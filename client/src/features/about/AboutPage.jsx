@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Heart, Leaf, Clock, Users, Award, ChefHat } from 'lucide-react';
 import brand from '../../config/brand.config';
+import ownerPhoto from '../../assets/owner.jpeg';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const timeline = [
-  { year: brand.yearFounded, title: 'The Beginning', desc: `${brand.shortName} was founded with a small sweet shop and a big dream — to bring pure, authentic sweets to Indore.` },
+  { year: brand.yearFounded, title: 'The Beginning', desc: `${brand.shortName} was founded with a small sweet shop and a big dream — to bring pure, authentic sweets to ${brand.city}.` },
   { year: 1980, title: 'Growing Reputation', desc: 'Word of our pure desi ghee sweets spread across the city. We became a household name for festivals and celebrations.' },
   { year: 1995, title: 'Expanding Horizons', desc: 'Opened our second branch and introduced our popular namkeen range alongside traditional sweets.' },
   { year: 2010, title: 'Modern Kitchen', desc: 'Invested in a state-of-the-art kitchen while preserving our traditional recipes and handcrafted processes.' },
@@ -17,7 +18,7 @@ const values = [
   { icon: Leaf, title: 'Purity', desc: 'Only pure desi ghee, fresh milk, and premium ingredients. No shortcuts, no preservatives.' },
   { icon: Heart, title: 'Tradition', desc: 'Heritage recipes passed down through generations, made with the same love and care.' },
   { icon: Clock, title: 'Freshness', desc: 'Made fresh daily in small batches. From our kitchen to your hands, always fresh.' },
-  { icon: Users, title: 'Community', desc: 'A part of Indore\'s fabric for decades. We celebrate with our community, every day.' },
+  { icon: Users, title: 'Community', desc: `A part of ${brand.city}'s fabric for decades. We celebrate with our community, every day.` },
 ];
 
 const stats = [
@@ -32,7 +33,7 @@ export default function AboutPage() {
     <>
       <Helmet>
         <title>About Us — {brand.name} | Our Story &amp; Heritage</title>
-        <meta name="description" content={`Learn about ${brand.name}'s journey from ${brand.yearFounded} to becoming Indore's most trusted sweet brand. Pure desi ghee, heritage recipes, and a commitment to excellence.`} />
+        <meta name="description" content={`Learn about ${brand.name}'s journey from ${brand.yearFounded} and owner Akash Soni. Pure desi ghee, heritage recipes, and a commitment to hospitality in ${brand.city}.`} />
       </Helmet>
 
       {/* Cinematic Header */}
@@ -63,7 +64,7 @@ export default function AboutPage() {
             transition={{ delay: 0.4 }}
             className="text-navy-300 text-base sm:text-lg max-w-2xl mx-auto"
           >
-            A legacy of purity, tradition, and love — serving Indore since {brand.yearFounded}.
+            A legacy of purity, tradition, and love — serving since {brand.yearFounded}.
           </motion.p>
         </div>
       </section>
@@ -83,20 +84,19 @@ export default function AboutPage() {
                 {/* Gold frame */}
                 <div className="rounded-t-[120px] rounded-b-2xl overflow-hidden border-4 border-gold-400/40 shadow-gold bg-cream-100">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fit=crop&crop=face"
-                    alt="Shri Gangaram Ji - Founder"
-                    className="w-full h-80 sm:h-96 object-cover object-top"
+                    src={ownerPhoto}
+                    alt="Akash Soni, owner of Gangaram Restaurant"
+                    className="w-full h-80 object-cover object-[center_18%] sm:h-96"
                     loading="lazy"
-                    width="400"
-                    height="384"
+                    width="1086"
+                    height="1448"
                   />
                 </div>
-                {/* Name plate */}
                 <div className="text-center mt-4">
                   <h3 className="font-heading text-xl font-bold text-navy-900">
-                    Shri Gangaram Ji
+                    Akash Soni
                   </h3>
-                  <p className="text-gold-600 text-sm font-medium">Founder & Visionary</p>
+                  <p className="text-gold-600 text-sm font-medium">Owner</p>
                 </div>
               </div>
             </motion.div>
@@ -110,89 +110,31 @@ export default function AboutPage() {
               className="md:col-span-3"
             >
               <p className="text-gold-600 text-sm font-medium tracking-[0.2em] uppercase mb-2">
-                Meet Our Founder
+                The Owner
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                The Man Behind the{' '}
-                <span className="text-gold-gradient">Legacy</span>
+                Mr. Akash <span className="text-gold-gradient">Soni</span>
               </h2>
 
-              {/* Pull quote */}
-              <blockquote className="border-l-4 border-gold-400 pl-4 mb-6">
-                <p className="font-heading text-lg sm:text-xl text-navy-700 italic leading-relaxed">
-                  &ldquo;When you use the purest ingredients with honest intent, every sweet becomes a blessing.&rdquo;
-                </p>
-              </blockquote>
-
               <p className="text-muted leading-relaxed mb-4">
-                In {brand.yearFounded}, Shri Gangaram Ji started with a humble shop and an unwavering commitment — to create sweets that families could trust completely. Using only pure desi ghee, fresh milk from local dairies, and the finest dry fruits, he set a standard that remains uncompromised to this day.
+                Mr. Akash Soni is a passionate entrepreneur whose journey reflects a deep-rooted family legacy, dedication, and a vision for creating memorable experiences.
               </p>
               <p className="text-muted leading-relaxed mb-4">
-                What began as a small shop in Indore has grown into a beloved institution, but the values remain the same: purity first, taste always, and every customer is family.
+                Coming from a family with a strong entrepreneurial heritage, Akash Soni has carried forward the values of trust, quality, and commitment while building his own presence across multiple businesses. His entrepreneurial journey extends beyond the restaurant industry, with ventures in jewellery and automobile showrooms, giving him a diverse perspective on business and customer experience.
+              </p>
+              <p className="text-muted leading-relaxed mb-4">
+                With his long-standing connection to the restaurant business, Akash Soni understands that a great restaurant is about much more than food. It is about the warmth of hospitality, the quality of every dish, the trust of every customer, and the memories people take home with them.
               </p>
               <p className="text-muted leading-relaxed">
-                Today, the next generation carries forward this legacy, blending time-honored recipes with modern hygiene standards, ensuring that every bite of {brand.shortName} sweet is a taste of heritage.
+                At Ganga Ram Restaurant, his vision is to bring together the richness of tradition with a modern approach to hospitality—creating a place where every guest feels welcomed and every meal becomes a memorable experience.
               </p>
 
-              {/* Signature */}
               <div className="mt-6 pt-4 border-t border-cream-200">
-                <p className="font-heading text-lg italic text-gold-600">— The {brand.shortName} Family</p>
+                <p className="font-heading text-lg italic text-gold-600">
+                  Built on legacy. Driven by vision. Inspired by people.
+                </p>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Heritage Timeline */}
-      <section className="py-16 sm:py-20 bg-white pattern-jaali">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <p className="text-gold-600 text-sm font-medium tracking-[0.2em] uppercase mb-2">
-              Our Journey
-            </p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-3">
-              Heritage Timeline
-            </h2>
-            <OrnamentalDivider className="my-4" width={180} />
-          </motion.div>
-
-          <div className="relative">
-            {/* Center line */}
-            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gold-300 -translate-x-1/2" />
-
-            {timeline.map((item, i) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className={`relative flex items-start gap-4 sm:gap-0 mb-10 ${
-                  i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'
-                }`}
-              >
-                {/* Dot */}
-                <div className="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-gold-500 border-4 border-cream-50 -translate-x-1/2 z-10 mt-1" />
-
-                {/* Content card */}
-                <div className={`ml-10 sm:ml-0 sm:w-[45%] ${i % 2 === 0 ? 'sm:pr-8 sm:text-right' : 'sm:pl-8'}`}>
-                  <span className="inline-block bg-navy-900 text-gold-300 text-xs font-bold px-3 py-1 rounded-lg mb-2">
-                    {item.year}
-                  </span>
-                  <h3 className="font-heading text-lg font-bold text-navy-900 mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

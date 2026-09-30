@@ -10,20 +10,20 @@ const brand = {
   tagline: 'Taste of Purity',
   taglineHindi: 'गंगाराम',
   description:
-    'Indore\'s most trusted name for pure desi ghee sweets, namkeen, and festive gift boxes. Heritage recipes, made fresh daily.',
+    'Dalsinghsarai\'s trusted name for pure desi ghee sweets, namkeen, and festive gift boxes. Heritage recipes, made fresh daily.',
 
   // ─── Contact & Location ───
   phone: '+91-731-XXXXXXX',
   whatsapp: '+91-98XXXXXXXX',
-  email: 'info@gangaram.in',
-  address: 'Main Branch, MG Road, Indore, Madhya Pradesh 452001',
-  mapUrl: 'https://maps.google.com/?q=Gangaram+Sweets+Indore',
-  city: 'Indore',
-  state: 'Madhya Pradesh',
+  email: 'Gangaramdss12@gmail.com',
+  address: 'Thana Road, Dalsinghsarai, 851111',
+  mapUrl: 'https://maps.google.com/?q=Thana+Road+Dalsinghsarai+851111',
+  city: 'Dalsinghsarai',
+  state: 'Bihar',
 
   // ─── Business ───
   fssaiNumber: 'FSSAI: XXXXXXXXXXXX',
-  yearFounded: 1965,
+  yearFounded: 1978,
   get yearsOfTrust() {
     return new Date().getFullYear() - this.yearFounded;
   },

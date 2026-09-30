@@ -156,9 +156,6 @@ export default function Footer() {
             <p>
               © {new Date().getFullYear()} {brand.name}. All rights reserved.
             </p>
-            <p className="text-xs">
-              Made with ❤️ in {brand.city}, {brand.state}
-            </p>
           </div>
         </div>
       </div>

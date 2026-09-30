@@ -63,7 +63,7 @@ export default function OurStoryTeaser() {
             </p>
             <p className="text-muted leading-relaxed mb-6">
               Our commitment to using only pure desi ghee, fresh milk, and premium dry
-              fruits has made us Indore&apos;s most trusted name in traditional sweets.
+              fruits has made us {brand.city}&apos;s most trusted name in traditional sweets.
             </p>
             {/* Values */}
             <div className="grid grid-cols-2 gap-3 mb-6">

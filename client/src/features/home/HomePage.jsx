@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>{brand.name} — {brand.tagline} | Best Sweets in Indore</title>
+        <title>{brand.name} — {brand.tagline} | Best Sweets in {brand.city}</title>
         <meta
           name="description"
           content={`${brand.name} – ${brand.description}. Order online for delivery in ${brand.city}.`}
