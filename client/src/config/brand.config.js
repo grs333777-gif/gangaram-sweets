@@ -15,9 +15,9 @@ const brand = {
   // ─── Contact & Location ───
   phone: '+91-731-XXXXXXX',
   whatsapp: '+91-98XXXXXXXX',
-  email: 'Gangaramdss12@gmail.com',
+  email: 'gangaramdss12@gmail.com',
   address: 'Thana Road, Dalsinghsarai, 851111',
-  mapUrl: 'https://maps.google.com/?q=Thana+Road+Dalsinghsarai+851111',
+  mapUrl: 'https://www.google.com/maps/place/Thana+Rd,+Bihar+848114/@25.6693575,85.8341322,17z/data=!3m1!4b1!4m6!3m5!1s0x39ed8968c9fce9b3:0x24edbe523a60f2ea!8m2!3d25.6693575!4d85.8367071!16s%2Fg%2F11b6bqgh51?entry=ttu&g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D',
   city: 'Dalsinghsarai',
   state: 'Bihar',
 

@@ -75,7 +75,7 @@ export default function PolicyPage({ type = 'terms' }) {
 
         <div className="mt-12 p-4 rounded-2xl bg-cream-100 text-center">
           <p className="text-sm text-muted">
-            Last updated: October 2024. For questions, contact us at{' '}
+            For questions, contact us at{' '}
             <a href={`mailto:${brand.email}`} className="text-navy-900 font-medium hover:underline">
               {brand.email}
             </a>
