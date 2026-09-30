@@ -24,14 +24,16 @@ export default function HomePage() {
         <link rel="canonical" href={brand.siteUrl} />
       </Helmet>
 
-      <Hero />
-      <TrustStrip />
-      <CategoryShowcase />
-      <Bestsellers />
-      <FestiveBoxes />
-      <OurStoryTeaser />
-      <Testimonials />
-      <CTABand />
+      <div className="overflow-x-clip">
+        <Hero />
+        <TrustStrip />
+        <CategoryShowcase />
+        <Bestsellers />
+        <FestiveBoxes />
+        <OurStoryTeaser />
+        <Testimonials />
+        <CTABand />
+      </div>
     </>
   );
 }

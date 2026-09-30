@@ -33,7 +33,7 @@ export default function OurStoryTeaser() {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, type: 'spring' }}
-              className="absolute -bottom-6 -right-4 sm:right-6 bg-navy-900 text-white px-6 py-4 rounded-2xl shadow-lg"
+              className="absolute -bottom-6 right-3 bg-navy-900 text-white px-6 py-4 rounded-2xl shadow-lg sm:right-6"
             >
               <p className="text-3xl font-heading font-bold text-gold-400">
                 {brand.yearsOfTrust}+

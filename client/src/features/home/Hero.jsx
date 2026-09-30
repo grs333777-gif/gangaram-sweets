@@ -34,20 +34,33 @@ function HeroFlourish() {
 export default function Hero() {
   return (
     <section className="relative bg-cream-50">
-      <div className="relative h-[50vh] min-h-[280px] overflow-hidden bg-navy-900 sm:h-[48vh] lg:h-[52vh]">
-        <img
-          src={heroPhoto}
-          alt="Gangaram storefront sign lit at night"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          width="1672"
-          height="941"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-900/80 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-cream-50 to-transparent" />
+      <div className="relative bg-navy-900 lg:pt-0">
+        <div className="relative h-[72vw] min-h-[280px] max-h-[460px] overflow-hidden lg:hidden">
+          <img
+            src={heroPhoto}
+            alt="Gangaram storefront sign lit at night"
+            className="absolute inset-0 h-full w-full object-cover object-[42%_46%]"
+            width="1672"
+            height="941"
+            fetchPriority="high"
+          />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-900 to-transparent" />
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-cream-50 to-transparent lg:hidden" />
+        <div className="relative hidden h-[52vh] overflow-hidden lg:block">
+          <img
+            src={heroPhoto}
+            alt="Gangaram storefront sign lit at night"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            width="1672"
+            height="941"
+          />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-900/80 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-cream-50 to-transparent" />
+        </div>
       </div>
 
-      <div className="relative z-10 -mt-6 px-4 pb-8 text-center sm:-mt-8 sm:px-6 lg:px-8">
+      <div className="relative z-10 px-4 pb-8 text-center sm:px-6 lg:-mt-8 lg:px-8">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
