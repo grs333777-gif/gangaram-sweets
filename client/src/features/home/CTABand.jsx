@@ -1,42 +1,36 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, Phone } from 'lucide-react';
 import brand from '../../config/brand.config';
 
 export default function CTABand() {
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-r from-navy-900 via-navy-700 to-navy-900 relative overflow-hidden">
-      <div className="absolute inset-0 pattern-mandala opacity-10" />
-
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="bg-cream-50 py-20 sm:py-28">
+      <div className="relative max-w-3xl mx-auto px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            Ready to Experience the{' '}
-            <span className="text-gold-gradient">Taste of Purity?</span>
+          <h2 className="font-heading mb-4 text-4xl leading-tight text-navy-900 sm:text-5xl lg:text-6xl">
+            Ready for the <span className="italic">taste of purity?</span>
           </h2>
-          <p className="text-navy-300 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+          <p className="mx-auto mb-8 max-w-xl text-base font-light text-muted sm:text-lg">
             Order your favorite sweets online and get them delivered fresh to your doorstep.
             Pure desi ghee, heritage recipes, and love in every bite.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/menu"
-              className="btn-gold-shimmer inline-flex items-center gap-2 text-white font-semibold px-8 py-3.5 rounded-2xl text-base shadow-gold"
+              className="btn-gold-shimmer inline-flex items-center px-8 py-3.5 text-xs"
             >
-              <ShoppingBag size={20} />
               Order Now
             </Link>
             <a
               href={`tel:${brand.phone}`}
-              className="inline-flex items-center gap-2 text-white/90 hover:text-white font-medium px-8 py-3.5 rounded-2xl text-base border border-white/20 hover:border-white/40 transition-all"
+              className="text-xs font-medium uppercase tracking-[0.18em] text-navy-900 underline decoration-gold-400 underline-offset-8"
             >
-              <Phone size={18} />
-              Call to Order
+              Call {brand.phone}
             </a>
           </div>
         </motion.div>

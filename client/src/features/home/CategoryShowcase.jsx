@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import categories from '../../data/categories';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
 
@@ -16,10 +15,10 @@ export default function CategoryShowcase() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <p className="text-gold-600 text-sm font-medium tracking-[0.2em] uppercase mb-2">
-            Our Specialties
+          <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.32em] text-gold-600">
+            The collection
           </p>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-3">
+          <h2 className="font-heading text-4xl text-navy-900 sm:text-5xl">
             Explore Our Categories
           </h2>
           <OrnamentalDivider className="my-4" width={180} />
@@ -40,34 +39,26 @@ export default function CategoryShowcase() {
             >
               <Link
                 to={`/menu?category=${cat.slug}`}
-                className="group block relative overflow-hidden rounded-2xl bg-white shadow-card hover:shadow-card-hover transition-all duration-300"
+                className="group block"
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-[4/5] overflow-hidden bg-cream-100">
                   <img
                     src={cat.image}
                     alt={cat.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     width="300"
-                    height="300"
+                    height="375"
                   />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent" />
                 </div>
-
-                {/* Label */}
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="font-heading text-lg font-bold text-white mb-0.5">
+                <div className="pt-4">
+                  <h3 className="font-heading text-2xl text-navy-900">
                     {cat.name}
                   </h3>
-                  <p className="text-white/70 text-xs leading-snug line-clamp-2">
+                  <p className="mt-1 text-xs leading-relaxed text-muted line-clamp-2">
                     {cat.description}
                   </p>
-                  <div className="flex items-center gap-1 mt-2 text-gold-300 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span>Explore</span>
-                    <ArrowRight size={14} />
-                  </div>
                 </div>
               </Link>
             </motion.div>

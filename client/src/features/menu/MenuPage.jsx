@@ -7,7 +7,6 @@ import brand from '../../config/brand.config';
 import products from '../../data/products';
 import categories from '../../data/categories';
 import useCartStore from '../../store/cartStore';
-import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
 import { useDebounce } from '../../hooks/useScrollAnimation';
 
 export default function MenuPage() {
@@ -82,22 +81,21 @@ export default function MenuPage() {
       </Helmet>
 
       {/* Header */}
-      <div className="bg-gradient-to-b from-navy-900 to-navy-800 pt-28 pb-12 relative overflow-hidden">
-        <div className="absolute inset-0 pattern-mandala opacity-15" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-2">
-            Our <span className="text-gold-gradient">Menu</span>
-          </h1>
-          <p className="text-white/80 text-sm sm:text-base">
-            Handcrafted with pure desi ghee &amp; love
-          </p>
-          <OrnamentalDivider className="mt-4" width={160} />
-        </div>
+      <div className="bg-cream-50 px-4 pb-6 pt-28 text-center sm:px-6">
+        <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.32em] text-gold-600">
+          Gangaram
+        </p>
+        <h1 className="font-heading text-5xl text-navy-900 sm:text-6xl">
+          Our Menu
+        </h1>
+        <p className="mt-3 text-sm font-light text-muted">
+          Handcrafted with pure desi ghee
+        </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Category tabs – sticky */}
-        <div className="sticky top-[64px] z-30 bg-cream-50 pt-2 pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="sticky top-20 z-30 bg-cream-50 pt-2 pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
             <button
               onClick={() => setCategory('all')}
@@ -275,8 +273,8 @@ function ProductCard({ product, index, onQuickView, onAddToCart }) {
         {/* Badges */}
         <div className="absolute top-2 left-2 flex flex-col gap-1">
           {product.isBestseller && (
-            <span className="bg-magenta-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
-              ★ Bestseller
+            <span className="bg-white/95 px-2 py-1 text-[10px] uppercase tracking-[0.16em] text-navy-900">
+              Bestseller
             </span>
           )}
         </div>

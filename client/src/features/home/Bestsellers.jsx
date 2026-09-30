@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Plus, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
 import products from '../../data/products';
 import useCartStore from '../../store/cartStore';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
@@ -41,10 +41,10 @@ export default function Bestsellers() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <p className="text-gold-600 text-sm font-medium tracking-[0.2em] uppercase mb-2">
-            Most Loved
+          <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.32em] text-gold-600">
+            Most loved
           </p>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-3">
+          <h2 className="font-heading mb-3 text-4xl text-navy-900 sm:text-5xl">
             Our Bestsellers
           </h2>
           <OrnamentalDivider className="my-4" width={180} />
@@ -99,8 +99,8 @@ export default function Bestsellers() {
                       height="288"
                     />
                     {/* Bestseller tag */}
-                    <span className="absolute top-3 left-3 bg-magenta-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">
-                      ★ Bestseller
+                    <span className="absolute top-3 left-3 bg-white/95 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-navy-900">
+                      Bestseller
                     </span>
                     {/* Veg badge */}
                     {product.isVeg && (

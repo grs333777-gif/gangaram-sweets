@@ -1,85 +1,81 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingBag } from 'lucide-react';
 import brand from '../../config/brand.config';
-import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
-import heroPhoto from '../../assets/hero.png';
+import heroSign from '../../assets/hero-sign.jpg';
+
+const rise = (delay) => ({
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
+});
 
 export default function Hero() {
   return (
-    <section className="relative bg-cream-50">
-      <div className="relative h-[50vh] min-h-[280px] sm:h-[48vh] lg:h-[52vh] overflow-hidden bg-navy-900">
-        <img
-          src={heroPhoto}
-          alt="Gangaram storefront sign lit at night"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          width="1672"
-          height="941"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-900/80 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-cream-50 to-transparent" />
-      </div>
+    <section className="bg-[#F6EFE6]">
+      <div className="mx-auto grid max-w-[1440px] items-center lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+        <div className="px-6 pb-12 pt-28 sm:px-10 sm:pt-32 lg:py-24 lg:pl-16 lg:pr-10 xl:pl-24">
+          <motion.p
+            {...rise(0.05)}
+            className="mb-6 text-[11px] font-medium uppercase tracking-[0.34em] text-gold-600"
+          >
+            {brand.city} · Since {brand.yearFounded}
+          </motion.p>
 
-      <div className="relative z-10 -mt-6 px-4 pb-8 text-center sm:px-6 sm:-mt-8 lg:px-8">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.45 }}
-          className="font-hindi text-gold-600 text-lg sm:text-xl mb-1"
-        >
-          {brand.taglineHindi}
-        </motion.p>
+          <motion.p
+            {...rise(0.12)}
+            className="font-hindi mb-4 text-lg text-navy-800"
+          >
+            {brand.taglineHindi}
+          </motion.p>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.55 }}
-          className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-navy-900 leading-tight"
-        >
-          <span className="text-gold-gradient">{brand.tagline}</span>
-        </motion.h2>
+          <motion.h2
+            {...rise(0.18)}
+            className="font-heading text-[3.4rem] leading-[0.92] text-navy-900 sm:text-7xl lg:text-[5.25rem]"
+          >
+            Taste of
+            <span className="block italic font-normal">Purity</span>
+          </motion.h2>
+
+          <motion.p
+            {...rise(0.28)}
+            className="mt-6 max-w-sm text-[15px] font-light leading-relaxed text-muted sm:text-base"
+          >
+            Pure desi ghee sweets and namkeen, prepared the way Indore has known them for generations.
+          </motion.p>
+
+          <motion.div
+            {...rise(0.38)}
+            className="mt-9 flex flex-wrap items-center gap-7"
+          >
+            <Link
+              to="/menu"
+              className="btn-gold-shimmer inline-flex items-center px-7 py-3.5 text-[11px]"
+            >
+              Order Now
+            </Link>
+            <Link
+              to="/menu"
+              className="text-[11px] font-medium uppercase tracking-[0.2em] text-navy-900 underline decoration-gold-500 underline-offset-[10px] transition-colors hover:text-gold-700"
+            >
+              View the menu
+            </Link>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ delay: 0.35, duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[640px] lg:self-stretch"
         >
-          <OrnamentalDivider className="my-4" width={220} />
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.45 }}
-          className="text-muted text-base sm:text-lg max-w-2xl mx-auto mb-6 leading-relaxed"
-        >
-          Indore&apos;s heritage of{' '}
-          <span className="text-gold-600 font-medium">pure desi ghee</span>{' '}
-          sweets &amp; namkeen, handcrafted with love since {brand.yearFounded}.
-          Every bite tells a story of tradition and purity.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.45 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Link
-            to="/menu"
-            className="btn-gold-shimmer inline-flex items-center gap-2 text-navy-900 font-semibold px-8 py-3.5 rounded-2xl text-base shadow-gold hover:shadow-lg transition-shadow duration-300"
-          >
-            <ShoppingBag size={20} />
-            Order Now
-          </Link>
-          <Link
-            to="/menu"
-            className="inline-flex items-center gap-2 text-navy-900 font-medium px-8 py-3.5 rounded-2xl text-base border border-navy-900/15 bg-white hover:border-gold-400 hover:text-gold-700 transition-all duration-300"
-          >
-            Explore Menu
-            <ArrowRight size={18} />
-          </Link>
+          <img
+            src={heroSign}
+            alt="Gangaram storefront sign"
+            className="absolute inset-0 h-full w-full object-cover object-[72%_center]"
+            width="1152"
+            height="864"
+            fetchPriority="high"
+          />
         </motion.div>
       </div>
     </section>

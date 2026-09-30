@@ -3,57 +3,57 @@
    ═══════════════════════════════════════════════ */
 
 /* ─── Google Fonts — MUST be first ─── */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap');
 
 @import 'tailwindcss';
 
 /* ─── Tailwind v4 Theme ─── */
 @theme {
-  /* Brand Colors */
-  --color-navy-900: #1B2A63;
-  --color-navy-800: #1F3375;
-  --color-navy-700: #2A3F87;
-  --color-navy-600: #354DA0;
-  --color-navy-500: #4459A8;
-  --color-navy-400: #6B7DC4;
-  --color-navy-300: #96A4D8;
-  --color-navy-200: #C5CDEC;
+  /* Brand Colors — wine, ivory, champagne */
+  --color-navy-900: #5C1E30;
+  --color-navy-800: #6E2436;
+  --color-navy-700: #8A3A4C;
+  --color-navy-600: #A45A6A;
+  --color-navy-500: #C08490;
+  --color-navy-400: #D4A8B2;
+  --color-navy-300: #E7D0D6;
+  --color-navy-200: #F3E6E9;
 
-  --color-gold-700: #8B6839;
-  --color-gold-600: #A67C4A;
-  --color-gold-500: #C0935A;
-  --color-gold-400: #D4A96A;
-  --color-gold-300: #E9C27F;
-  --color-gold-200: #F5D99A;
-  --color-gold-100: #FBE8B5;
+  --color-gold-700: #7A6244;
+  --color-gold-600: #8C7352;
+  --color-gold-500: #A08A62;
+  --color-gold-400: #B89A72;
+  --color-gold-300: #CDB592;
+  --color-gold-200: #E6D5BE;
+  --color-gold-100: #F4EBE0;
 
-  --color-cream-50: #FFFBF3;
-  --color-cream-100: #FBF3E4;
-  --color-cream-200: #F5E8D0;
+  --color-cream-50: #F7F3EE;
+  --color-cream-100: #F1EBE3;
+  --color-cream-200: #E6DDD2;
 
-  --color-blush-100: #FDE8E6;
-  --color-blush-200: #F9D5D3;
-  --color-blush-300: #F0B0AD;
+  --color-blush-100: #F8EFEA;
+  --color-blush-200: #F0E2DA;
+  --color-blush-300: #E4CFC4;
 
-  --color-magenta-500: #C2185B;
-  --color-magenta-400: #E91E7B;
+  --color-magenta-500: #6E2436;
+  --color-magenta-400: #8A3A4C;
 
-  --color-ink: #1A1A2E;
-  --color-muted: #5B5F76;
+  --color-ink: #2C241E;
+  --color-muted: #7A7068;
   --color-success: #2E7D32;
   --color-error: #C62828;
 
   /* Typography */
-  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Outfit', 'Segoe UI', system-ui, sans-serif;
   --font-hindi: 'Noto Serif Devanagari', serif;
 
   /* Shadows */
-  --shadow-card: 0 2px 12px 0 rgba(27, 42, 99, 0.08), 0 1px 3px 0 rgba(0,0,0,0.04);
-  --shadow-card-hover: 0 12px 32px 0 rgba(27, 42, 99, 0.14), 0 4px 12px 0 rgba(0,0,0,0.06);
-  --shadow-nav: 0 1px 8px 0 rgba(27, 42, 99, 0.10);
-  --shadow-drawer: -8px 0 30px 0 rgba(27, 42, 99, 0.18);
-  --shadow-gold: 0 4px 20px 0 rgba(166, 124, 74, 0.25);
+  --shadow-card: 0 1px 2px 0 rgba(44, 36, 30, 0.04);
+  --shadow-card-hover: 0 12px 28px 0 rgba(44, 36, 30, 0.08);
+  --shadow-nav: 0 1px 0 0 rgba(44, 36, 30, 0.06);
+  --shadow-drawer: -8px 0 30px 0 rgba(44, 36, 30, 0.12);
+  --shadow-gold: none;
 
   /* Animations */
   --animate-fade-up: fade-up 0.6s ease-out both;
@@ -141,17 +141,23 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    line-height: 1.2;
-    font-weight: 700;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 }
 
-/* ─── Gold gradient text ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+/* Accent word — italic serif, same color as its heading */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #A67C4A, #E9C27F, #FFD99A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-style: italic;
+  font-weight: 500;
+  color: inherit;
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 
 /* ─── Gold gradient border ─── */
@@ -161,19 +167,42 @@
 
 /* ─── Gold shimmer button effect ─── */
 .btn-gold-shimmer {
-  background: linear-gradient(135deg, #A67C4A 0%, #E9C27F 40%, #FFD99A 60%, #E9C27F 80%, #A67C4A 100%);
-  background-size: 200% auto;
-  transition: background-position 0.5s ease, box-shadow 0.3s ease;
+  background: #5C1E30;
+  color: #fff;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 2px;
+  box-shadow: none;
+  transition: background 0.2s ease;
 }
 .btn-gold-shimmer:hover {
-  background-position: right center;
-  box-shadow: 0 4px 20px 0 rgba(166, 124, 74, 0.35);
+  background: #3E1422;
+  box-shadow: none;
 }
+
+/* ─── Cinematic hero ─── */
+.hero-title {
+  background: linear-gradient(180deg, #fff8ea 0%, #f6d78a 42%, #d7a45a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
+}
+
+.hero-photo {
+  transform: none;
+}
+
+@keyframes hero-drift {
+  from { transform: scale(1.04); }
+  to   { transform: scale(1.1); }
+}
+
 
 /* ─── Mandala pattern overlay ─── */
 .pattern-mandala {
-  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23A67C4A' stroke-width='0.5' opacity='0.06'%3E%3Ccircle cx='60' cy='60' r='50'/%3E%3Ccircle cx='60' cy='60' r='35'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Cpath d='M60 10 L60 110 M10 60 L110 60 M25 25 L95 95 M95 25 L25 95'/%3E%3Cellipse cx='60' cy='30' rx='8' ry='16' transform='rotate(0 60 60)'/%3E%3Cellipse cx='60' cy='30' rx='8' ry='16' transform='rotate(45 60 60)'/%3E%3Cellipse cx='60' cy='30' rx='8' ry='16' transform='rotate(90 60 60)'/%3E%3Cellipse cx='60' cy='30' rx='8' ry='16' transform='rotate(135 60 60)'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
+  background-image: none;
 }
 
 /* ─── Jaali pattern overlay ─── */

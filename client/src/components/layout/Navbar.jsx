@@ -13,17 +13,6 @@ const navLinks = [
   { name: 'Track Order', path: '/track-order' },
 ];
 
-const darkHeroPaths = new Set([
-  '/',
-  '/menu',
-  '/about',
-  '/contact',
-  '/track-order',
-  '/terms',
-  '/privacy',
-  '/refund-shipping',
-]);
-
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,7 +21,7 @@ export default function Navbar() {
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 48);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -42,36 +31,23 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const onDarkHero = darkHeroPaths.has(location.pathname) && !isScrolled;
-
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          onDarkHero
-            ? 'bg-navy-900/95 backdrop-blur-md shadow-nav py-3'
-            : 'bg-white/95 backdrop-blur-md shadow-nav py-2'
+        className={`fixed top-0 left-0 right-0 z-50 border-b border-cream-200/80 bg-[#FBF8F4]/95 backdrop-blur-md transition-shadow duration-300 ${
+          isScrolled ? 'shadow-nav' : ''
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group" aria-label={`${brand.name} Home`}>
-              <img
-                src="/logo.jpeg"
-                alt={`${brand.name} Logo`}
-                className="h-12 w-12 sm:h-14 sm:w-14 rounded-full object-cover border-2 border-gold-400 shadow-md group-hover:shadow-gold transition-shadow duration-300"
-                width="56"
-                height="56"
-              />
-              <div className="hidden sm:block">
-                <h1 className={`font-heading text-lg font-bold leading-tight ${onDarkHero ? 'text-white' : 'text-navy-900'}`}>
-                  {brand.name}
-                </h1>
-                <p className={`text-xs tracking-[0.2em] uppercase font-medium ${onDarkHero ? 'text-gold-300' : 'text-gold-600'}`}>
-                  {brand.tagline}
-                </p>
-              </div>
+            <Link to="/" className="block" aria-label={`${brand.name} Home`}>
+              <h1 className="font-heading text-2xl leading-none text-navy-900 sm:text-[1.7rem]">
+                {brand.shortName}
+              </h1>
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.28em] text-gold-600">
+                {brand.tagline}
+              </p>
             </Link>
 
             {/* Desktop Nav */}
@@ -80,17 +56,17 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                  className={`relative px-3 py-5 text-[13px] tracking-wide transition-colors duration-200 ${
                     location.pathname === link.path
-                      ? onDarkHero ? 'text-white' : 'text-navy-900'
-                      : onDarkHero ? 'text-white/80 hover:text-white' : 'text-muted hover:text-navy-900'
+                      ? 'text-navy-900'
+                      : 'text-muted hover:text-navy-900'
                   }`}
                 >
                   {link.name}
                   {location.pathname === link.path && (
                     <motion.div
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 rounded-full"
+                      className="absolute bottom-0 left-3 right-3 h-px bg-navy-900"
                     />
                   )}
                 </Link>
@@ -102,9 +78,7 @@ export default function Navbar() {
               {/* Phone CTA – desktop only */}
               <a
                 href={`tel:${brand.phone}`}
-                className={`hidden xl:flex items-center gap-2 text-sm transition-colors ${
-                  onDarkHero ? 'text-white/90 hover:text-white' : 'text-navy-700 hover:text-navy-900'
-                }`}
+                className="hidden items-center gap-2 text-sm text-muted transition-colors hover:text-navy-900 xl:flex"
               >
                 <Phone size={16} />
                 <span>{brand.phone}</span>
@@ -113,11 +87,7 @@ export default function Navbar() {
               {/* Cart button */}
               <button
                 onClick={openCart}
-                className={`relative p-2.5 rounded-xl transition-colors duration-200 ${
-                  onDarkHero
-                    ? 'bg-white text-navy-900 hover:bg-gold-200'
-                    : 'bg-navy-900 text-white hover:bg-navy-700'
-                }`}
+                className="relative p-2 text-navy-900 transition-colors hover:text-gold-700"
                 aria-label={`Cart with ${totalItems} items`}
               >
                 <ShoppingBag size={20} />
@@ -136,9 +106,7 @@ export default function Navbar() {
               {/* Mobile menu toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`lg:hidden p-2.5 rounded-xl transition-colors ${
-                  onDarkHero ? 'text-white hover:bg-white/10' : 'text-navy-900 hover:bg-cream-100'
-                }`}
+                className="p-2 text-navy-900 transition-colors hover:text-gold-700 lg:hidden"
                 aria-label="Toggle menu"
                 aria-expanded={isMobileMenuOpen}
               >

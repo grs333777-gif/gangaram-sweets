@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Gift, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function FestiveBoxes() {
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
-      <div className="absolute inset-0 pattern-mandala opacity-20" />
-
+    <section className="bg-white py-16 sm:py-24">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Text */}
@@ -16,15 +14,13 @@ export default function FestiveBoxes() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 bg-gold-600/20 text-gold-300 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
-              <Gift size={16} />
-              Perfect for Gifting
-            </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              Festive{' '}
-              <span className="text-gold-gradient">Gift Boxes</span>
+            <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.32em] text-gold-600">
+              Gifting
+            </p>
+            <h2 className="font-heading mb-4 text-4xl leading-tight text-navy-900 sm:text-5xl">
+              Festive <span className="italic">Gift Boxes</span>
             </h2>
-            <p className="text-navy-300 text-base sm:text-lg leading-relaxed mb-6">
+            <p className="mb-6 text-base leading-relaxed text-muted sm:text-lg">
               Make every celebration sweeter with our exquisitely curated gift hampers.
               Premium sweets in designer boxes — perfect for Diwali, weddings, corporate gifting, and every special moment.
             </p>
@@ -32,7 +28,7 @@ export default function FestiveBoxes() {
               {['Diwali Hampers', 'Wedding Trays', 'Corporate Gifts', 'Custom Boxes'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-medium text-gold-300 border border-gold-600/30 px-3 py-1.5 rounded-lg"
+                  className="border border-cream-200 px-3 py-1.5 text-[11px] uppercase tracking-[0.16em] text-muted"
                 >
                   {tag}
                 </span>
