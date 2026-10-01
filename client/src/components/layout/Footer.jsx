@@ -24,7 +24,7 @@ const policies = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-900 text-white relative overflow-hidden">
+    <footer className="relative z-10 overflow-hidden bg-navy-900 text-white">
       {/* Mandala pattern overlay */}
       <div className="absolute inset-0 pattern-mandala opacity-30 pointer-events-none" />
 

@@ -33,34 +33,24 @@ function HeroFlourish() {
 
 export default function Hero() {
   return (
-    <section className="relative bg-cream-50">
-      <div className="relative bg-navy-900 lg:pt-0">
-        <div className="relative h-[72vw] min-h-[280px] max-h-[460px] overflow-hidden lg:hidden">
+    <section className="relative">
+      <div className="relative">
+        <div className="hero-pin pointer-events-none inset-x-0 top-0 z-0 h-[72vw] min-h-[280px] max-h-[460px] overflow-hidden bg-cream-50 shadow-[0_8px_0_0_#FFFBF3] lg:h-[52vh] lg:max-h-none lg:min-h-[420px]">
           <img
             src={heroPhoto}
             alt="Gangaram storefront sign lit at night"
-            className="absolute inset-0 h-full w-full object-cover object-[42%_46%]"
+            className="absolute inset-0 h-full w-full object-cover object-[42%_46%] lg:object-center"
             width="1672"
             height="941"
             fetchPriority="high"
           />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-900 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-900 to-transparent lg:h-28 lg:from-navy-900/80" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-cream-50 via-cream-50/60 to-transparent lg:h-28" />
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-cream-50 to-transparent lg:hidden" />
-        <div className="relative hidden h-[52vh] overflow-hidden lg:block">
-          <img
-            src={heroPhoto}
-            alt="Gangaram storefront sign lit at night"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            width="1672"
-            height="941"
-          />
-          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-900/80 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-cream-50 to-transparent" />
-        </div>
+        <div className="h-[72vw] min-h-[280px] max-h-[460px] lg:h-[52vh] lg:max-h-none lg:min-h-[420px]" aria-hidden="true" />
       </div>
 
-      <div className="relative z-10 px-4 pb-8 text-center sm:px-6 lg:-mt-8 lg:px-8">
+      <div className="relative z-10 -mt-4 bg-[linear-gradient(180deg,transparent_0%,#FFFBF3_36px,#FFFBF3_100%)] px-4 pb-8 pt-6 text-center sm:-mt-6 sm:px-6 lg:-mt-12 lg:bg-[linear-gradient(180deg,transparent_0%,#FFFBF3_24%,#FFFBF3_100%)] lg:px-8 lg:pt-12">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

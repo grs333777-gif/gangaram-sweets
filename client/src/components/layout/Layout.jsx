@@ -23,7 +23,7 @@ export default function Layout() {
       <MobileBar />
       <CartDrawer />
       {/* Spacer for mobile bottom bar */}
-      <div className="h-16 lg:hidden" />
+      <div className="relative z-10 h-16 bg-cream-50 lg:hidden" />
     </div>
   );
 }

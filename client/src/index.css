@@ -175,6 +175,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 20px 0 rgba(166, 124, 74, 0.35);
 }
 
+/* Pinned hero photo. Content from the Hindi line scrolls over it. */
+.hero-pin {
+  position: fixed;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-pin {
+    position: absolute;
+  }
+}
+
 /* ─── Cinematic hero ─── */
 .hero-title {
   background: linear-gradient(180deg, #fff8ea 0%, #f6d78a 42%, #d7a45a 100%);

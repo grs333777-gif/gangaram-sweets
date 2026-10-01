@@ -24,8 +24,9 @@ export default function HomePage() {
         <link rel="canonical" href={brand.siteUrl} />
       </Helmet>
 
-      <div className="overflow-x-clip">
+      <div>
         <Hero />
+        <div className="relative z-10 overflow-x-clip">
         <TrustStrip />
         <CategoryShowcase />
         <Bestsellers />
@@ -33,6 +34,7 @@ export default function HomePage() {
         <OurStoryTeaser />
         <Testimonials />
         <CTABand />
+        </div>
       </div>
     </>
   );
