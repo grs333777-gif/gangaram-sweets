@@ -35,7 +35,7 @@ export default function FestiveBoxes() {
               ))}
             </div>
             <Link
-              to="/menu?category=festive-gift-boxes"
+              to="/menu?category=sweets-dessert"
               className="btn-gold-shimmer inline-flex items-center gap-2 text-white font-semibold px-8 py-3 rounded-2xl text-sm shadow-gold"
             >
               View Gift Collections

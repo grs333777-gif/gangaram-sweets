@@ -23,7 +23,7 @@ export default function CategoryShowcase() {
           </h2>
           <OrnamentalDivider className="my-4" width={180} />
           <p className="text-muted max-w-xl mx-auto">
-            From traditional mithai to Indore&apos;s iconic street food, discover handcrafted flavors for every palate.
+            From dosa and thali to chaat, Chinese and desserts — the full Gangaram menu.
           </p>
         </motion.div>
 

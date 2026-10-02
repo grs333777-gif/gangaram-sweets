@@ -51,13 +51,14 @@ export default function MenuPage() {
     if (filters.veg) result = result.filter((p) => p.isVeg);
     if (filters.bestseller) result = result.filter((p) => p.isBestseller);
     if (filters.sugarFree) result = result.filter((p) => p.tags?.includes('sugar-free'));
-    if (filters.priceRange === 'under200') result = result.filter((p) => p.variants[0].price < 200);
-    if (filters.priceRange === '200to500') result = result.filter((p) => p.variants[0].price >= 200 && p.variants[0].price <= 500);
-    if (filters.priceRange === 'above500') result = result.filter((p) => p.variants[0].price > 500);
+    const priceOf = (p) => p.variants[0].price;
+    if (filters.priceRange === 'under200') result = result.filter((p) => priceOf(p) != null && priceOf(p) < 200);
+    if (filters.priceRange === '200to500') result = result.filter((p) => priceOf(p) != null && priceOf(p) >= 200 && priceOf(p) <= 500);
+    if (filters.priceRange === 'above500') result = result.filter((p) => priceOf(p) != null && priceOf(p) > 500);
 
-    // Sort
-    if (sortBy === 'priceLow') result.sort((a, b) => a.variants[0].price - b.variants[0].price);
-    if (sortBy === 'priceHigh') result.sort((a, b) => b.variants[0].price - a.variants[0].price);
+    // Sort — MRP items have no fixed price, so they stay at the end
+    if (sortBy === 'priceLow') result.sort((a, b) => (priceOf(a) ?? Infinity) - (priceOf(b) ?? Infinity));
+    if (sortBy === 'priceHigh') result.sort((a, b) => (priceOf(b) ?? -1) - (priceOf(a) ?? -1));
     if (sortBy === 'name') result.sort((a, b) => a.name.localeCompare(b.name));
     if (sortBy === 'popularity') result.sort((a, b) => (b.isBestseller ? 1 : 0) - (a.isBestseller ? 1 : 0));
 
@@ -76,8 +77,8 @@ export default function MenuPage() {
   return (
     <>
       <Helmet>
-        <title>Menu — {brand.name} | Order Sweets Online</title>
-        <meta name="description" content={`Browse our menu of ${products.length}+ authentic sweets, namkeen & snacks. Order online from ${brand.name}, ${brand.city}.`} />
+        <title>Menu — {brand.name}</title>
+        <meta name="description" content={`Browse ${products.length} dishes from ${brand.name}, ${brand.city}. South Indian, thali, chaat, Chinese, tandoor and desserts.`} />
       </Helmet>
 
       {/* Header */}
@@ -89,7 +90,7 @@ export default function MenuPage() {
           Our Menu
         </h1>
         <p className="mt-3 text-sm font-light text-muted">
-          Handcrafted with pure desi ghee
+          Taste of purity, served fresh
         </p>
       </div>
 
@@ -132,7 +133,7 @@ export default function MenuPage() {
             <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" />
             <input
               type="search"
-              placeholder="Search sweets, namkeen..."
+              placeholder="Search the menu..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-cream-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
@@ -326,19 +327,18 @@ function ProductCard({ product, index, onQuickView, onAddToCart }) {
         <div className="flex items-center justify-between">
           <div>
             <span className="text-base sm:text-lg font-bold text-navy-900">
-              ₹{variant.price}
-            </span>
-            <span className="text-[10px] text-muted ml-1 hidden sm:inline">
-              / {variant.weight}
+              {variant.price == null ? 'MRP' : `₹${variant.price}`}
             </span>
           </div>
-          <button
-            onClick={() => onAddToCart(variant)}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-900 text-white flex items-center justify-center hover:bg-gold-600 transition-colors duration-200"
-            aria-label={`Add ${product.name} to cart`}
-          >
-            <Plus size={16} />
-          </button>
+          {variant.price != null && (
+            <button
+              onClick={() => onAddToCart(variant)}
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-900 text-white flex items-center justify-center hover:bg-gold-600 transition-colors duration-200"
+              aria-label={`Add ${product.name} to cart`}
+            >
+              <Plus size={16} />
+            </button>
+          )}
         </div>
       </div>
     </motion.div>
@@ -429,49 +429,56 @@ function ProductModal({ product, onClose }) {
               )}
             </div>
 
-            {/* Variants */}
-            <div className="mb-4">
-              <p className="text-xs font-semibold text-navy-900 mb-2">Select Size</p>
-              <div className="flex flex-wrap gap-2">
-                {product.variants.map((v, vi) => (
-                  <button
-                    key={vi}
-                    onClick={() => setSelectedVariant(vi)}
-                    className={`text-sm px-4 py-2 rounded-xl border transition-colors ${
-                      selectedVariant === vi
-                        ? 'bg-navy-900 text-white border-navy-900'
-                        : 'border-cream-200 text-muted hover:border-navy-300'
-                    }`}
-                  >
-                    {v.weight} — ₹{v.price}
-                  </button>
-                ))}
+            {product.variants.length > 1 && (
+              <div className="mb-4">
+                <p className="text-xs font-semibold text-navy-900 mb-2">Select Size</p>
+                <div className="flex flex-wrap gap-2">
+                  {product.variants.map((v, vi) => (
+                    <button
+                      key={vi}
+                      onClick={() => setSelectedVariant(vi)}
+                      className={`text-sm px-4 py-2 rounded-xl border transition-colors ${
+                        selectedVariant === vi
+                          ? 'bg-navy-900 text-white border-navy-900'
+                          : 'border-cream-200 text-muted hover:border-navy-300'
+                      }`}
+                    >
+                      {v.weight} — {v.price == null ? 'MRP' : `₹${v.price}`}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Quantity + Price */}
             <div className="mt-auto">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2 bg-cream-50 rounded-xl border border-cream-200 p-1">
-                  <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-white transition-colors" aria-label="Decrease quantity">
-                    <Minus size={16} />
+              {variant.price == null ? (
+                <p className="text-2xl font-bold text-navy-900">MRP</p>
+              ) : (
+                <>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 bg-cream-50 rounded-xl border border-cream-200 p-1">
+                      <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-white transition-colors" aria-label="Decrease quantity">
+                        <Minus size={16} />
+                      </button>
+                      <span className="w-8 text-center font-semibold text-navy-900">{quantity}</span>
+                      <button onClick={() => setQuantity(quantity + 1)} className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-white transition-colors" aria-label="Increase quantity">
+                        <Plus size={16} />
+                      </button>
+                    </div>
+                    <p className="text-2xl font-bold text-navy-900">
+                      ₹{(variant.price * quantity).toLocaleString('en-IN')}
+                    </p>
+                  </div>
+                  <button
+                    onClick={handleAdd}
+                    className="btn-gold-shimmer w-full flex items-center justify-center gap-2 text-white font-semibold py-3 rounded-xl"
+                  >
+                    <Plus size={18} />
+                    Add to Cart
                   </button>
-                  <span className="w-8 text-center font-semibold text-navy-900">{quantity}</span>
-                  <button onClick={() => setQuantity(quantity + 1)} className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-white transition-colors" aria-label="Increase quantity">
-                    <Plus size={16} />
-                  </button>
-                </div>
-                <p className="text-2xl font-bold text-navy-900">
-                  ₹{(variant.price * quantity).toLocaleString('en-IN')}
-                </p>
-              </div>
-              <button
-                onClick={handleAdd}
-                className="btn-gold-shimmer w-full flex items-center justify-center gap-2 text-white font-semibold py-3 rounded-xl"
-              >
-                <Plus size={18} />
-                Add to Cart
-              </button>
+                </>
+              )}
             </div>
           </div>
         </div>

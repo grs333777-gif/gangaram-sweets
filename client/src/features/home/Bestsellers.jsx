@@ -124,9 +124,6 @@ export default function Bestsellers() {
                         <span className="text-lg font-bold text-navy-900">
                           ₹{product.variants[0].price}
                         </span>
-                        <span className="text-xs text-muted ml-1">
-                          / {product.variants[0].weight}
-                        </span>
                       </div>
                       <button
                         onClick={() => addToCart(product, product.variants[0])}
