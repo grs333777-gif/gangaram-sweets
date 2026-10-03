@@ -3,6 +3,7 @@ import { Heart, Leaf, Clock, Users } from 'lucide-react';
 import brand from '../../config/brand.config';
 import Seo from '../../components/seo/Seo';
 import ownerPhoto from '../../assets/owner.jpeg';
+import fatherPhoto from '../../assets/owner_f.jpeg';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
 
 const timeline = [
@@ -70,7 +71,65 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Founder */}
+      {/* Owner's Father */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-5 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-2"
+            >
+              <div className="relative max-w-sm mx-auto">
+                <div className="rounded-t-[120px] rounded-b-2xl overflow-hidden border-4 border-gold-400/40 shadow-gold bg-cream-100">
+                  <img
+                    src={fatherPhoto}
+                    alt="Mr. Shambhu Prasad, father of the owner of Gangaram Sweets"
+                    className="h-80 w-full origin-[100%_12%] scale-[1.0] object-cover object-[100%_12%] sm:h-96"
+                    loading="lazy"
+                    width="853"
+                    height="1280"
+                  />
+                </div>
+                <div className="text-center mt-4">
+                  <h3 className="font-heading text-xl font-bold text-navy-900">
+                    Shambhu Prasad
+                  </h3>
+                  <p className="text-gold-600 text-sm font-medium">Owner&apos;s Father</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="md:col-span-3"
+            >
+              <p className="text-gold-600 text-sm font-medium tracking-[0.2em] uppercase mb-2">
+                The Foundation
+              </p>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
+                Mr. Shambhu <span className="text-gold-gradient">Prasad</span>
+              </h2>
+
+              <p className="text-muted leading-relaxed mb-4">
+                Mr. Shambhu Prasad began his business journey in the 1970s, carrying with him a strong sense of dedication, hard work, and commitment to quality. In 1980, he expanded his journey by entering the wholesale gold business, building lasting relationships through trust, integrity, and consistent service.
+              </p>
+              <p className="text-muted leading-relaxed mb-4">
+                Over the years, the support of customers and his unwavering dedication helped establish a strong foundation for the family business. His approach was always rooted in maintaining quality and earning the trust of people through honest work and long-term relationships.
+              </p>
+              <p className="text-muted leading-relaxed">
+                Today, the values he built over the years continue to be an important part of our identity at Gangaram Sweets. We carry forward his legacy by giving the same importance to purity, quality, trust, and customer satisfaction in everything we do.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Owner */}
       <section className="py-16 sm:py-20 bg-cream-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-5 gap-10 items-center">
