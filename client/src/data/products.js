@@ -26,7 +26,7 @@ const products = menu.categories.flatMap((cat) =>
         price: item.mrp ? null : item.price,
       },
     ],
-    images: [cat.image],
+    images: [item.image || cat.image],
     tags: item.bestseller ? ['bestseller'] : [],
   }))
 );

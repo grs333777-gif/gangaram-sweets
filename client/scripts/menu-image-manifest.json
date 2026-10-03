@@ -1,0 +1,1418 @@
+[
+  {
+    "category_id": "mocktails",
+    "name": "Virgin Mojito",
+    "slug": "virgin-mojito",
+    "description": "Mint, lime & fizzy soda",
+    "prompt": "Premium food photography: Virgin Mojito \u2014 Mint, lime & fizzy soda. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/mocktails/virgin-mojito.jpg"
+  },
+  {
+    "category_id": "mocktails",
+    "name": "Fruit Punch",
+    "slug": "fruit-punch",
+    "description": "Refreshing tropical fruit blend",
+    "prompt": "Premium food photography: Fruit Punch \u2014 Refreshing tropical fruit blend. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/mocktails/fruit-punch.jpg"
+  },
+  {
+    "category_id": "mocktails",
+    "name": "Blue Lagoon",
+    "slug": "blue-lagoon",
+    "description": "Refreshing blue citrus mocktail",
+    "prompt": "Premium food photography: Blue Lagoon \u2014 Refreshing blue citrus mocktail. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/mocktails/blue-lagoon.jpg"
+  },
+  {
+    "category_id": "mocktails",
+    "name": "Green Apple",
+    "slug": "green-apple",
+    "description": "Sweet-tangy green apple mocktail",
+    "prompt": "Premium food photography: Green Apple \u2014 Sweet-tangy green apple mocktail. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/mocktails/green-apple.jpg"
+  },
+  {
+    "category_id": "smoothie",
+    "name": "Banana Smoothie",
+    "slug": "banana-smoothie",
+    "description": "Creamy banana fruit smoothie",
+    "prompt": "Premium food photography: Banana Smoothie \u2014 Creamy banana fruit smoothie. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/smoothie/banana-smoothie.jpg"
+  },
+  {
+    "category_id": "smoothie",
+    "name": "Mango Smoothie",
+    "slug": "mango-smoothie",
+    "description": "Smooth ripe mango blend",
+    "prompt": "Premium food photography: Mango Smoothie \u2014 Smooth ripe mango blend. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/smoothie/mango-smoothie.jpg"
+  },
+  {
+    "category_id": "smoothie",
+    "name": "Peach Smoothie",
+    "slug": "peach-smoothie",
+    "description": "Creamy peach fruit blend",
+    "prompt": "Premium food photography: Peach Smoothie \u2014 Creamy peach fruit blend. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/smoothie/peach-smoothie.jpg"
+  },
+  {
+    "category_id": "smoothie",
+    "name": "Strawberry Smoothie",
+    "slug": "strawberry-smoothie",
+    "description": "Fresh creamy strawberry blend",
+    "prompt": "Premium food photography: Strawberry Smoothie \u2014 Fresh creamy strawberry blend. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/smoothie/strawberry-smoothie.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Plain Dosa",
+    "slug": "plain-dosa",
+    "description": "Crispy & classic South Indian dosa",
+    "prompt": "Premium food photography: Plain Dosa \u2014 Crispy & classic South Indian dosa. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/plain-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Masala Dosa",
+    "slug": "masala-dosa",
+    "description": "Dosa filled with spiced potato masala",
+    "prompt": "Premium food photography: Masala Dosa \u2014 Dosa filled with spiced potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Special Dosa",
+    "slug": "special-dosa",
+    "description": "Special dosa with flavorful filling",
+    "prompt": "Premium food photography: Special Dosa \u2014 Special dosa with flavorful filling. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/special-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Paneer Dosa",
+    "slug": "paneer-dosa",
+    "description": "Dosa stuffed with spiced paneer",
+    "prompt": "Premium food photography: Paneer Dosa \u2014 Dosa stuffed with spiced paneer. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/paneer-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Rawa Plain Dosa",
+    "slug": "rawa-plain-dosa",
+    "description": "Crispy dosa made with semolina",
+    "prompt": "Premium food photography: Rawa Plain Dosa \u2014 Crispy dosa made with semolina. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/rawa-plain-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Rawa Masala Dosa",
+    "slug": "rawa-masala-dosa",
+    "description": "Crispy rawa dosa with potato masala",
+    "prompt": "Premium food photography: Rawa Masala Dosa \u2014 Crispy rawa dosa with potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/rawa-masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Rawa Onion Plain Dosa",
+    "slug": "rawa-onion-plain-dosa",
+    "description": "Crispy rawa dosa topped with onion",
+    "prompt": "Premium food photography: Rawa Onion Plain Dosa \u2014 Crispy rawa dosa topped with onion. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/rawa-onion-plain-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Rawa Onion Masala Dosa",
+    "slug": "rawa-onion-masala-dosa",
+    "description": "Rawa dosa with onion & potato masala",
+    "prompt": "Premium food photography: Rawa Onion Masala Dosa \u2014 Rawa dosa with onion & potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/rawa-onion-masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Butter Plain Dosa",
+    "slug": "butter-plain-dosa",
+    "description": "Crispy dosa with rich butter",
+    "prompt": "Premium food photography: Butter Plain Dosa \u2014 Crispy dosa with rich butter. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/butter-plain-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Butter Masala Dosa",
+    "slug": "butter-masala-dosa",
+    "description": "Butter dosa with spiced potato masala",
+    "prompt": "Premium food photography: Butter Masala Dosa \u2014 Butter dosa with spiced potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/butter-masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Paper Masala Dosa",
+    "slug": "paper-masala-dosa",
+    "description": "Thin crispy dosa with potato masala",
+    "prompt": "Premium food photography: Paper Masala Dosa \u2014 Thin crispy dosa with potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/paper-masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Onion Plain Dosa",
+    "slug": "onion-plain-dosa",
+    "description": "Crispy dosa topped with fresh onion",
+    "prompt": "Premium food photography: Onion Plain Dosa \u2014 Crispy dosa topped with fresh onion. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/onion-plain-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Onion Masala Dosa",
+    "slug": "onion-masala-dosa",
+    "description": "Onion dosa with spiced potato masala",
+    "prompt": "Premium food photography: Onion Masala Dosa \u2014 Onion dosa with spiced potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/onion-masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Mysore Cheese Dosa",
+    "slug": "mysore-cheese-dosa",
+    "description": "Spicy Mysore dosa with melted cheese",
+    "prompt": "Premium food photography: Mysore Cheese Dosa \u2014 Spicy Mysore dosa with melted cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/mysore-cheese-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Mysore Masala Dosa",
+    "slug": "mysore-masala-dosa",
+    "description": "Spicy Mysore dosa with potato masala",
+    "prompt": "Premium food photography: Mysore Masala Dosa \u2014 Spicy Mysore dosa with potato masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/mysore-masala-dosa.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Onion Uttapam",
+    "slug": "onion-uttapam",
+    "description": "Soft uttapam topped with fresh onion",
+    "prompt": "Premium food photography: Onion Uttapam \u2014 Soft uttapam topped with fresh onion. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/onion-uttapam.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Onion Tomato Uttapam",
+    "slug": "onion-tomato-uttapam",
+    "description": "Soft uttapam with onion & tomato",
+    "prompt": "Premium food photography: Onion Tomato Uttapam \u2014 Soft uttapam with onion & tomato. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/onion-tomato-uttapam.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Vegetable Uttapam",
+    "slug": "vegetable-uttapam",
+    "description": "Soft uttapam topped with fresh vegetables",
+    "prompt": "Premium food photography: Vegetable Uttapam \u2014 Soft uttapam topped with fresh vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/vegetable-uttapam.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Paneer Uttapam",
+    "slug": "paneer-uttapam",
+    "description": "Soft uttapam topped with spiced paneer",
+    "prompt": "Premium food photography: Paneer Uttapam \u2014 Soft uttapam topped with spiced paneer. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/paneer-uttapam.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Sambar Idli",
+    "slug": "sambar-idli",
+    "description": "Soft idli served with hot sambar",
+    "prompt": "Premium food photography: Sambar Idli \u2014 Soft idli served with hot sambar. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/sambar-idli.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "Sambar (1 Idli + 1 Vada)",
+    "slug": "sambar-1-idli-1-vada",
+    "description": "Idli & vada served with hot sambar",
+    "prompt": "Premium food photography: Sambar (1 Idli + 1 Vada) \u2014 Idli & vada served with hot sambar. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/sambar-1-idli-1-vada.jpg"
+  },
+  {
+    "category_id": "south-indian",
+    "name": "South Indian Platter",
+    "slug": "south-indian-platter",
+    "description": "Assorted South Indian favorites with sambar & chutney",
+    "prompt": "Premium food photography: South Indian Platter \u2014 Assorted South Indian favorites with sambar & chutney. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/south-indian/south-indian-platter.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Golgappe",
+    "slug": "golgappe",
+    "description": "Crispy puris with tangy spicy water",
+    "prompt": "Premium food photography: Golgappe \u2014 Crispy puris with tangy spicy water. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/golgappe.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Dahi Bhalla",
+    "slug": "dahi-bhalla",
+    "description": "Soft bhalla with creamy yogurt",
+    "prompt": "Premium food photography: Dahi Bhalla \u2014 Soft bhalla with creamy yogurt. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/dahi-bhalla.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Papdi Chaat",
+    "slug": "papdi-chaat",
+    "description": "Crispy papri with yogurt & chutneys",
+    "prompt": "Premium food photography: Papdi Chaat \u2014 Crispy papri with yogurt & chutneys. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/papdi-chaat.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Bhalla Papdi",
+    "slug": "bhalla-papdi",
+    "description": "Soft bhalla with crispy papri & chutneys",
+    "prompt": "Premium food photography: Bhalla Papdi \u2014 Soft bhalla with crispy papri & chutneys. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/bhalla-papdi.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Aloo Tikki",
+    "slug": "aloo-tikki",
+    "description": "Crispy potato tikki with chutneys",
+    "prompt": "Premium food photography: Aloo Tikki \u2014 Crispy potato tikki with chutneys. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/aloo-tikki.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Dahi Puree",
+    "slug": "dahi-puree",
+    "description": "Crispy puris topped with yogurt & chutneys",
+    "prompt": "Premium food photography: Dahi Puree \u2014 Crispy puris topped with yogurt & chutneys. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/dahi-puree.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Pav Bhaji",
+    "slug": "pav-bhaji",
+    "description": "Spiced vegetable bhaji with buttered pav",
+    "prompt": "Premium food photography: Pav Bhaji \u2014 Spiced vegetable bhaji with buttered pav. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/pav-bhaji.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Aloo Chaat",
+    "slug": "aloo-chaat",
+    "description": "Spiced potatoes with tangy chutneys",
+    "prompt": "Premium food photography: Aloo Chaat \u2014 Spiced potatoes with tangy chutneys. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/aloo-chaat.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Raj Kachori",
+    "slug": "raj-kachori",
+    "description": "Crispy kachori filled with chaat toppings",
+    "prompt": "Premium food photography: Raj Kachori \u2014 Crispy kachori filled with chaat toppings. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/raj-kachori.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Samosa Chat",
+    "slug": "samosa-chat",
+    "description": "Samosa topped with yogurt & chutneys",
+    "prompt": "Premium food photography: Samosa Chat \u2014 Samosa topped with yogurt & chutneys. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/samosa-chat.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Tikki Chaat",
+    "slug": "tikki-chaat",
+    "description": "Crispy potato tikki with chaat toppings",
+    "prompt": "Premium food photography: Tikki Chaat \u2014 Crispy potato tikki with chaat toppings. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/tikki-chaat.jpg"
+  },
+  {
+    "category_id": "chaat-snacks",
+    "name": "Dhokla",
+    "slug": "dhokla",
+    "description": "Soft steamed gram flour snack",
+    "prompt": "Premium food photography: Dhokla \u2014 Soft steamed gram flour snack. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/chaat-snacks/dhokla.jpg"
+  },
+  {
+    "category_id": "morning-meal",
+    "name": "Choley Bhature (Desi Ghee)",
+    "slug": "choley-bhature-desi-ghee",
+    "description": "Spicy choley with fluffy bhature",
+    "prompt": "Premium food photography: Choley Bhature (Desi Ghee) \u2014 Spicy choley with fluffy bhature. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/morning-meal/choley-bhature-desi-ghee.jpg"
+  },
+  {
+    "category_id": "morning-meal",
+    "name": "Poori Sabzi with Jalebi",
+    "slug": "poori-sabzi-with-jalebi",
+    "description": "Crispy poori, spiced sabzi & sweet jalebi",
+    "prompt": "Premium food photography: Poori Sabzi with Jalebi \u2014 Crispy poori, spiced sabzi & sweet jalebi. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/morning-meal/poori-sabzi-with-jalebi.jpg"
+  },
+  {
+    "category_id": "thaali",
+    "name": "Executive Thali",
+    "slug": "executive-thali",
+    "description": "Complete Indian meal with dal, sabzi, roti, rice & accompaniments",
+    "prompt": "Premium food photography: Executive Thali \u2014 Complete Indian meal with dal, sabzi, roti, rice & accompaniments. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/thaali/executive-thali.jpg"
+  },
+  {
+    "category_id": "thaali",
+    "name": "Deluxe Thali",
+    "slug": "deluxe-thali",
+    "description": "Royal Indian meal with assorted curries, breads, rice & dessert",
+    "prompt": "Premium food photography: Deluxe Thali \u2014 Royal Indian meal with assorted curries, breads, rice & dessert. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/thaali/deluxe-thali.jpg"
+  },
+  {
+    "category_id": "pasta",
+    "name": "Veg. Red Sauce Pasta",
+    "slug": "veg-red-sauce-pasta",
+    "description": "Pasta tossed in rich tomato sauce",
+    "prompt": "Premium food photography: Veg. Red Sauce Pasta \u2014 Pasta tossed in rich tomato sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pasta/veg-red-sauce-pasta.jpg"
+  },
+  {
+    "category_id": "pasta",
+    "name": "Veg. White Sauce Pasta",
+    "slug": "veg-white-sauce-pasta",
+    "description": "Creamy pasta in white sauce",
+    "prompt": "Premium food photography: Veg. White Sauce Pasta \u2014 Creamy pasta in white sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pasta/veg-white-sauce-pasta.jpg"
+  },
+  {
+    "category_id": "pasta",
+    "name": "Pink Sauce Pasta",
+    "slug": "pink-sauce-pasta",
+    "description": "Creamy pasta with tomato sauce",
+    "prompt": "Premium food photography: Pink Sauce Pasta \u2014 Creamy pasta with tomato sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pasta/pink-sauce-pasta.jpg"
+  },
+  {
+    "category_id": "burgers",
+    "name": "Veg. Burger",
+    "slug": "veg-burger",
+    "description": "Crispy veg patty in a soft bun",
+    "prompt": "Premium food photography: Veg. Burger \u2014 Crispy veg patty in a soft bun. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/burgers/veg-burger.jpg"
+  },
+  {
+    "category_id": "burgers",
+    "name": "Cheese Petties Burger",
+    "slug": "cheese-petties-burger",
+    "description": "Crispy cheese patty in a soft bun",
+    "prompt": "Premium food photography: Cheese Petties Burger \u2014 Crispy cheese patty in a soft bun. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/burgers/cheese-petties-burger.jpg"
+  },
+  {
+    "category_id": "burgers",
+    "name": "Paneer Cheese Petties Burger",
+    "slug": "paneer-cheese-petties-burger",
+    "description": "Paneer cheese patty in a soft bun",
+    "prompt": "Premium food photography: Paneer Cheese Petties Burger \u2014 Paneer cheese patty in a soft bun. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/burgers/paneer-cheese-petties-burger.jpg"
+  },
+  {
+    "category_id": "burgers",
+    "name": "Paneer Petties Burger",
+    "slug": "paneer-petties-burger",
+    "description": "Crispy paneer patty in a soft bun",
+    "prompt": "Premium food photography: Paneer Petties Burger \u2014 Crispy paneer patty in a soft bun. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/burgers/paneer-petties-burger.jpg"
+  },
+  {
+    "category_id": "sandwiches",
+    "name": "Veg. Sandwich",
+    "slug": "veg-sandwich",
+    "description": "Fresh vegetable sandwich",
+    "prompt": "Premium food photography: Veg. Sandwich \u2014 Fresh vegetable sandwich. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sandwiches/veg-sandwich.jpg"
+  },
+  {
+    "category_id": "sandwiches",
+    "name": "Cheese Sandwich",
+    "slug": "cheese-sandwich",
+    "description": "Soft sandwich with melted cheese",
+    "prompt": "Premium food photography: Cheese Sandwich \u2014 Soft sandwich with melted cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sandwiches/cheese-sandwich.jpg"
+  },
+  {
+    "category_id": "sandwiches",
+    "name": "Grilled Cheese Sandwich",
+    "slug": "grilled-cheese-sandwich",
+    "description": "Grilled sandwich with melted cheese",
+    "prompt": "Premium food photography: Grilled Cheese Sandwich \u2014 Grilled sandwich with melted cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sandwiches/grilled-cheese-sandwich.jpg"
+  },
+  {
+    "category_id": "sandwiches",
+    "name": "Chilly Paneer Sandwich",
+    "slug": "chilly-paneer-sandwich",
+    "description": "Grilled sandwich with chilli paneer",
+    "prompt": "Premium food photography: Chilly Paneer Sandwich \u2014 Grilled sandwich with chilli paneer. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sandwiches/chilly-paneer-sandwich.jpg"
+  },
+  {
+    "category_id": "pizza",
+    "name": "Onion Capsicum Pizza",
+    "slug": "onion-capsicum-pizza",
+    "description": "Topped with onion & capsicum",
+    "prompt": "Premium food photography: Onion Capsicum Pizza \u2014 Topped with onion & capsicum. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pizza/onion-capsicum-pizza.jpg"
+  },
+  {
+    "category_id": "pizza",
+    "name": "Corn Pizza",
+    "slug": "corn-pizza",
+    "description": "Loaded with sweet corn & cheese",
+    "prompt": "Premium food photography: Corn Pizza \u2014 Loaded with sweet corn & cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pizza/corn-pizza.jpg"
+  },
+  {
+    "category_id": "pizza",
+    "name": "Margherita Pizza",
+    "slug": "margherita-pizza",
+    "description": "Classic cheese pizza with tomato sauce",
+    "prompt": "Premium food photography: Margherita Pizza \u2014 Classic cheese pizza with tomato sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pizza/margherita-pizza.jpg"
+  },
+  {
+    "category_id": "pizza",
+    "name": "Mushroom Pizza",
+    "slug": "mushroom-pizza",
+    "description": "Topped with fresh mushrooms & cheese",
+    "prompt": "Premium food photography: Mushroom Pizza \u2014 Topped with fresh mushrooms & cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pizza/mushroom-pizza.jpg"
+  },
+  {
+    "category_id": "pizza",
+    "name": "Peri Peri Veg Pizza",
+    "slug": "peri-peri-veg-pizza",
+    "description": "Veg pizza with spicy peri peri flavour",
+    "prompt": "Premium food photography: Peri Peri Veg Pizza \u2014 Veg pizza with spicy peri peri flavour. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pizza/peri-peri-veg-pizza.jpg"
+  },
+  {
+    "category_id": "pizza",
+    "name": "Peprica Pizza",
+    "slug": "peprica-pizza",
+    "description": "Cheesy pizza with spicy paprika flavour",
+    "prompt": "Premium food photography: Peprica Pizza \u2014 Cheesy pizza with spicy paprika flavour. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/pizza/peprica-pizza.jpg"
+  },
+  {
+    "category_id": "soup-shorba",
+    "name": "Tomato Soup",
+    "slug": "tomato-soup",
+    "description": "Creamy tomato soup with herbs",
+    "prompt": "Premium food photography: Tomato Soup \u2014 Creamy tomato soup with herbs. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/soup-shorba/tomato-soup.jpg"
+  },
+  {
+    "category_id": "soup-shorba",
+    "name": "Veg. Hot n Sour Soup",
+    "slug": "veg-hot-n-sour-soup",
+    "description": "Spicy & tangy vegetable soup",
+    "prompt": "Premium food photography: Veg. Hot n Sour Soup \u2014 Spicy & tangy vegetable soup. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/soup-shorba/veg-hot-n-sour-soup.jpg"
+  },
+  {
+    "category_id": "soup-shorba",
+    "name": "Veg. American Chopsy",
+    "slug": "veg-american-chopsy",
+    "description": "Crispy noodles with vegetables & sauce",
+    "prompt": "Premium food photography: Veg. American Chopsy \u2014 Crispy noodles with vegetables & sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/soup-shorba/veg-american-chopsy.jpg"
+  },
+  {
+    "category_id": "soup-shorba",
+    "name": "Veg. Manchow Soup",
+    "slug": "veg-manchow-soup",
+    "description": "Spicy soup topped with crispy noodles",
+    "prompt": "Premium food photography: Veg. Manchow Soup \u2014 Spicy soup topped with crispy noodles. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/soup-shorba/veg-manchow-soup.jpg"
+  },
+  {
+    "category_id": "soup-shorba",
+    "name": "Veg. Lemon Coriander Soup",
+    "slug": "veg-lemon-coriander-soup",
+    "description": "Light soup with lemon & coriander",
+    "prompt": "Premium food photography: Veg. Lemon Coriander Soup \u2014 Light soup with lemon & coriander. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/soup-shorba/veg-lemon-coriander-soup.jpg"
+  },
+  {
+    "category_id": "soup-shorba",
+    "name": "Sweetcorn Soup",
+    "slug": "sweetcorn-soup",
+    "description": "Creamy soup with sweet corn",
+    "prompt": "Premium food photography: Sweetcorn Soup \u2014 Creamy soup with sweet corn. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/soup-shorba/sweetcorn-soup.jpg"
+  },
+  {
+    "category_id": "momos",
+    "name": "Veg. Momos Steamed",
+    "slug": "veg-momos-steamed",
+    "description": "Steamed dumplings with vegetable filling",
+    "prompt": "Premium food photography: Veg. Momos Steamed \u2014 Steamed dumplings with vegetable filling. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/momos/veg-momos-steamed.jpg"
+  },
+  {
+    "category_id": "momos",
+    "name": "Veg. Momos Fried",
+    "slug": "veg-momos-fried",
+    "description": "Crispy fried vegetable dumplings",
+    "prompt": "Premium food photography: Veg. Momos Fried \u2014 Crispy fried vegetable dumplings. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/momos/veg-momos-fried.jpg"
+  },
+  {
+    "category_id": "momos",
+    "name": "Soya Momos Steamed",
+    "slug": "soya-momos-steamed",
+    "description": "Steamed dumplings with soya filling",
+    "prompt": "Premium food photography: Soya Momos Steamed \u2014 Steamed dumplings with soya filling. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/momos/soya-momos-steamed.jpg"
+  },
+  {
+    "category_id": "momos",
+    "name": "Soya Momos Fried",
+    "slug": "soya-momos-fried",
+    "description": "Crispy fried soya dumplings",
+    "prompt": "Premium food photography: Soya Momos Fried \u2014 Crispy fried soya dumplings. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/momos/soya-momos-fried.jpg"
+  },
+  {
+    "category_id": "momos",
+    "name": "Paneer Momos (Steamed)",
+    "slug": "paneer-momos-steamed",
+    "description": "Steamed dumplings with paneer filling",
+    "prompt": "Premium food photography: Paneer Momos (Steamed) \u2014 Steamed dumplings with paneer filling. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/momos/paneer-momos-steamed.jpg"
+  },
+  {
+    "category_id": "momos",
+    "name": "Paneer Momos (Fried)",
+    "slug": "paneer-momos-fried",
+    "description": "Crispy fried paneer dumplings",
+    "prompt": "Premium food photography: Paneer Momos (Fried) \u2014 Crispy fried paneer dumplings. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/momos/paneer-momos-fried.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Veg. Noodles",
+    "slug": "veg-noodles",
+    "description": "Noodles tossed with fresh vegetables",
+    "prompt": "Premium food photography: Veg. Noodles \u2014 Noodles tossed with fresh vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/veg-noodles.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Schezwan Noodles",
+    "slug": "schezwan-noodles",
+    "description": "Spicy noodles with Schezwan sauce",
+    "prompt": "Premium food photography: Schezwan Noodles \u2014 Spicy noodles with Schezwan sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/schezwan-noodles.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chili Garlic Noodles",
+    "slug": "chili-garlic-noodles",
+    "description": "Noodles with chilli & garlic",
+    "prompt": "Premium food photography: Chili Garlic Noodles \u2014 Noodles with chilli & garlic. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chili-garlic-noodles.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Veg. Hakka Noodles",
+    "slug": "veg-hakka-noodles",
+    "description": "Stir-fried noodles with fresh vegetables",
+    "prompt": "Premium food photography: Veg. Hakka Noodles \u2014 Stir-fried noodles with fresh vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/veg-hakka-noodles.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Paneer Noodles",
+    "slug": "paneer-noodles",
+    "description": "Noodles tossed with spiced paneer",
+    "prompt": "Premium food photography: Paneer Noodles \u2014 Noodles tossed with spiced paneer. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/paneer-noodles.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Veg. Fried Rice",
+    "slug": "veg-fried-rice",
+    "description": "Fried rice with fresh vegetables",
+    "prompt": "Premium food photography: Veg. Fried Rice \u2014 Fried rice with fresh vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/veg-fried-rice.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chilli Garlic Fried Rice",
+    "slug": "chilli-garlic-fried-rice",
+    "description": "Fried rice with chilli & garlic",
+    "prompt": "Premium food photography: Chilli Garlic Fried Rice \u2014 Fried rice with chilli & garlic. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chilli-garlic-fried-rice.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Paneer Fried Rice",
+    "slug": "paneer-fried-rice",
+    "description": "Fried rice tossed with paneer",
+    "prompt": "Premium food photography: Paneer Fried Rice \u2014 Fried rice tossed with paneer. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/paneer-fried-rice.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Veg. Manchurian Dry/Gry",
+    "slug": "veg-manchurian-dry-gry",
+    "description": "Vegetable dumplings in Manchurian sauce",
+    "prompt": "Premium food photography: Veg. Manchurian Dry/Gry \u2014 Vegetable dumplings in Manchurian sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/veg-manchurian-dry-gry.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Paneer Manchurian",
+    "slug": "paneer-manchurian",
+    "description": "Paneer tossed in Manchurian sauce",
+    "prompt": "Premium food photography: Paneer Manchurian \u2014 Paneer tossed in Manchurian sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/paneer-manchurian.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chilli Mushroom",
+    "slug": "chilli-mushroom",
+    "description": "Mushrooms tossed in spicy chilli sauce",
+    "prompt": "Premium food photography: Chilli Mushroom \u2014 Mushrooms tossed in spicy chilli sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chilli-mushroom.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chilli Paneer Dry",
+    "slug": "chilli-paneer-dry",
+    "description": "Crispy paneer tossed in chilli sauce",
+    "prompt": "Premium food photography: Chilli Paneer Dry \u2014 Crispy paneer tossed in chilli sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chilli-paneer-dry.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "French Fries",
+    "slug": "french-fries",
+    "description": "Crispy golden potato fries",
+    "prompt": "Premium food photography: French Fries \u2014 Crispy golden potato fries. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/french-fries.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Corn Salt & Pepper",
+    "slug": "corn-salt-and-pepper",
+    "description": "Crispy corn with pepper seasoning",
+    "prompt": "Premium food photography: Corn Salt & Pepper \u2014 Crispy corn with pepper seasoning. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/corn-salt-and-pepper.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chilli Potato",
+    "slug": "chilli-potato",
+    "description": "Crispy potato tossed in chilli sauce",
+    "prompt": "Premium food photography: Chilli Potato \u2014 Crispy potato tossed in chilli sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chilli-potato.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Baby Corn Chilli",
+    "slug": "baby-corn-chilli",
+    "description": "Crispy baby corn with chilli sauce",
+    "prompt": "Premium food photography: Baby Corn Chilli \u2014 Crispy baby corn with chilli sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/baby-corn-chilli.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Spring Roll",
+    "slug": "spring-roll",
+    "description": "Crispy rolls with vegetable filling",
+    "prompt": "Premium food photography: Spring Roll \u2014 Crispy rolls with vegetable filling. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/spring-roll.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Paneer Spring Roll",
+    "slug": "paneer-spring-roll",
+    "description": "Crispy rolls with paneer filling",
+    "prompt": "Premium food photography: Paneer Spring Roll \u2014 Crispy rolls with paneer filling. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/paneer-spring-roll.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Honey Chilli Potato",
+    "slug": "honey-chilli-potato",
+    "description": "Crispy potato tossed in honey chilli sauce",
+    "prompt": "Premium food photography: Honey Chilli Potato \u2014 Crispy potato tossed in honey chilli sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/honey-chilli-potato.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Crispy Veg.",
+    "slug": "crispy-veg",
+    "description": "Crispy vegetables with savoury sauce",
+    "prompt": "Premium food photography: Crispy Veg. \u2014 Crispy vegetables with savoury sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/crispy-veg.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chilli Soya Chaap",
+    "slug": "chilli-soya-chaap",
+    "description": "Soya chaap tossed in chilli sauce",
+    "prompt": "Premium food photography: Chilli Soya Chaap \u2014 Soya chaap tossed in chilli sauce. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chilli-soya-chaap.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Veg Cheese Ball",
+    "slug": "veg-cheese-ball",
+    "description": "Crispy vegetable cheese balls",
+    "prompt": "Premium food photography: Veg Cheese Ball \u2014 Crispy vegetable cheese balls. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/veg-cheese-ball.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chinese Platter",
+    "slug": "chinese-platter",
+    "description": "Assorted Chinese vegetarian favourites",
+    "prompt": "Premium food photography: Chinese Platter \u2014 Assorted Chinese vegetarian favourites. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chinese-platter.jpg"
+  },
+  {
+    "category_id": "taste-of-china",
+    "name": "Chinese Sizzler",
+    "slug": "chinese-sizzler",
+    "description": "Sizzling mix of Chinese favourites",
+    "prompt": "Premium food photography: Chinese Sizzler \u2014 Sizzling mix of Chinese favourites. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/taste-of-china/chinese-sizzler.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Paneer Tikka",
+    "slug": "paneer-tikka",
+    "description": "Grilled paneer with aromatic spices",
+    "prompt": "Premium food photography: Paneer Tikka \u2014 Grilled paneer with aromatic spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/paneer-tikka.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Mushroom Tikka",
+    "slug": "mushroom-tikka",
+    "description": "Tandoori mushrooms with mild spices",
+    "prompt": "Premium food photography: Mushroom Tikka \u2014 Tandoori mushrooms with mild spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/mushroom-tikka.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Afghani Soya Chaap",
+    "slug": "afghani-soya-chaap",
+    "description": "Creamy soya chaap with rich spices",
+    "prompt": "Premium food photography: Afghani Soya Chaap \u2014 Creamy soya chaap with rich spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/afghani-soya-chaap.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Achari Chaap",
+    "slug": "achari-chaap",
+    "description": "Soya chaap with tangy achari flavour",
+    "prompt": "Premium food photography: Achari Chaap \u2014 Soya chaap with tangy achari flavour. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/achari-chaap.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Paneer Malai Tikka",
+    "slug": "paneer-malai-tikka",
+    "description": "Creamy marinated paneer grilled in tandoor",
+    "prompt": "Premium food photography: Paneer Malai Tikka \u2014 Creamy marinated paneer grilled in tandoor. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/paneer-malai-tikka.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Achari Paneer Tikka",
+    "slug": "achari-paneer-tikka",
+    "description": "Paneer tikka with tangy pickle spices",
+    "prompt": "Premium food photography: Achari Paneer Tikka \u2014 Paneer tikka with tangy pickle spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/achari-paneer-tikka.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Spicy Apple Tikka",
+    "slug": "spicy-apple-tikka",
+    "description": "Spiced apple pieces grilled to perfection",
+    "prompt": "Premium food photography: Spicy Apple Tikka \u2014 Spiced apple pieces grilled to perfection. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/spicy-apple-tikka.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Tandoori Aloo Nazakat",
+    "slug": "tandoori-aloo-nazakat",
+    "description": "Tandoori potatoes with aromatic spices",
+    "prompt": "Premium food photography: Tandoori Aloo Nazakat \u2014 Tandoori potatoes with aromatic spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/tandoori-aloo-nazakat.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Tandoori Chaap",
+    "slug": "tandoori-chaap",
+    "description": "Smoky soya chaap grilled in tandoor",
+    "prompt": "Premium food photography: Tandoori Chaap \u2014 Smoky soya chaap grilled in tandoor. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/tandoori-chaap.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Hara Bhara Kebab",
+    "slug": "hara-bhara-kebab",
+    "description": "Crispy kebabs with spinach & vegetables",
+    "prompt": "Premium food photography: Hara Bhara Kebab \u2014 Crispy kebabs with spinach & vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/hara-bhara-kebab.jpg"
+  },
+  {
+    "category_id": "tandoori-starter",
+    "name": "Veg Sheek Kebab",
+    "slug": "veg-sheek-kebab",
+    "description": "Grilled vegetable seekh kebab with spices",
+    "prompt": "Premium food photography: Veg Sheek Kebab \u2014 Grilled vegetable seekh kebab with spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/tandoori-starter/veg-sheek-kebab.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Tandoori Roti",
+    "slug": "tandoori-roti",
+    "description": "Crispy edges with smoky tandoor flavour",
+    "prompt": "Premium food photography: Tandoori Roti \u2014 Crispy edges with smoky tandoor flavour. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/tandoori-roti.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Butter Roti",
+    "slug": "butter-roti",
+    "description": "Soft roti brushed with butter",
+    "prompt": "Premium food photography: Butter Roti \u2014 Soft roti brushed with butter. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/butter-roti.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Lachcha Paratha",
+    "slug": "lachcha-paratha",
+    "description": "Crispy, flaky & layered flatbread",
+    "prompt": "Premium food photography: Lachcha Paratha \u2014 Crispy, flaky & layered flatbread. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/lachcha-paratha.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Plain Naan",
+    "slug": "plain-naan",
+    "description": "Soft naan baked in tandoor",
+    "prompt": "Premium food photography: Plain Naan \u2014 Soft naan baked in tandoor. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/plain-naan.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Butter Naan",
+    "slug": "butter-naan",
+    "description": "Soft naan topped with butter",
+    "prompt": "Premium food photography: Butter Naan \u2014 Soft naan topped with butter. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/butter-naan.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Missi Roti",
+    "slug": "missi-roti",
+    "description": "Spiced gram flour flatbread",
+    "prompt": "Premium food photography: Missi Roti \u2014 Spiced gram flour flatbread. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/missi-roti.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Kulcha Mix",
+    "slug": "kulcha-mix",
+    "description": "Soft kulcha with flavorful stuffing",
+    "prompt": "Premium food photography: Kulcha Mix \u2014 Soft kulcha with flavorful stuffing. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/kulcha-mix.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Garlic Naan",
+    "slug": "garlic-naan",
+    "description": "Naan topped with fresh garlic",
+    "prompt": "Premium food photography: Garlic Naan \u2014 Naan topped with fresh garlic. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/garlic-naan.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Cheese Garlic Naan",
+    "slug": "cheese-garlic-naan",
+    "description": "Garlic naan topped with melted cheese",
+    "prompt": "Premium food photography: Cheese Garlic Naan \u2014 Garlic naan topped with melted cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/cheese-garlic-naan.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Onion Kulcha",
+    "slug": "onion-kulcha",
+    "description": "Soft kulcha stuffed with spiced onion",
+    "prompt": "Premium food photography: Onion Kulcha \u2014 Soft kulcha stuffed with spiced onion. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/onion-kulcha.jpg"
+  },
+  {
+    "category_id": "bread-basket",
+    "name": "Cheese Naan",
+    "slug": "cheese-naan",
+    "description": "Soft naan filled with melted cheese",
+    "prompt": "Premium food photography: Cheese Naan \u2014 Soft naan filled with melted cheese. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/bread-basket/cheese-naan.jpg"
+  },
+  {
+    "category_id": "rice-biryani",
+    "name": "Steamed Rice",
+    "slug": "steamed-rice",
+    "description": "Plain steamed aromatic rice",
+    "prompt": "Premium food photography: Steamed Rice \u2014 Plain steamed aromatic rice. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/rice-biryani/steamed-rice.jpg"
+  },
+  {
+    "category_id": "rice-biryani",
+    "name": "Veg. Biryani",
+    "slug": "veg-biryani",
+    "description": "Fragrant rice with spiced vegetables",
+    "prompt": "Premium food photography: Veg. Biryani \u2014 Fragrant rice with spiced vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/rice-biryani/veg-biryani.jpg"
+  },
+  {
+    "category_id": "rice-biryani",
+    "name": "Veg. Pulao",
+    "slug": "veg-pulao",
+    "description": "Aromatic rice with fresh vegetables",
+    "prompt": "Premium food photography: Veg. Pulao \u2014 Aromatic rice with fresh vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/rice-biryani/veg-pulao.jpg"
+  },
+  {
+    "category_id": "rice-biryani",
+    "name": "Muter Pulao",
+    "slug": "muter-pulao",
+    "description": "Fragrant rice with green peas",
+    "prompt": "Premium food photography: Muter Pulao \u2014 Fragrant rice with green peas. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/rice-biryani/muter-pulao.jpg"
+  },
+  {
+    "category_id": "rice-biryani",
+    "name": "Kashmiri Pulao",
+    "slug": "kashmiri-pulao",
+    "description": "Sweet aromatic rice with dry fruits",
+    "prompt": "Premium food photography: Kashmiri Pulao \u2014 Sweet aromatic rice with dry fruits. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/rice-biryani/kashmiri-pulao.jpg"
+  },
+  {
+    "category_id": "rice-biryani",
+    "name": "Jeera Rice",
+    "slug": "jeera-rice",
+    "description": "Fragrant rice tempered with cumin",
+    "prompt": "Premium food photography: Jeera Rice \u2014 Fragrant rice tempered with cumin. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/rice-biryani/jeera-rice.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Dal Makhni",
+    "slug": "dal-makhni",
+    "description": "Creamy black lentils slow-cooked with spices",
+    "prompt": "Premium food photography: Dal Makhni \u2014 Creamy black lentils slow-cooked with spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/dal-makhni.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Yellow Dal Fry",
+    "slug": "yellow-dal-fry",
+    "description": "Yellow dal tempered with Indian spices",
+    "prompt": "Premium food photography: Yellow Dal Fry \u2014 Yellow dal tempered with Indian spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/yellow-dal-fry.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Punjabi Dal Tadka",
+    "slug": "punjabi-dal-tadka",
+    "description": "Aromatic dal with Punjabi-style tempering",
+    "prompt": "Premium food photography: Punjabi Dal Tadka \u2014 Aromatic dal with Punjabi-style tempering. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/punjabi-dal-tadka.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Shahi Paneer",
+    "slug": "shahi-paneer",
+    "description": "Soft paneer in rich creamy gravy",
+    "prompt": "Premium food photography: Shahi Paneer \u2014 Soft paneer in rich creamy gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/shahi-paneer.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Kadahi Paneer",
+    "slug": "kadahi-paneer",
+    "description": "Paneer cooked with capsicum & spices",
+    "prompt": "Premium food photography: Kadahi Paneer \u2014 Paneer cooked with capsicum & spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/kadahi-paneer.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Mix. Veg.",
+    "slug": "mix-veg",
+    "description": "Mixed vegetables in flavorful gravy",
+    "prompt": "Premium food photography: Mix. Veg. \u2014 Mixed vegetables in flavorful gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/mix-veg.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Matar Paneer",
+    "slug": "matar-paneer",
+    "description": "Paneer & peas in rich gravy",
+    "prompt": "Premium food photography: Matar Paneer \u2014 Paneer & peas in rich gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/matar-paneer.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Lababdar",
+    "slug": "paneer-lababdar",
+    "description": "Paneer in rich tomato-based gravy",
+    "prompt": "Premium food photography: Paneer Lababdar \u2014 Paneer in rich tomato-based gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-lababdar.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Butter Masala",
+    "slug": "paneer-butter-masala",
+    "description": "Paneer in creamy buttery tomato gravy",
+    "prompt": "Premium food photography: Paneer Butter Masala \u2014 Paneer in creamy buttery tomato gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-butter-masala.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Matar Mushroom",
+    "slug": "matar-mushroom",
+    "description": "Peas & mushrooms in spiced gravy",
+    "prompt": "Premium food photography: Matar Mushroom \u2014 Peas & mushrooms in spiced gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/matar-mushroom.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Jeera Aloo",
+    "slug": "jeera-aloo",
+    "description": "Potatoes tossed with cumin & spices",
+    "prompt": "Premium food photography: Jeera Aloo \u2014 Potatoes tossed with cumin & spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/jeera-aloo.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Chana Masala",
+    "slug": "chana-masala",
+    "description": "Chickpeas cooked in spicy masala",
+    "prompt": "Premium food photography: Chana Masala \u2014 Chickpeas cooked in spicy masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/chana-masala.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Aloo Gobhi (Seasonal)",
+    "slug": "aloo-gobhi-seasonal",
+    "description": "Potato & cauliflower cooked with spices",
+    "prompt": "Premium food photography: Aloo Gobhi (Seasonal) \u2014 Potato & cauliflower cooked with spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/aloo-gobhi-seasonal.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Bhindi Masala (Seasonal)",
+    "slug": "bhindi-masala-seasonal",
+    "description": "Okra cooked with onion & spices",
+    "prompt": "Premium food photography: Bhindi Masala (Seasonal) \u2014 Okra cooked with onion & spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/bhindi-masala-seasonal.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Pasanda",
+    "slug": "paneer-pasanda",
+    "description": "Stuffed paneer in rich creamy gravy",
+    "prompt": "Premium food photography: Paneer Pasanda \u2014 Stuffed paneer in rich creamy gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-pasanda.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Do Pyaza",
+    "slug": "paneer-do-pyaza",
+    "description": "Paneer cooked with onion & spices",
+    "prompt": "Premium food photography: Paneer Do Pyaza \u2014 Paneer cooked with onion & spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-do-pyaza.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Palak Paneer",
+    "slug": "palak-paneer",
+    "description": "Paneer in creamy spinach gravy",
+    "prompt": "Premium food photography: Palak Paneer \u2014 Paneer in creamy spinach gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/palak-paneer.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Diwani Handi",
+    "slug": "paneer-diwani-handi",
+    "description": "Paneer & vegetables in rich handi gravy",
+    "prompt": "Premium food photography: Paneer Diwani Handi \u2014 Paneer & vegetables in rich handi gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-diwani-handi.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Palak Corn",
+    "slug": "palak-corn",
+    "description": "Sweet corn in creamy spinach gravy",
+    "prompt": "Premium food photography: Palak Corn \u2014 Sweet corn in creamy spinach gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/palak-corn.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Aloo Dum Banarsi",
+    "slug": "aloo-dum-banarsi",
+    "description": "Potatoes cooked in Banarasi-style gravy",
+    "prompt": "Premium food photography: Aloo Dum Banarsi \u2014 Potatoes cooked in Banarasi-style gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/aloo-dum-banarsi.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Mughlai Malai Kofta",
+    "slug": "mughlai-malai-kofta",
+    "description": "Soft kofta in creamy Mughlai gravy",
+    "prompt": "Premium food photography: Mughlai Malai Kofta \u2014 Soft kofta in creamy Mughlai gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/mughlai-malai-kofta.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Malai Kofta",
+    "slug": "malai-kofta",
+    "description": "Soft kofta in rich creamy gravy",
+    "prompt": "Premium food photography: Malai Kofta \u2014 Soft kofta in rich creamy gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/malai-kofta.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Dhaniya Adraki",
+    "slug": "paneer-dhaniya-adraki",
+    "description": "Paneer with coriander & ginger flavours",
+    "prompt": "Premium food photography: Paneer Dhaniya Adraki \u2014 Paneer with coriander & ginger flavours. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-dhaniya-adraki.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Punjabi Paneer Masala",
+    "slug": "punjabi-paneer-masala",
+    "description": "Paneer cooked in spicy Punjabi masala",
+    "prompt": "Premium food photography: Punjabi Paneer Masala \u2014 Paneer cooked in spicy Punjabi masala. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/punjabi-paneer-masala.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Paneer Tikka Masala",
+    "slug": "paneer-tikka-masala",
+    "description": "Tandoori paneer in rich spiced gravy",
+    "prompt": "Premium food photography: Paneer Tikka Masala \u2014 Tandoori paneer in rich spiced gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/paneer-tikka-masala.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Mutter Malai Methi",
+    "slug": "mutter-malai-methi",
+    "description": "Peas cooked with cream & fenugreek",
+    "prompt": "Premium food photography: Mutter Malai Methi \u2014 Peas cooked with cream & fenugreek. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/mutter-malai-methi.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Kadahi Mushroom",
+    "slug": "kadahi-mushroom",
+    "description": "Mushrooms cooked with capsicum & spices",
+    "prompt": "Premium food photography: Kadahi Mushroom \u2014 Mushrooms cooked with capsicum & spices. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/kadahi-mushroom.jpg"
+  },
+  {
+    "category_id": "indian-main-course",
+    "name": "Soya Chaap Gravy",
+    "slug": "soya-chaap-gravy",
+    "description": "Soya chaap in rich spiced gravy",
+    "prompt": "Premium food photography: Soya Chaap Gravy \u2014 Soya chaap in rich spiced gravy. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/indian-main-course/soya-chaap-gravy.jpg"
+  },
+  {
+    "category_id": "raita",
+    "name": "Mix Veg. Raita",
+    "slug": "mix-veg-raita",
+    "description": "Creamy yogurt with fresh mixed vegetables",
+    "prompt": "Premium food photography: Mix Veg. Raita \u2014 Creamy yogurt with fresh mixed vegetables. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/raita/mix-veg-raita.jpg"
+  },
+  {
+    "category_id": "raita",
+    "name": "Boondi Raita",
+    "slug": "boondi-raita",
+    "description": "Creamy yogurt with crispy boondi",
+    "prompt": "Premium food photography: Boondi Raita \u2014 Creamy yogurt with crispy boondi. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/raita/boondi-raita.jpg"
+  },
+  {
+    "category_id": "raita",
+    "name": "Pineapple Raita",
+    "slug": "pineapple-raita",
+    "description": "Creamy yogurt with sweet pineapple",
+    "prompt": "Premium food photography: Pineapple Raita \u2014 Creamy yogurt with sweet pineapple. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/raita/pineapple-raita.jpg"
+  },
+  {
+    "category_id": "salads-papad",
+    "name": "Green Salad",
+    "slug": "green-salad",
+    "description": "Fresh seasonal vegetables with lemon",
+    "prompt": "Premium food photography: Green Salad \u2014 Fresh seasonal vegetables with lemon. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/salads-papad/green-salad.jpg"
+  },
+  {
+    "category_id": "salads-papad",
+    "name": "Cucumber Salad",
+    "slug": "cucumber-salad",
+    "description": "Fresh cucumber with light seasoning",
+    "prompt": "Premium food photography: Cucumber Salad \u2014 Fresh cucumber with light seasoning. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/salads-papad/cucumber-salad.jpg"
+  },
+  {
+    "category_id": "salads-papad",
+    "name": "Roasted Papad",
+    "slug": "roasted-papad",
+    "description": "Crispy roasted papad",
+    "prompt": "Premium food photography: Roasted Papad \u2014 Crispy roasted papad. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/salads-papad/roasted-papad.jpg"
+  },
+  {
+    "category_id": "salads-papad",
+    "name": "Fried Papad",
+    "slug": "fried-papad",
+    "description": "Crispy golden fried papad",
+    "prompt": "Premium food photography: Fried Papad \u2014 Crispy golden fried papad. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/salads-papad/fried-papad.jpg"
+  },
+  {
+    "category_id": "salads-papad",
+    "name": "Masala Papad",
+    "slug": "masala-papad",
+    "description": "Papad topped with onion & tomato",
+    "prompt": "Premium food photography: Masala Papad \u2014 Papad topped with onion & tomato. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/salads-papad/masala-papad.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Gulab Jamun",
+    "slug": "gulab-jamun",
+    "description": "Soft dumplings in sweet syrup",
+    "prompt": "Premium food photography: Gulab Jamun \u2014 Soft dumplings in sweet syrup. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/gulab-jamun.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Rasgulla",
+    "slug": "rasgulla",
+    "description": "Soft cottage-cheese dumplings in syrup",
+    "prompt": "Premium food photography: Rasgulla \u2014 Soft cottage-cheese dumplings in syrup. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/rasgulla.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Rasmalai",
+    "slug": "rasmalai",
+    "description": "Soft dumplings in creamy milk",
+    "prompt": "Premium food photography: Rasmalai \u2014 Soft dumplings in creamy milk. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/rasmalai.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Rasmadhuri",
+    "slug": "rasmadhuri",
+    "description": "Soft sweet dumplings in rich milk",
+    "prompt": "Premium food photography: Rasmadhuri \u2014 Soft sweet dumplings in rich milk. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/rasmadhuri.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Gajar Halwa (Seasonal)",
+    "slug": "gajar-halwa-seasonal",
+    "description": "Warm carrot halwa with rich flavours",
+    "prompt": "Premium food photography: Gajar Halwa (Seasonal) \u2014 Warm carrot halwa with rich flavours. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/gajar-halwa-seasonal.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Moongdal Halwa",
+    "slug": "moongdal-halwa",
+    "description": "Rich halwa made with moong dal",
+    "prompt": "Premium food photography: Moongdal Halwa \u2014 Rich halwa made with moong dal. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/moongdal-halwa.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Shahi Tukda",
+    "slug": "shahi-tukda",
+    "description": "Bread pudding with creamy rabri",
+    "prompt": "Premium food photography: Shahi Tukda \u2014 Bread pudding with creamy rabri. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/shahi-tukda.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Vanilla Ice Cream",
+    "slug": "vanilla-ice-cream",
+    "description": "Classic creamy vanilla ice cream",
+    "prompt": "Premium food photography: Vanilla Ice Cream \u2014 Classic creamy vanilla ice cream. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/vanilla-ice-cream.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Strawberry Ice Cream",
+    "slug": "strawberry-ice-cream",
+    "description": "Creamy ice cream with strawberry flavour",
+    "prompt": "Premium food photography: Strawberry Ice Cream \u2014 Creamy ice cream with strawberry flavour. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/strawberry-ice-cream.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Kessar Pista Ice Cream",
+    "slug": "kessar-pista-ice-cream",
+    "description": "Creamy ice cream with kesar & pista",
+    "prompt": "Premium food photography: Kessar Pista Ice Cream \u2014 Creamy ice cream with kesar & pista. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/kessar-pista-ice-cream.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Mango Ice Cream",
+    "slug": "mango-ice-cream",
+    "description": "Creamy ice cream with mango flavour",
+    "prompt": "Premium food photography: Mango Ice Cream \u2014 Creamy ice cream with mango flavour. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/mango-ice-cream.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Butterscotch Ice Cream",
+    "slug": "butterscotch-ice-cream",
+    "description": "Creamy butterscotch ice cream",
+    "prompt": "Premium food photography: Butterscotch Ice Cream \u2014 Creamy butterscotch ice cream. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/butterscotch-ice-cream.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Chocolate Ice Cream",
+    "slug": "chocolate-ice-cream",
+    "description": "Rich creamy chocolate ice cream",
+    "prompt": "Premium food photography: Chocolate Ice Cream \u2014 Rich creamy chocolate ice cream. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/chocolate-ice-cream.jpg"
+  },
+  {
+    "category_id": "sweets-dessert",
+    "name": "Gulab Jamun with Rabdi",
+    "slug": "gulab-jamun-with-rabdi",
+    "description": "Warm gulab jamun served with rabdi",
+    "prompt": "Premium food photography: Gulab Jamun with Rabdi \u2014 Warm gulab jamun served with rabdi. Premium Indian restaurant food photography for a luxury heritage sweet shop website menu. Square 1:1 composition. Warm cream marble surface, soft golden side lighting, shallow depth of field, subtle navy linen and gold accent in blurred background. Appetizing, photorealistic. No text, no watermark, no logo, no brand labels, no human hands.",
+    "dest": "client/public/images/menu/sweets-dessert/gulab-jamun-with-rabdi.jpg"
+  }
+]
