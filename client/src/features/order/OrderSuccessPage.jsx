@@ -14,6 +14,7 @@ export default function OrderSuccessPage() {
     <>
       <Helmet>
         <title>Order Confirmed — {brand.name}</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <div className="min-h-screen bg-cream-50 pt-28 pb-20 flex items-center justify-center">

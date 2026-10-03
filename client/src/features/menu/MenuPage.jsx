@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import Seo from '../../components/seo/Seo';
 import { Search, SlidersHorizontal, X, Plus, Minus, Eye } from 'lucide-react';
 import brand from '../../config/brand.config';
 import products from '../../data/products';
@@ -76,10 +76,11 @@ export default function MenuPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Menu — {brand.name}</title>
-        <meta name="description" content={`Browse ${products.length} dishes from ${brand.name}, ${brand.city}. South Indian, thali, chaat, Chinese, tandoor and desserts.`} />
-      </Helmet>
+      <Seo
+        title={`Menu — ${brand.name} | Sweets & Mithai in ${brand.city}`}
+        description={`Browse mithai, namkeen, festive boxes and the full kitchen menu from ${brand.name} on Thana Road, ${brand.city}, ${brand.district}.`}
+        path="/menu"
+      />
 
       {/* Header */}
       <div className="bg-cream-50 px-4 pb-6 pt-28 text-center sm:px-6">

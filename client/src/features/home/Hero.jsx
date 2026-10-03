@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="hero-pin pointer-events-none inset-x-0 top-0 z-0 h-[72vw] min-h-[280px] max-h-[460px] overflow-hidden bg-cream-50 shadow-[0_8px_0_0_#FFFBF3] lg:h-[52vh] lg:max-h-none lg:min-h-[420px]">
           <img
             src={heroPhoto}
-            alt="Gangaram storefront sign lit at night"
+            alt="Gangaram Sweets storefront in Dalsinghsarai, Samastipur"
             className="absolute inset-0 h-full w-full object-cover object-[42%_46%] lg:object-center"
             width="1672"
             height="941"
@@ -83,10 +83,10 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.45 }}
           className="mx-auto mb-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
         >
-          {brand.city}&apos;s heritage of{' '}
+          A heritage of{' '}
           <span className="font-medium text-gold-600">pure desi ghee</span>{' '}
-          sweets &amp; namkeen, handcrafted with love since {brand.yearFounded}.
-          Every bite tells a story of tradition and purity.
+          sweets &amp; namkeen since {brand.yearFounded}, now at our{' '}
+          {brand.city} branch. Every bite tells a story of tradition and purity.
         </motion.p>
 
         <motion.div

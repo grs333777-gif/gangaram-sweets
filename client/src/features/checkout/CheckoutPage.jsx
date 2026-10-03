@@ -76,6 +76,7 @@ export default function CheckoutPage() {
     <>
       <Helmet>
         <title>Checkout — {brand.name}</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <div className="bg-cream-50 min-h-screen pt-24 pb-20">

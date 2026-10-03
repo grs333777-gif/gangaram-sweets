@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import Seo from '../../components/seo/Seo';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import brand from '../../config/brand.config';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
@@ -40,10 +40,11 @@ const details = [
 export default function ContactPage() {
   return (
     <>
-      <Helmet>
-        <title>Contact Us — {brand.name} | Get in Touch</title>
-        <meta name="description" content={`Contact ${brand.name} at ${brand.address}. Call ${brand.phone} or email ${brand.email}.`} />
-      </Helmet>
+      <Seo
+        title={`Contact Us — ${brand.name} | ${brand.city}, ${brand.district}`}
+        description={`Visit ${brand.name} at ${brand.address}. Call ${brand.phone} or email ${brand.email}.`}
+        path="/contact"
+      />
 
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 to-navy-800 pt-28 pb-12">
         <div className="absolute inset-0 pattern-mandala opacity-15" />
@@ -108,7 +109,7 @@ export default function ContactPage() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Gangaram location map"
+            title="Gangaram Sweets on Thana Road, Dalsinghsarai"
           />
         </div>
       </div>

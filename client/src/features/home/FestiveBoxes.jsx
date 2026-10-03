@@ -56,7 +56,7 @@ export default function FestiveBoxes() {
                 <div className="rounded-2xl overflow-hidden border-2 border-gold-400/20 shadow-gold">
                   <img
                     src="/images/sweets.jpg"
-                    alt="Diwali Sweet Box"
+                    alt="Festive mithai counter at Gangaram Sweets, Dalsinghsarai"
                     className="w-full h-48 object-cover"
                     loading="lazy"
                     decoding="async"
@@ -67,7 +67,7 @@ export default function FestiveBoxes() {
                 <div className="rounded-2xl overflow-hidden border-2 border-gold-400/20">
                   <img
                     src="/images/kaju-katli.jpg"
-                    alt="Premium Sweets"
+                    alt="Kaju Katli from Gangaram Sweets, Samastipur"
                     className="w-full h-32 object-cover"
                     loading="lazy"
                     decoding="async"
@@ -80,7 +80,7 @@ export default function FestiveBoxes() {
                 <div className="rounded-2xl overflow-hidden border-2 border-gold-400/20">
                   <img
                     src="/images/laddu.jpg"
-                    alt="Laddu Box"
+                    alt="Motichoor laddu from Gangaram Sweets"
                     className="w-full h-32 object-cover"
                     loading="lazy"
                     decoding="async"
@@ -91,7 +91,7 @@ export default function FestiveBoxes() {
                 <div className="rounded-2xl overflow-hidden border-2 border-gold-400/20 shadow-gold">
                   <img
                     src="/images/gulab-jamun.jpg"
-                    alt="Gulab Jamun Gift Pack"
+                    alt="Gulab Jamun from Gangaram Sweets, Dalsinghsarai"
                     className="w-full h-48 object-cover"
                     loading="lazy"
                     decoding="async"

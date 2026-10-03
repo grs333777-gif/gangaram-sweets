@@ -62,8 +62,9 @@ export default function OurStoryTeaser() {
               is handpicked, every recipe perfected over decades.
             </p>
             <p className="text-muted leading-relaxed mb-6">
-              Our commitment to using only pure desi ghee, fresh milk, and premium dry
-              fruits has made us {brand.city}&apos;s most trusted name in traditional sweets.
+              Our {brand.city} branch brings that same legacy to {brand.district},{' '}
+              {brand.state} — pure desi ghee, fresh milk, and premium dry fruits in
+              every box.
             </p>
             {/* Values */}
             <div className="grid grid-cols-2 gap-3 mb-6">

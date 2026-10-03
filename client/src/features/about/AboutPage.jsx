@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { Heart, Leaf, Clock, Users, Award, ChefHat } from 'lucide-react';
+import { Heart, Leaf, Clock, Users } from 'lucide-react';
 import brand from '../../config/brand.config';
+import Seo from '../../components/seo/Seo';
 import ownerPhoto from '../../assets/owner.jpeg';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const timeline = [
-  { year: brand.yearFounded, title: 'The Beginning', desc: `${brand.shortName} was founded with a small sweet shop and a big dream — to bring pure, authentic sweets to ${brand.city}.` },
+  { year: brand.yearFounded, title: 'The Beginning', desc: `${brand.shortName} was founded with a small sweet shop and a big dream — to bring pure, authentic sweets to every celebration.` },
   { year: 1980, title: 'Growing Reputation', desc: 'Word of our pure desi ghee sweets spread across the city. We became a household name for festivals and celebrations.' },
   { year: 1995, title: 'Expanding Horizons', desc: 'Opened our second branch and introduced our popular namkeen range alongside traditional sweets.' },
   { year: 2010, title: 'Modern Kitchen', desc: 'Invested in a state-of-the-art kitchen while preserving our traditional recipes and handcrafted processes.' },
   { year: 2024, title: 'Online Ordering', desc: 'Bringing the taste of purity to your doorstep with online ordering and delivery services.' },
+  { year: brand.yearBranchOpened, title: 'Dalsinghsarai Branch', desc: `Opened our ${brand.city} branch on Thana Road — bringing Gangaram's heritage mithai to ${brand.district}, ${brand.state}.` },
 ];
 
 const values = [
@@ -31,10 +31,11 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
-      <Helmet>
-        <title>About Us — {brand.name} | Our Story &amp; Heritage</title>
-        <meta name="description" content={`Learn about ${brand.name}'s journey from ${brand.yearFounded} and owner Akash Soni. Pure desi ghee, heritage recipes, and a commitment to hospitality in ${brand.city}.`} />
-      </Helmet>
+      <Seo
+        title={`About Us — ${brand.name} | Our Story Since ${brand.yearFounded}`}
+        description={`The story of ${brand.name} — heritage since ${brand.yearFounded}, now at our ${brand.city}, ${brand.district} branch. Pure desi ghee mithai and recipes trusted for generations.`}
+        path="/about"
+      />
 
       {/* Cinematic Header */}
       <section className="bg-gradient-to-b from-navy-900 via-navy-800 to-navy-900 pt-28 pb-16 relative overflow-hidden">
@@ -64,7 +65,7 @@ export default function AboutPage() {
             transition={{ delay: 0.4 }}
             className="text-navy-300 text-base sm:text-lg max-w-2xl mx-auto"
           >
-            A legacy of purity, tradition, and love — serving since {brand.yearFounded}.
+            A legacy of purity, tradition, and love — heritage since {brand.yearFounded}, now in {brand.city}.
           </motion.p>
         </div>
       </section>
@@ -85,7 +86,7 @@ export default function AboutPage() {
                 <div className="rounded-t-[120px] rounded-b-2xl overflow-hidden border-4 border-gold-400/40 shadow-gold bg-cream-100">
                   <img
                     src={ownerPhoto}
-                    alt="Akash Soni, owner of Gangaram Restaurant"
+                    alt="Akash Soni, owner of Gangaram Sweets, Dalsinghsarai"
                     className="w-full h-80 object-cover object-[center_18%] sm:h-96"
                     loading="lazy"
                     width="1086"
@@ -120,13 +121,13 @@ export default function AboutPage() {
                 Mr. Akash Soni is a passionate entrepreneur whose journey reflects a deep-rooted family legacy, dedication, and a vision for creating memorable experiences.
               </p>
               <p className="text-muted leading-relaxed mb-4">
-                Coming from a family with a strong entrepreneurial heritage, Akash Soni has carried forward the values of trust, quality, and commitment while building his own presence across multiple businesses. His entrepreneurial journey extends beyond the restaurant industry, with ventures in jewellery and automobile showrooms, giving him a diverse perspective on business and customer experience.
+                Coming from a family with a strong entrepreneurial heritage, Akash Soni has carried forward the values of trust, quality, and commitment while building his own presence across multiple businesses. His journey extends beyond the sweet shop, with ventures in jewellery and automobile showrooms, giving him a diverse perspective on business and customer experience.
               </p>
               <p className="text-muted leading-relaxed mb-4">
-                With his long-standing connection to the restaurant business, Akash Soni understands that a great restaurant is about much more than food. It is about the warmth of hospitality, the quality of every dish, the trust of every customer, and the memories people take home with them.
+                With his long-standing connection to the mithai business, Akash Soni understands that a great sweet shop is about much more than desserts. It is about the warmth of hospitality, the quality of every box, the trust of every customer, and the memories people take home with them.
               </p>
               <p className="text-muted leading-relaxed">
-                At Ganga Ram Restaurant, his vision is to bring together the richness of tradition with a modern approach to hospitality—creating a place where every guest feels welcomed and every meal becomes a memorable experience.
+                At Gangaram Sweets, his vision is to bring together the richness of tradition with a modern approach to hospitality—creating a place where every guest feels welcomed and every box of mithai becomes a memorable gift.
               </p>
 
               <div className="mt-6 pt-4 border-t border-cream-200">

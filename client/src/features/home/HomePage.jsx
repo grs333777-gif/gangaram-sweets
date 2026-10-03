@@ -1,5 +1,4 @@
-import { Helmet } from 'react-helmet-async';
-import brand from '../../config/brand.config';
+import Seo from '../../components/seo/Seo';
 import Hero from './Hero';
 import TrustStrip from './TrustStrip';
 import CategoryShowcase from './CategoryShowcase';
@@ -12,17 +11,7 @@ import CTABand from './CTABand';
 export default function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>{brand.name} — {brand.tagline} | Best Sweets in {brand.city}</title>
-        <meta
-          name="description"
-          content={`${brand.name} – ${brand.description}. Order online for delivery in ${brand.city}.`}
-        />
-        <meta property="og:title" content={`${brand.name} — ${brand.tagline}`} />
-        <meta property="og:description" content={brand.description} />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href={brand.siteUrl} />
-      </Helmet>
+      <Seo path="/" />
 
       <div>
         <Hero />

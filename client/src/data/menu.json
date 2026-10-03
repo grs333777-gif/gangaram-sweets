@@ -364,7 +364,7 @@
       "name": "Sweets / Dessert",
       "slug": "sweets-dessert",
       "description": "Mithai, halwa and ice cream",
-      "image": "https://images.unsplash.com/photo-1590080876351-941da357bde6?w=600&q=80",
+      "image": "/images/sweets.jpg",
       "items": [
         { "name": "Gulab Jamun", "description": "Soft dumplings in sweet syrup", "price": 40, "bestseller": true },
         { "name": "Rasgulla", "description": "Soft cottage-cheese dumplings in syrup", "price": 40 },
