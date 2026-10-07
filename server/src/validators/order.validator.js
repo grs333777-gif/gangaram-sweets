@@ -51,6 +51,8 @@ export const checkoutSchema = z.object({
       state: z.string().trim().max(100).optional(),
       pincode: z.string().trim().optional(),
       country: z.string().trim().default('India'),
+      latitude: z.number().gte(-90).lte(90).optional(),
+      longitude: z.number().gte(-180).lte(180).optional(),
     })
     .optional(),
   giftMessage: z.string().trim().max(500).optional(),

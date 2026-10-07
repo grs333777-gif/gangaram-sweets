@@ -18,6 +18,8 @@ const shippingAddressSchema = new mongoose.Schema(
     state: { type: String },
     pincode: { type: String },
     country: { type: String, default: 'India' },
+    latitude: { type: Number },
+    longitude: { type: Number },
   },
   { _id: false },
 );

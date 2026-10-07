@@ -41,6 +41,7 @@ const brand = {
   freeDeliveryAbove: 500, // ₹
   minOrderAmount: 200,
   deliveryFee: 40,
+  deliveryRadiusKm: 3,
 
   // ─── Social ───
   social: {

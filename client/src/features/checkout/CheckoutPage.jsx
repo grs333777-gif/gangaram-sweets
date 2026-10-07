@@ -9,6 +9,33 @@ import { useAuthStore } from '../../store/authStore';
 import { api, apiOrigin } from '../../lib/api';
 import brand from '../../config/brand.config';
 
+function distanceKm(fromLat, fromLng, toLat, toLng) {
+  const toRad = (degrees) => (degrees * Math.PI) / 180;
+  const earthKm = 6371;
+  const dLat = toRad(toLat - fromLat);
+  const dLng = toRad(toLng - fromLng);
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(toRad(fromLat)) * Math.cos(toRad(toLat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * earthKm * Math.asin(Math.min(1, Math.sqrt(a)));
+}
+
+function readDeviceLocation() {
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) {
+      reject(new Error('This device cannot share its location. Choose store pickup.'));
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      }),
+      () => reject(new Error('Allow location so we can check the 3 km delivery area, or choose store pickup.')),
+      { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 },
+    );
+  });
+}
+
 export default function CheckoutPage() {
   const navigate = useNavigate();
   const { items, clearCart } = useCartStore();
@@ -28,6 +55,8 @@ export default function CheckoutPage() {
     paymentMethod: 'ONLINE',
   });
   const [loading, setLoading] = useState(false);
+  const [locating, setLocating] = useState(false);
+  const [location, setLocation] = useState(null);
   const deliveryFee = form.deliveryType === 'pickup' || totalPrice >= brand.freeDeliveryAbove ? 0 : brand.deliveryFee;
 
   useEffect(() => {
@@ -40,6 +69,25 @@ export default function CheckoutPage() {
   }, [user]);
 
   const update = (field) => (e) => setForm({ ...form, [field]: e.target.value });
+
+  const checkLocation = async () => {
+    setLocating(true);
+    try {
+      const point = await readDeviceLocation();
+      const km = distanceKm(brand.geo.latitude, brand.geo.longitude, point.latitude, point.longitude);
+      setLocation({ ...point, distanceKm: km });
+      if (km > brand.deliveryRadiusKm) {
+        toast.error(`You are ${km.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
+      }
+      return { ...point, distanceKm: km };
+    } catch (err) {
+      setLocation(null);
+      toast.error(err.message);
+      return null;
+    } finally {
+      setLocating(false);
+    }
+  };
 
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
@@ -65,9 +113,16 @@ export default function CheckoutPage() {
       toast.error('An item is priced at the shop. Remove it or ask for a fixed price first.');
       return;
     }
-    if (form.deliveryType === 'delivery' && !form.pincode) {
-      toast.error('Please enter the delivery pincode');
-      return;
+    let deliveryPoint = location;
+    if (form.deliveryType === 'delivery') {
+      if (!deliveryPoint) deliveryPoint = await checkLocation();
+      if (!deliveryPoint) return;
+      if (deliveryPoint.distanceKm > brand.deliveryRadiusKm) {
+        if (location) {
+          toast.error(`You are ${deliveryPoint.distanceKm.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
+        }
+        return;
+      }
     }
     if (totalPrice < brand.minOrderAmount) {
       toast.error(`Minimum order is ₹${brand.minOrderAmount}`);
@@ -93,6 +148,8 @@ export default function CheckoutPage() {
                 state: 'Bihar',
                 pincode: form.pincode,
                 country: 'India',
+                latitude: deliveryPoint.latitude,
+                longitude: deliveryPoint.longitude,
               }
             : undefined,
         },
@@ -273,6 +330,26 @@ export default function CheckoutPage() {
                           <input type="text" value={form.landmark} onChange={update('landmark')}
                             className="w-full px-4 py-2.5 rounded-xl border border-cream-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
                             placeholder="Near..." />
+                        </div>
+                        <div className="sm:col-span-2 rounded-xl bg-cream-50 px-4 py-3">
+                          <p className="text-sm text-navy-900">
+                            We deliver within {brand.deliveryRadiusKm} km of the shop. Be at the delivery place, then share this phone’s location. This uses your device, not a paid map.
+                          </p>
+                          <button
+                            type="button"
+                            onClick={checkLocation}
+                            disabled={locating}
+                            className="mt-3 cursor-pointer rounded-full border border-navy-900/15 bg-white px-4 py-2 text-sm font-semibold text-navy-900 disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            {locating ? 'Checking location…' : 'Check my location'}
+                          </button>
+                          {location && (
+                            <p className={`mt-2 text-sm ${location.distanceKm <= brand.deliveryRadiusKm ? 'text-success' : 'text-error'}`}>
+                              {location.distanceKm <= brand.deliveryRadiusKm
+                                ? `${location.distanceKm.toFixed(1)} km away. We can deliver here.`
+                                : `${location.distanceKm.toFixed(1)} km away. Please choose store pickup.`}
+                            </p>
+                          )}
                         </div>
                       </>
                     )}

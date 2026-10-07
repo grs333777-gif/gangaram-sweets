@@ -64,15 +64,23 @@ app.use(
 );
 
 // ─── CORS ───
-const allowedOrigins = config.CORS_ORIGINS.split(',').map((o) => o.trim());
+const allowedOrigins = config.CORS_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean);
+
+function isAllowedOrigin(origin) {
+  if (!origin || allowedOrigins.includes(origin)) return true;
+  if (config.NODE_ENV === 'production') return false;
+  try {
+    const url = new URL(origin);
+    return url.protocol === 'http:' && (url.hostname === 'localhost' || url.hostname === '127.0.0.1');
+  } catch {
+    return false;
+  }
+}
+
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (e.g., mobile apps, Postman in dev)
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      callback(new Error(`CORS: Origin ${origin} not allowed`));
+      callback(null, isAllowedOrigin(origin));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
