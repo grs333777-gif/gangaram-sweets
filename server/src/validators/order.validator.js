@@ -77,6 +77,11 @@ export const adminOrderQuerySchema = z.object({
   to: z.coerce.date().optional(),
 });
 
+export const nearbyAddressSchema = z.object({
+  latitude: z.number().gte(-90).lte(90),
+  longitude: z.number().gte(-180).lte(180),
+});
+
 export const trackOrderSchema = z.object({
   orderNumber: z.string().trim().min(4, 'Enter the order ID').max(40),
   phone: z.string().trim().min(10, 'Enter the phone number used for the order').max(20),

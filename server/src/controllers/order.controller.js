@@ -1,4 +1,5 @@
 import * as orderService from '../services/order.service.js';
+import { lookupNearbyAddress } from '../services/serviceability.service.js';
 import { asyncHandler, successResponse, paginatedResponse } from '../utils/helpers.js';
 
 // ─── Customer ───
@@ -7,6 +8,11 @@ export const checkout = asyncHandler(async (req, res) => {
   const idempotencyKey = req.headers['idempotency-key'] || null;
   const result = await orderService.checkout(req.user._id, req.body, idempotencyKey);
   return successResponse(res, result, 201);
+});
+
+export const nearbyAddress = asyncHandler(async (req, res) => {
+  const address = await lookupNearbyAddress(req.body.latitude, req.body.longitude);
+  return successResponse(res, { address });
 });
 
 export const trackOrder = asyncHandler(async (req, res) => {

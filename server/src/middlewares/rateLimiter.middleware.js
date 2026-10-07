@@ -36,6 +36,13 @@ export const authRateLimit = makeHandler(
   'Too many authentication attempts. Please try again later.',
 );
 
+export const locationRateLimit = makeHandler(
+  15 * 60 * 1000,
+  20,
+  'location',
+  'Too many location checks. Please wait and try again.',
+);
+
 export const trackRateLimit = makeHandler(
   15 * 60 * 1000,
   30,

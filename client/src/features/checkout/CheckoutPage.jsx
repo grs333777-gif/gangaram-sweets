@@ -75,10 +75,22 @@ export default function CheckoutPage() {
       const point = await readDeviceLocation();
       const km = distanceKm(brand.geo.latitude, brand.geo.longitude, point.latitude, point.longitude);
       setLocation({ ...point, distanceKm: km });
+      let detected = '';
+      if (!form.address.trim()) {
+        try {
+          const data = await api.nearbyAddress(point.latitude, point.longitude);
+          detected = data.data?.address || '';
+          if (detected) {
+            setForm((current) => (current.address.trim() ? current : { ...current, address: detected }));
+          }
+        } catch {
+          detected = '';
+        }
+      }
       if (km > brand.deliveryRadiusKm) {
         toast.error(`You are ${km.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
       }
-      return { ...point, distanceKm: km };
+      return { ...point, distanceKm: km, address: form.address.trim() || detected };
     } catch (err) {
       setLocation(null);
       toast.error(err.message);
@@ -92,10 +104,6 @@ export default function CheckoutPage() {
     e.preventDefault();
     if (!form.name || !form.phone) {
       toast.error('Please fill in required fields');
-      return;
-    }
-    if (form.deliveryType === 'delivery' && !form.address) {
-      toast.error('Please enter delivery address');
       return;
     }
     if (items.length === 0) {
@@ -113,13 +121,22 @@ export default function CheckoutPage() {
       return;
     }
     let deliveryPoint = location;
+    let address = form.address.trim();
     if (form.deliveryType === 'delivery') {
-      if (!deliveryPoint) deliveryPoint = await checkLocation();
-      if (!deliveryPoint) return;
+      if (!deliveryPoint || !address) {
+        const found = await checkLocation();
+        if (!found) return;
+        deliveryPoint = found;
+        address = address || found.address || '';
+      }
       if (deliveryPoint.distanceKm > brand.deliveryRadiusKm) {
         if (location) {
           toast.error(`You are ${deliveryPoint.distanceKm.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
         }
+        return;
+      }
+      if (!address) {
+        toast.error('Please enter the delivery address');
         return;
       }
     }
@@ -141,7 +158,7 @@ export default function CheckoutPage() {
             ? {
                 name: form.name,
                 phone: form.phone,
-                addressLine1: form.address,
+                addressLine1: address,
                 landmark: form.landmark || undefined,
                 city: 'Dalsinghsarai',
                 state: 'Bihar',
@@ -325,7 +342,7 @@ export default function CheckoutPage() {
                         </div>
                         <div className="sm:col-span-2 rounded-xl bg-cream-50 px-4 py-3">
                           <p className="text-sm text-navy-900">
-                            We deliver within {brand.deliveryRadiusKm} km of the shop. Be at the delivery place, then share this phone’s location. This uses your device, not a paid map.
+                            We deliver within {brand.deliveryRadiusKm} km of the shop. Be at the delivery place and share this phone’s location. If the address is empty, we fill it from that spot. You can still edit it.
                           </p>
                           <button
                             type="button"

@@ -43,6 +43,7 @@ export const api = {
     }),
   myOrders: () => request('/api/orders?limit=50'),
   trackOrder: (orderNumber, phone) => request('/api/orders/track', { method: 'POST', body: { orderNumber, phone } }),
+  nearbyAddress: (latitude, longitude) => request('/api/orders/nearby-address', { method: 'POST', body: { latitude, longitude } }),
   cancelOrder: (orderId) => request(`/api/orders/${orderId}/cancel`, { method: 'POST', body: {} }),
   deskOrders: ({ status, paymentStatus } = {}) => {
     const params = new URLSearchParams({ limit: '50' });

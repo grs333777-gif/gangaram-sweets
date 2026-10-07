@@ -4,9 +4,10 @@ import { createRequire } from 'module';
 import * as orderController from '../controllers/order.controller.js';
 import { authenticate, authorize } from '../middlewares/auth.middleware.js';
 import { validateBody, validateQuery } from '../middlewares/validate.middleware.js';
-import { checkoutRateLimit, trackRateLimit } from '../middlewares/rateLimiter.middleware.js';
+import { checkoutRateLimit, locationRateLimit, trackRateLimit } from '../middlewares/rateLimiter.middleware.js';
 import {
   checkoutSchema,
+  nearbyAddressSchema,
   trackOrderSchema,
   adminOrderStatusSchema,
   adminOrderQuerySchema,
@@ -30,6 +31,7 @@ router.post(
   orderController.checkout,
 );
 
+router.post('/nearby-address', locationRateLimit, validateBody(nearbyAddressSchema), orderController.nearbyAddress);
 router.post('/track', trackRateLimit, validateBody(trackOrderSchema), orderController.trackOrder);
 router.get('/', authenticate, validateQuery(customerOrderQuerySchema), orderController.getOrders);
 
