@@ -47,7 +47,6 @@ export default function CheckoutPage() {
     name: '',
     phone: '',
     address: '',
-    pincode: '',
     landmark: '',
     deliveryType: 'delivery',
     timeSlot: 'anytime',
@@ -146,7 +145,6 @@ export default function CheckoutPage() {
                 landmark: form.landmark || undefined,
                 city: 'Dalsinghsarai',
                 state: 'Bihar',
-                pincode: form.pincode,
                 country: 'India',
                 latitude: deliveryPoint.latitude,
                 longitude: deliveryPoint.longitude,
@@ -319,13 +317,7 @@ export default function CheckoutPage() {
                             className="w-full px-4 py-2.5 rounded-xl border border-cream-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 resize-none"
                             placeholder="House/flat no., street, area..." />
                         </div>
-                        <div>
-                          <label className="block text-sm font-medium text-navy-900 mb-1">Pincode</label>
-                          <input type="text" value={form.pincode} onChange={update('pincode')} required
-                            className="w-full px-4 py-2.5 rounded-xl border border-cream-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
-                            placeholder="848114" />
-                        </div>
-                        <div>
+                        <div className="sm:col-span-2">
                           <label className="block text-sm font-medium text-navy-900 mb-1">Landmark</label>
                           <input type="text" value={form.landmark} onChange={update('landmark')}
                             className="w-full px-4 py-2.5 rounded-xl border border-cream-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"

@@ -1,15 +1,45 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
 import toast from 'react-hot-toast';
 
-/**
- * Cart Store – Zustand with localStorage persistence
- * Handles: add, remove, update quantity, clear, selected variant tracking
- */
-const useCartStore = create(
-  persist(
-    (set, get) => ({
-      items: [],
+const CART_KEY = 'gangaram-cart';
+
+function savedItems(items) {
+  if (!Array.isArray(items)) return [];
+  return items
+    .filter((item) => item && (item.productId || item.id) && item.name && Number(item.quantity) > 0)
+    .map((item) => ({
+      productId: item.productId || item.id,
+      name: item.name,
+      image: item.image || '',
+      weight: item.weight || 'Plate',
+      price: item.price ?? null,
+      quantity: Number(item.quantity),
+      isVeg: item.isVeg !== false,
+    }));
+}
+
+function readCart() {
+  try {
+    const raw = localStorage.getItem(CART_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    const items = Array.isArray(parsed) ? parsed : parsed?.state?.items || parsed?.items;
+    return savedItems(items);
+  } catch {
+    return [];
+  }
+}
+
+function writeCart(items) {
+  try {
+    localStorage.setItem(CART_KEY, JSON.stringify(savedItems(items)));
+  } catch {
+    // Storage can be unavailable in private mode. The cart still works for this visit.
+  }
+}
+
+const useCartStore = create((set, get) => ({
+      items: readCart(),
       isCartOpen: false,
 
       // ─── Derived ───
@@ -37,8 +67,9 @@ const useCartStore = create(
           );
 
           if (existingIndex > -1) {
-            const updatedItems = [...state.items];
-            updatedItems[existingIndex].quantity += quantity;
+            const updatedItems = state.items.map((item, index) =>
+              index === existingIndex ? { ...item, quantity: item.quantity + quantity } : item,
+            );
             toast.success(`Updated ${product.name} quantity`);
             return { items: updatedItems };
           }
@@ -50,7 +81,7 @@ const useCartStore = create(
               {
                 productId: product._id,
                 name: product.name,
-                image: product.images[0],
+                image: Array.isArray(product.images) ? product.images[0] : product.image,
                 weight: variant.weight,
                 price: variant.price,
                 quantity,
@@ -93,12 +124,10 @@ const useCartStore = create(
 
       openCart: () => set({ isCartOpen: true }),
       closeCart: () => set({ isCartOpen: false }),
-    }),
-    {
-      name: 'gangaram-cart',
-      partialize: (state) => ({ items: state.items }),
-    }
-  )
-);
+}));
+
+useCartStore.subscribe((state, previous) => {
+  if (state.items !== previous.items) writeCart(state.items);
+});
 
 export default useCartStore;
