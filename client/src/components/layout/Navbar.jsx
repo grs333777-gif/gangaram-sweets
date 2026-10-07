@@ -45,6 +45,8 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const onDarkHero = darkHeroPaths.has(location.pathname) && !isScrolled;
+  const firstName = user?.name?.trim().split(/\s+/)[0] || 'Account';
+  const initial = firstName.charAt(0).toUpperCase() || 'A';
 
   return (
     <>
@@ -109,27 +111,28 @@ export default function Navbar() {
               </a>
 
               {user ? (
-                <div className="hidden items-center gap-2 sm:flex">
+                <div
+                  className={`hidden h-10 items-center rounded-xl border pl-1 sm:flex ${
+                    onDarkHero ? 'border-white/15 bg-white/10' : 'border-cream-200 bg-cream-50'
+                  }`}
+                >
                   <Link
                     to="/account"
-                    className={`inline-flex items-center gap-2 rounded-full border py-1 pl-1 pr-3 text-sm font-semibold transition ${
-                      onDarkHero
-                        ? 'border-gold-400/70 bg-white/10 text-white hover:bg-white/20'
-                        : 'border-gold-300 bg-cream-50 text-navy-900 hover:border-gold-500'
+                    className={`flex h-8 items-center gap-2 rounded-lg px-1.5 pr-2.5 transition ${
+                      onDarkHero ? 'text-white hover:bg-white/10' : 'text-navy-900 hover:bg-white'
                     }`}
                   >
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 font-heading text-sm font-bold text-navy-900">
-                      {user.name.trim().charAt(0).toUpperCase()}
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold-400 text-xs font-semibold text-navy-900">
+                      {initial}
                     </span>
-                    <span className="max-w-[7rem] truncate">{user.name.split(' ')[0]}</span>
+                    <span className="max-w-[7.5rem] truncate text-sm font-medium">{firstName}</span>
                   </Link>
+                  <span className={`mx-0.5 h-4 w-px ${onDarkHero ? 'bg-white/25' : 'bg-navy-900/15'}`} />
                   <button
                     type="button"
                     onClick={() => logout()}
-                    className={`rounded-full border px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition ${
-                      onDarkHero
-                        ? 'border-white/30 text-white hover:border-gold-300 hover:text-gold-200'
-                        : 'border-navy-900/15 text-navy-900 hover:border-gold-500 hover:text-gold-700'
+                    className={`h-8 cursor-pointer rounded-lg px-2.5 text-sm transition ${
+                      onDarkHero ? 'text-white/80 hover:bg-white/10 hover:text-white' : 'text-navy-700 hover:bg-white hover:text-navy-900'
                     }`}
                   >
                     Sign out
@@ -138,7 +141,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   to="/login"
-                  className="btn-gold-shimmer hidden rounded-full px-4 py-2 text-sm font-semibold text-navy-900 shadow-gold sm:inline-flex"
+                  className="hidden h-10 cursor-pointer items-center rounded-xl bg-gold-400 px-4 text-sm font-medium text-navy-900 transition hover:bg-gold-300 sm:inline-flex"
                 >
                   Sign in
                 </Link>
@@ -237,33 +240,27 @@ export default function Navbar() {
                   ))}
                 </div>
 
-                <div className="mt-6 space-y-2">
+                <div className="mt-6 border-t border-cream-200 pt-5">
                   {user ? (
-                    <>
-                      <Link
-                        to="/account"
-                        className="flex items-center gap-3 rounded-2xl border border-gold-200 bg-cream-50 px-3 py-2.5"
-                      >
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 font-heading text-lg font-bold text-navy-900">
-                          {user.name.trim().charAt(0).toUpperCase()}
+                    <div className="flex h-12 items-center rounded-xl border border-cream-200 bg-cream-50 pl-1.5 pr-1.5">
+                      <Link to="/account" className="flex min-w-0 flex-1 items-center gap-2.5 rounded-lg px-1.5 py-1">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold-400 text-xs font-semibold text-navy-900">
+                          {initial}
                         </span>
-                        <span>
-                          <span className="block text-sm font-semibold text-navy-900">{user.name}</span>
-                          <span className="block text-xs text-gold-700">View orders</span>
-                        </span>
+                        <span className="truncate text-sm font-medium text-navy-900">{user.name}</span>
                       </Link>
                       <button
                         type="button"
                         onClick={() => logout()}
-                        className="w-full rounded-full border border-navy-900/15 px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.14em] text-navy-900 transition hover:border-gold-500"
+                        className="h-9 cursor-pointer shrink-0 rounded-lg px-3 text-sm text-navy-800 transition hover:bg-white"
                       >
                         Sign out
                       </button>
-                    </>
+                    </div>
                   ) : (
                     <Link
                       to="/login"
-                      className="btn-gold-shimmer block rounded-full px-4 py-3 text-center text-sm font-semibold text-navy-900 shadow-gold"
+                      className="flex h-11 cursor-pointer items-center justify-center rounded-xl bg-gold-400 text-sm font-medium text-navy-900 transition hover:bg-gold-300"
                     >
                       Sign in
                     </Link>
