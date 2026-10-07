@@ -1,0 +1,18 @@
+{
+  "testEnvironment": "node",
+  "transform": {},
+  "extensionsToTreatAsEsm": [".js"],
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  },
+  "testTimeout": 30000,
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "!src/server.js"
+  ],
+  "coverageReporters": ["text", "lcov"],
+  "setupFilesAfterFramework": [],
+  "globalSetup": "./tests/setup/globalSetup.js",
+  "globalTeardown": "./tests/setup/globalTeardown.js",
+  "setupFilesAfterFramework": ["./tests/setup/testSetup.js"]
+}

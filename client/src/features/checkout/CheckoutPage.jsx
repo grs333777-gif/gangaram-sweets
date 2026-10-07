@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, CreditCard, Truck, Store } from 'lucide-react';
 import toast from 'react-hot-toast';
+import { pay, getStatus, newIdempotencyKey } from '@razorpay-checkout';
 import useCartStore from '../../store/cartStore';
+import { useAuthStore } from '../../store/authStore';
+import { api, apiOrigin } from '../../lib/api';
 import brand from '../../config/brand.config';
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
   const { items, clearCart } = useCartStore();
-  const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const deliveryFee = totalPrice >= brand.freeDeliveryAbove ? 0 : brand.deliveryFee;
+  const user = useAuthStore((state) => state.user);
+  const authReady = useAuthStore((state) => state.ready);
+  const totalPrice = items.reduce((sum, item) => sum + (item.price || 0) * item.quantity, 0);
 
   const [form, setForm] = useState({
     name: '',
@@ -22,8 +25,19 @@ export default function CheckoutPage() {
     deliveryType: 'delivery',
     timeSlot: 'anytime',
     giftMessage: '',
+    paymentMethod: 'ONLINE',
   });
   const [loading, setLoading] = useState(false);
+  const deliveryFee = form.deliveryType === 'pickup' || totalPrice >= brand.freeDeliveryAbove ? 0 : brand.deliveryFee;
+
+  useEffect(() => {
+    if (!user) return;
+    setForm((current) => ({
+      ...current,
+      name: current.name || user.name || '',
+      phone: current.phone || user.phone || '',
+    }));
+  }, [user]);
 
   const update = (field) => (e) => setForm({ ...form, [field]: e.target.value });
 
@@ -42,19 +56,111 @@ export default function CheckoutPage() {
       return;
     }
 
-    setLoading(true);
-    // Simulate Razorpay flow for demo
-    await new Promise((r) => setTimeout(r, 1500));
+    if (!authReady) return;
+    if (!user) {
+      navigate('/login?next=/checkout');
+      return;
+    }
+    if (items.some((item) => item.price == null)) {
+      toast.error('An item is priced at the shop. Remove it or ask for a fixed price first.');
+      return;
+    }
+    if (form.deliveryType === 'delivery' && !form.pincode) {
+      toast.error('Please enter the delivery pincode');
+      return;
+    }
+    if (totalPrice < brand.minOrderAmount) {
+      toast.error(`Minimum order is ₹${brand.minOrderAmount}`);
+      return;
+    }
 
-    const orderId = 'GR' + Date.now().toString(36).toUpperCase();
-    clearCart();
-    navigate('/order-success', {
-      state: {
-        orderId,
-        total: totalPrice + deliveryFee,
-        items: items.length,
-      },
-    });
+    setLoading(true);
+    try {
+      const data = await api.checkout(
+        {
+          items: items.map((item) => ({ productKey: item.productId, quantity: item.quantity })),
+          paymentMethod: form.paymentMethod,
+          deliveryType: form.deliveryType,
+          timeSlot: form.timeSlot,
+          giftMessage: form.giftMessage || undefined,
+          shippingAddress: form.deliveryType === 'delivery'
+            ? {
+                name: form.name,
+                phone: form.phone,
+                addressLine1: form.address,
+                landmark: form.landmark || undefined,
+                city: 'Dalsinghsarai',
+                state: 'Bihar',
+                pincode: form.pincode,
+                country: 'India',
+              }
+            : undefined,
+        },
+        newIdempotencyKey(),
+      );
+      const order = data.data;
+
+      if (form.paymentMethod === 'COD') {
+        clearCart();
+        navigate('/order-success', {
+          state: {
+            orderId: order.orderNumber,
+            total: order.totalPaise / 100,
+            items: order.itemCount,
+          },
+        });
+        return;
+      }
+
+      await api.refresh().catch(() => {});
+      const result = await pay({
+        orderId: order.orderId,
+        apiBase: `${apiOrigin}/api/payments`,
+        description: `Gangaram Sweets ${order.orderNumber}`,
+        prefill: { name: user.name, email: user.email, contact: user.phone },
+      });
+
+      const goToSuccess = () => {
+        clearCart();
+        navigate('/order-success', {
+          state: {
+            orderId: order.orderNumber,
+            total: order.totalPaise / 100,
+            items: order.itemCount,
+          },
+        });
+      };
+
+      if (result.status === 'paid' || result.status === 'pending') {
+        goToSuccess();
+        return;
+      }
+
+      let recorded = 'unpaid';
+      try {
+        const status = await getStatus(order.orderId, { apiBase: `${apiOrigin}/api/payments` });
+        recorded = status.status;
+      } catch {
+        recorded = 'unknown';
+      }
+
+      if (recorded === 'paid' || recorded === 'processing') {
+        goToSuccess();
+        return;
+      }
+
+      if (result.status === 'dismissed' && recorded === 'unpaid') {
+        await api.cancelOrder(order.orderId).catch(() => {});
+        toast.error('Payment window closed. You can try again.');
+        return;
+      }
+
+      toast.error('Payment is still being confirmed. Check My account in a minute before paying again.');
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (items.length === 0) {
@@ -158,9 +264,9 @@ export default function CheckoutPage() {
                         </div>
                         <div>
                           <label className="block text-sm font-medium text-navy-900 mb-1">Pincode</label>
-                          <input type="text" value={form.pincode} onChange={update('pincode')}
+                          <input type="text" value={form.pincode} onChange={update('pincode')} required
                             className="w-full px-4 py-2.5 rounded-xl border border-cream-200 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400"
-                            placeholder="452001" />
+                            placeholder="848114" />
                         </div>
                         <div>
                           <label className="block text-sm font-medium text-navy-900 mb-1">Landmark</label>
@@ -227,6 +333,31 @@ export default function CheckoutPage() {
                     <span>₹{(totalPrice + deliveryFee).toLocaleString('en-IN')}</span>
                   </div>
 
+                  <div className="grid grid-cols-2 gap-2 mb-3">
+                    <button
+                      type="button"
+                      onClick={() => setForm({ ...form, paymentMethod: 'ONLINE' })}
+                      className={`px-3 py-2 rounded-xl border text-xs font-semibold ${
+                        form.paymentMethod === 'ONLINE' ? 'border-navy-900 bg-navy-900 text-white' : 'border-cream-200 text-muted'
+                      }`}
+                    >
+                      Pay online
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setForm({ ...form, paymentMethod: 'COD' })}
+                      className={`px-3 py-2 rounded-xl border text-xs font-semibold ${
+                        form.paymentMethod === 'COD' ? 'border-navy-900 bg-navy-900 text-white' : 'border-cream-200 text-muted'
+                      }`}
+                    >
+                      Cash on delivery
+                    </button>
+                  </div>
+
+                  {!user && authReady && (
+                    <p className="text-xs text-muted mb-2">Sign in is required before placing the order.</p>
+                  )}
+
                   <button
                     type="submit"
                     disabled={loading}
@@ -237,12 +368,12 @@ export default function CheckoutPage() {
                     ) : (
                       <>
                         <CreditCard size={18} />
-                        Pay ₹{(totalPrice + deliveryFee).toLocaleString('en-IN')}
+                        {form.paymentMethod === 'COD' ? 'Place order' : `Pay ₹${(totalPrice + deliveryFee).toLocaleString('en-IN')}`}
                       </>
                     )}
                   </button>
                   <p className="text-[11px] text-muted text-center mt-2">
-                    Secure payment via Razorpay (Demo mode)
+                    {form.paymentMethod === 'COD' ? 'Pay the shop when the order arrives.' : 'Card, UPI, or netbanking via Razorpay.'}
                   </p>
                 </div>
               </div>

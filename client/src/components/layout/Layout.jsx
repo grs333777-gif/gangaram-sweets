@@ -4,9 +4,15 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import MobileBar from './MobileBar';
 import CartDrawer from './CartDrawer';
+import { useAuthStore } from '../../store/authStore';
 
 export default function Layout() {
   const { pathname } = useLocation();
+  const loadUser = useAuthStore((state) => state.load);
+
+  useEffect(() => {
+    loadUser();
+  }, [loadUser]);
 
   // Scroll to top on route change
   useEffect(() => {

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingBag, Phone } from 'lucide-react';
 import brand from '../../config/brand.config';
 import useCartStore from '../../store/cartStore';
+import { useAuthStore } from '../../store/authStore';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -30,6 +31,8 @@ export default function Navbar() {
   const location = useLocation();
   const { items, openCart } = useCartStore();
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+  const user = useAuthStore((state) => state.user);
+  const logout = useAuthStore((state) => state.logout);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -104,6 +107,42 @@ export default function Navbar() {
                 <Phone size={16} />
                 <span>{brand.phone}</span>
               </a>
+
+              {user ? (
+                <div className="hidden items-center gap-2 sm:flex">
+                  <Link
+                    to="/account"
+                    className={`inline-flex items-center gap-2 rounded-full border py-1 pl-1 pr-3 text-sm font-semibold transition ${
+                      onDarkHero
+                        ? 'border-gold-400/70 bg-white/10 text-white hover:bg-white/20'
+                        : 'border-gold-300 bg-cream-50 text-navy-900 hover:border-gold-500'
+                    }`}
+                  >
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 font-heading text-sm font-bold text-navy-900">
+                      {user.name.trim().charAt(0).toUpperCase()}
+                    </span>
+                    <span className="max-w-[7rem] truncate">{user.name.split(' ')[0]}</span>
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => logout()}
+                    className={`rounded-full border px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition ${
+                      onDarkHero
+                        ? 'border-white/30 text-white hover:border-gold-300 hover:text-gold-200'
+                        : 'border-navy-900/15 text-navy-900 hover:border-gold-500 hover:text-gold-700'
+                    }`}
+                  >
+                    Sign out
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  to="/login"
+                  className="btn-gold-shimmer hidden rounded-full px-4 py-2 text-sm font-semibold text-navy-900 shadow-gold sm:inline-flex"
+                >
+                  Sign in
+                </Link>
+              )}
 
               <button
                 onClick={openCart}
@@ -196,6 +235,39 @@ export default function Navbar() {
                       </Link>
                     </motion.div>
                   ))}
+                </div>
+
+                <div className="mt-6 space-y-2">
+                  {user ? (
+                    <>
+                      <Link
+                        to="/account"
+                        className="flex items-center gap-3 rounded-2xl border border-gold-200 bg-cream-50 px-3 py-2.5"
+                      >
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 font-heading text-lg font-bold text-navy-900">
+                          {user.name.trim().charAt(0).toUpperCase()}
+                        </span>
+                        <span>
+                          <span className="block text-sm font-semibold text-navy-900">{user.name}</span>
+                          <span className="block text-xs text-gold-700">View orders</span>
+                        </span>
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => logout()}
+                        className="w-full rounded-full border border-navy-900/15 px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.14em] text-navy-900 transition hover:border-gold-500"
+                      >
+                        Sign out
+                      </button>
+                    </>
+                  ) : (
+                    <Link
+                      to="/login"
+                      className="btn-gold-shimmer block rounded-full px-4 py-3 text-center text-sm font-semibold text-navy-900 shadow-gold"
+                    >
+                      Sign in
+                    </Link>
+                  )}
                 </div>
 
                 <div className="mt-8 border-t border-cream-200 pt-6">

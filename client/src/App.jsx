@@ -11,6 +11,10 @@ const AboutPage = lazy(() => import('./features/about/AboutPage'));
 const ContactPage = lazy(() => import('./features/contact/ContactPage'));
 const CartPage = lazy(() => import('./features/cart/CartPage'));
 const CheckoutPage = lazy(() => import('./features/checkout/CheckoutPage'));
+const LoginPage = lazy(() => import('./features/auth/LoginPage'));
+const SignupPage = lazy(() => import('./features/auth/SignupPage'));
+const ProfilePage = lazy(() => import('./features/account/ProfilePage'));
+const AdminDeskPage = lazy(() => import('./features/admin/AdminDeskPage'));
 const OrderSuccessPage = lazy(() => import('./features/order/OrderSuccessPage'));
 const TrackOrderPage = lazy(() => import('./features/order/TrackOrderPage'));
 const NotFoundPage = lazy(() => import('./features/pages/NotFoundPage'));
@@ -56,6 +60,12 @@ export default function App() {
             <Route path="contact" element={<Suspense fallback={<PageLoader />}><ContactPage /></Suspense>} />
             <Route path="cart" element={<Suspense fallback={<PageLoader />}><CartPage /></Suspense>} />
             <Route path="checkout" element={<Suspense fallback={<PageLoader />}><CheckoutPage /></Suspense>} />
+            <Route path="login" element={<Suspense fallback={<PageLoader />}><LoginPage /></Suspense>} />
+            <Route path="signup" element={<Suspense fallback={<PageLoader />}><SignupPage /></Suspense>} />
+            <Route path="account" element={<Suspense fallback={<PageLoader />}><ProfilePage /></Suspense>} />
+            {import.meta.env.VITE_ADMIN_PANEL_SLUG && (
+              <Route path={import.meta.env.VITE_ADMIN_PANEL_SLUG} element={<Suspense fallback={<PageLoader />}><AdminDeskPage /></Suspense>} />
+            )}
             <Route path="order-success" element={<Suspense fallback={<PageLoader />}><OrderSuccessPage /></Suspense>} />
             <Route path="track-order" element={<Suspense fallback={<PageLoader />}><TrackOrderPage /></Suspense>} />
             <Route path="terms" element={<Suspense fallback={<PageLoader />}><PolicyPage type="terms" /></Suspense>} />
