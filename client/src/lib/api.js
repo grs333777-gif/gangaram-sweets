@@ -1,4 +1,5 @@
-export const apiOrigin = import.meta.env.VITE_API_URL || '';
+// Same-origin /api. The Vite dev server and the Vercel rewrite proxy these to the API.
+export const apiOrigin = '';
 
 async function request(path, { method = 'GET', body, headers } = {}) {
   const response = await fetch(`${apiOrigin}${path}`, {

@@ -1,7 +1,6 @@
 import './loadEnv.js';
 import express from 'express';
 import helmet from 'helmet';
-import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import hpp from 'hpp';
 import pinoHttp from 'pino-http';
@@ -63,33 +62,8 @@ app.use(
   }),
 );
 
-// ─── CORS ───
-const allowedOrigins = config.CORS_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean);
-
-function isAllowedOrigin(origin) {
-  if (!origin || allowedOrigins.includes(origin)) return true;
-  if (config.NODE_ENV === 'production') return false;
-  try {
-    const url = new URL(origin);
-    return url.protocol === 'http:' && (url.hostname === 'localhost' || url.hostname === '127.0.0.1');
-  } catch {
-    return false;
-  }
-}
-
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      callback(null, isAllowedOrigin(origin));
-    },
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Idempotency-Key', 'X-Request-Id'],
-    exposedHeaders: ['X-Request-Id'],
-    maxAge: 600,
-  }),
-);
-
+// The storefront calls /api on its own host. Vite proxies that locally, and
+// Vercel proxies it to this API in production, so the browser never needs CORS.
 app.use(cookieParser());
 
 // Payments router must be mounted before express.json() so the Razorpay webhook keeps its raw body.

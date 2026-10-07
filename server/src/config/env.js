@@ -25,9 +25,6 @@ const envSchema = z.object({
     .default('false'),
   COOKIE_SAMESITE: z.enum(['strict', 'lax', 'none']).default('lax'),
 
-  // CORS
-  CORS_ORIGINS: z.string().default('http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174,http://localhost:3000'),
-
   // Redis (optional)
   REDIS_URL: z.string().optional(),
   REDIS_KEY_PREFIX: z.string().default('gs:'),

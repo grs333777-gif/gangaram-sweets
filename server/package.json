@@ -15,7 +15,14 @@
     "format": "prettier --write \"src/**/*.js\" \"tests/**/*.js\"",
     "format:check": "prettier --check \"src/**/*.js\" \"tests/**/*.js\""
   },
-  "keywords": ["gangaram", "sweets", "ecommerce", "backend", "express", "mongodb"],
+  "keywords": [
+    "gangaram",
+    "sweets",
+    "ecommerce",
+    "backend",
+    "express",
+    "mongodb"
+  ],
   "license": "UNLICENSED",
   "private": true,
   "type": "module",
@@ -23,30 +30,29 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "mongoose": "^8.9.5",
-    "zod": "^3.24.2",
-    "jsonwebtoken": "^9.0.2",
     "bcrypt": "^5.1.1",
-    "helmet": "^8.0.0",
-    "cors": "^2.8.5",
-    "hpp": "^0.2.3",
     "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
     "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
     "pino": "^9.6.0",
-    "pino-pretty": "^13.0.0",
     "pino-http": "^10.4.0",
+    "pino-pretty": "^13.0.0",
+    "razorpay": "^2.9.6",
     "swagger-ui-express": "^5.0.1",
     "uuid": "^11.1.0",
-    "razorpay": "^2.9.6"
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "supertest": "^7.0.0",
-    "mongodb-memory-server": "^10.4.0",
-    "eslint": "^9.18.0",
     "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
     "globals": "^15.14.0",
-    "prettier": "^3.4.2"
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.4.0",
+    "prettier": "^3.4.2",
+    "supertest": "^7.0.0"
   }
 }
