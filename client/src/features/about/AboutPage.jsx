@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <div className="rounded-t-[120px] rounded-b-2xl overflow-hidden border-4 border-gold-400/40 shadow-gold bg-cream-100">
                   <img
                     src={fatherPhoto}
-                    alt="Mr. Shambhu Prasad, father of the owner of Gangaram Sweets"
+                    alt="Mr. Shambhu Prasad, founder of Gangaram Sweets"
                     className="h-80 w-full origin-[100%_12%] scale-[1.0] object-cover object-[100%_12%] sm:h-96"
                     loading="lazy"
                     width="853"
@@ -96,7 +96,7 @@ export default function AboutPage() {
                   <h3 className="font-heading text-xl font-bold text-navy-900">
                     Shambhu Prasad
                   </h3>
-                  <p className="text-gold-600 text-sm font-medium">Owner&apos;s Father</p>
+                  <p className="text-gold-600 text-sm font-medium">Founder</p>
                 </div>
               </div>
             </motion.div>
