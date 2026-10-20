@@ -55,11 +55,32 @@ const brand = {
   siteUrl: 'https://www.gangaramsweets.in',
   logo: '/logo.jpeg',
   ogImage: '/og-image.jpg',
+  keywords: [
+    'Gangaram Sweets',
+    'Gangaram DSS',
+    'Gangaram Dalsinghsarai',
+    'Dalsinghsarai sweets',
+    'DSS sweets',
+    'sweets in Dalsinghsarai',
+    'mithai in Dalsinghsarai',
+    'Samastipur mithai',
+    'Bihar sweet shop',
+    'desi ghee sweets',
+    'namkeen',
+    'festive gift box',
+  ],
+  alternateNames: [
+    'Gangaram',
+    'Gangaram DSS',
+    'Gangaram Dalsinghsarai',
+    'Gangaram Mithai',
+    'DSS sweets',
+  ],
   get seoTitle() {
-    return `${this.name} | Heritage Sweet Shop Since ${this.yearFounded} — ${this.city}, ${this.district}`;
+    return `${this.name} (Gangaram DSS) | Sweets in ${this.city}, ${this.district}`;
   },
   get seoDescription() {
-    return `Indulge in authentic desi ghee sweets at ${this.name}, a heritage mithai brand since ${this.yearFounded}. Now serving ${this.city}, ${this.district}, ${this.state} from our branch opened in ${this.yearBranchOpened}. Fresh mithai, namkeen, and festive gift boxes.`;
+    return `${this.name}, also called Gangaram DSS, is a heritage mithai shop since ${this.yearFounded} on Thana Road, ${this.city} (DSS), ${this.district}, ${this.state}. Pure desi ghee sweets, namkeen, and festive gift boxes.`;
   },
 
   // ─── Trust strip items ───

@@ -83,10 +83,10 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.45 }}
           className="mx-auto mb-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
         >
-          A heritage of{' '}
+          {brand.name}, known in town as Gangaram DSS, has made{' '}
           <span className="font-medium text-gold-600">pure desi ghee</span>{' '}
-          sweets &amp; namkeen since {brand.yearFounded}, now at our{' '}
-          {brand.city} branch. Every bite tells a story of tradition and purity.
+          sweets and namkeen since {brand.yearFounded}. Visit the shop on Thana Road,{' '}
+          {brand.city} (DSS), {brand.district}.
         </motion.p>
 
         <motion.div

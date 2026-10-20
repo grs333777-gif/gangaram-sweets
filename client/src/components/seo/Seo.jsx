@@ -19,7 +19,7 @@ export default function Seo({
       <meta name="description" content={description} />
       <meta
         name="keywords"
-        content={`Gangaram Sweets, ${brand.city} sweets, Samastipur mithai, Bihar sweet shop, desi ghee sweets, namkeen, festive gift box`}
+        content={brand.keywords.join(', ')}
       />
       <link rel="canonical" href={canonical} />
 
