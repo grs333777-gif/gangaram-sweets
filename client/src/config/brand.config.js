@@ -58,6 +58,9 @@ const brand = {
   keywords: [
     'Gangaram Sweets',
     'Gangaram DSS',
+    'dalsinghsarai',
+    'dalsingsarai',
+    'dss',
     'sweet shop in Dalsinghsarai',
     'mithai shop in Dalsinghsarai',
     'sweets shop in Samastipur',
