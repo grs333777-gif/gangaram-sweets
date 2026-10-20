@@ -58,29 +58,17 @@ const brand = {
   keywords: [
     'Gangaram Sweets',
     'Gangaram DSS',
-    'Gangaram Dalsinghsarai',
-    'Dalsinghsarai sweets',
-    'DSS sweets',
-    'sweets in Dalsinghsarai',
-    'mithai in Dalsinghsarai',
-    'Samastipur mithai',
-    'Bihar sweet shop',
+    'sweet shop in Dalsinghsarai',
+    'mithai shop in Dalsinghsarai',
+    'sweets shop in Samastipur',
     'desi ghee sweets',
-    'namkeen',
-    'festive gift box',
   ],
-  alternateNames: [
-    'Gangaram',
-    'Gangaram DSS',
-    'Gangaram Dalsinghsarai',
-    'Gangaram Mithai',
-    'DSS sweets',
-  ],
+  alternateNames: ['Gangaram', 'Gangaram DSS', 'Gangaram Dalsinghsarai'],
   get seoTitle() {
-    return `${this.name} (Gangaram DSS) | Sweets in ${this.city}, ${this.district}`;
+    return `${this.name}, ${this.city} | Desi Ghee Mithai`;
   },
   get seoDescription() {
-    return `${this.name}, also called Gangaram DSS, is a heritage mithai shop since ${this.yearFounded} on Thana Road, ${this.city} (DSS), ${this.district}, ${this.state}. Pure desi ghee sweets, namkeen, and festive gift boxes.`;
+    return `Discover ${this.name} in ${this.city}, ${this.district}, ${this.state}. Explore traditional Indian mithai, including Gulab Jamun, Rasgulla and Rasmalai.`;
   },
 
   // ─── Trust strip items ───

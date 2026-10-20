@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Heart, Leaf, Clock, Users } from 'lucide-react';
 import brand from '../../config/brand.config';
 import Seo from '../../components/seo/Seo';
+import { breadcrumbJsonLd } from '../../config/seo.config';
 import ownerPhoto from '../../assets/owner.jpeg';
 import fatherPhoto from '../../assets/owner_f.jpeg';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
@@ -33,9 +34,13 @@ export default function AboutPage() {
   return (
     <>
       <Seo
-        title={`About Us — ${brand.name} | Our Story Since ${brand.yearFounded}`}
-        description={`The story of ${brand.name} — heritage since ${brand.yearFounded}, now at our ${brand.city}, ${brand.district} branch. Pure desi ghee mithai and recipes trusted for generations.`}
+        title={`About ${brand.name} | ${brand.city}, ${brand.district}`}
+        description={`The story of ${brand.name}, a mithai shop since ${brand.yearFounded}, now on Thana Road in ${brand.city}, ${brand.district}, ${brand.state}.`}
         path="/about"
+        jsonLd={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'About', path: '/about' },
+        ])}
       />
 
       {/* Cinematic Header */}

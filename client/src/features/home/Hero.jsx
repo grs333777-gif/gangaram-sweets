@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingBag } from 'lucide-react';
 import brand from '../../config/brand.config';
-import heroPhoto from '../../assets/hero.png';
+import heroPhoto from '../../assets/hero.webp';
 
 function HeroFlourish() {
   return (
@@ -40,8 +40,8 @@ export default function Hero() {
             src={heroPhoto}
             alt="Gangaram Sweets storefront in Dalsinghsarai, Samastipur"
             className="absolute inset-0 h-full w-full object-cover object-[42%_46%] lg:object-center"
-            width="1672"
-            height="941"
+            width="1600"
+            height="900"
             fetchPriority="high"
           />
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-900 to-transparent lg:h-28 lg:from-navy-900/80" />
@@ -60,14 +60,17 @@ export default function Hero() {
           {brand.taglineHindi}
         </motion.p>
 
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.55 }}
           className="font-heading text-4xl font-bold leading-tight text-navy-900 sm:text-5xl md:text-6xl"
         >
+          <span className="mb-2 block text-base font-semibold tracking-normal text-navy-800 sm:text-lg">
+            {brand.name}, {brand.city}
+          </span>
           <span className="text-gold-gradient">{brand.tagline}</span>
-        </motion.h2>
+        </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
@@ -83,10 +86,8 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.45 }}
           className="mx-auto mb-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
         >
-          {brand.name}, known in town as Gangaram DSS, has made{' '}
-          <span className="font-medium text-gold-600">pure desi ghee</span>{' '}
-          sweets and namkeen since {brand.yearFounded}. Visit the shop on Thana Road,{' '}
-          {brand.city} (DSS), {brand.district}.
+          {brand.name}, also called Gangaram DSS, is a sweet shop on Thana Road, {brand.city}, {brand.district}.
+          Order traditional mithai such as gulab jamun, rasgulla and rasmalai, made here since {brand.yearFounded}.
         </motion.p>
 
         <motion.div

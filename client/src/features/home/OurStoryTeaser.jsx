@@ -19,7 +19,7 @@ export default function OurStoryTeaser() {
             <div className="rounded-2xl overflow-hidden border-4 border-gold-400/30 shadow-gold">
               <img
                 src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
-                alt="Our traditional kitchen"
+                alt="Traditional kitchen"
                 className="w-full h-72 sm:h-96 object-cover"
                 loading="lazy"
                 decoding="async"

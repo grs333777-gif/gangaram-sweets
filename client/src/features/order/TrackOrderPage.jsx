@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { Search, Package, CheckCircle, Clock, Truck, ChefHat, XCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 import brand from '../../config/brand.config';
+import Seo from '../../components/seo/Seo';
+import { breadcrumbJsonLd } from '../../config/seo.config';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
 import { api } from '../../lib/api';
 
@@ -125,10 +126,15 @@ export default function TrackOrderPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Track Order — {brand.name}</title>
-        <meta name="description" content={`Track your ${brand.name} order status.`} />
-      </Helmet>
+      <Seo
+        title={`Track an order — ${brand.name}`}
+        description={`Track a ${brand.name} delivery in ${brand.city}, ${brand.district} with your order number and phone.`}
+        path="/track-order"
+        jsonLd={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Track order', path: '/track-order' },
+        ])}
+      />
 
       <section className="bg-gradient-to-b from-navy-900 to-navy-800 pt-28 pb-12 relative overflow-hidden">
         <div className="absolute inset-0 pattern-mandala opacity-15" />

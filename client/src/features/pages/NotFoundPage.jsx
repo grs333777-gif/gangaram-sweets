@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft } from 'lucide-react';
-import brand from '../../config/brand.config';
 
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen bg-cream-50 flex items-center justify-center px-4">
+      <Helmet>
+        <title>Page not found — Gangaram Sweets</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

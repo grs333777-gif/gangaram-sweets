@@ -68,9 +68,9 @@ export default function Navbar() {
                 height="56"
               />
               <div className="hidden sm:block">
-                <h1 className={`font-heading text-lg font-bold leading-tight ${onDarkHero ? 'text-white' : 'text-navy-900'}`}>
+                <p className={`font-heading text-lg font-bold leading-tight ${onDarkHero ? 'text-white' : 'text-navy-900'}`}>
                   {brand.name}
-                </h1>
+                </p>
                 <p className={`text-xs font-medium uppercase tracking-[0.2em] ${onDarkHero ? 'text-gold-300' : 'text-gold-600'}`}>
                   {brand.tagline}
                 </p>

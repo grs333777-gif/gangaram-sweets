@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Seo from '../../components/seo/Seo';
+import { breadcrumbJsonLd } from '../../config/seo.config';
 import { Search, SlidersHorizontal, X, Plus, Minus, Eye } from 'lucide-react';
 import brand from '../../config/brand.config';
 import products from '../../data/products';
@@ -77,9 +78,13 @@ export default function MenuPage() {
   return (
     <>
       <Seo
-        title={`Menu — ${brand.name} | Sweets & Mithai in ${brand.city}`}
-        description={`Browse mithai, namkeen, festive boxes and the full kitchen menu from ${brand.name} on Thana Road, ${brand.city}, ${brand.district}.`}
+        title={`Menu — ${brand.name} | Mithai in ${brand.city}`}
+        description={`Sweet shop menu from ${brand.name} on Thana Road, ${brand.city}, ${brand.district}. Gulab jamun, rasgulla, rasmalai, meals and snacks.`}
         path="/menu"
+        jsonLd={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Menu', path: '/menu' },
+        ])}
       />
 
       {/* Header */}
@@ -91,7 +96,7 @@ export default function MenuPage() {
           Our Menu
         </h1>
         <p className="mt-3 text-sm font-light text-muted">
-          Taste of purity, served fresh
+          Mithai, meals and snacks from the {brand.city} shop
         </p>
       </div>
 

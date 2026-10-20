@@ -3,5 +3,8 @@ Allow: /
 Disallow: /cart
 Disallow: /checkout
 Disallow: /order-success
+Disallow: /login
+Disallow: /signup
+Disallow: /account
 
 Sitemap: https://www.gangaramsweets.in/sitemap.xml

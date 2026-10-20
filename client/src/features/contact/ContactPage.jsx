@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Seo from '../../components/seo/Seo';
+import { breadcrumbJsonLd } from '../../config/seo.config';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import brand from '../../config/brand.config';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
@@ -41,9 +42,13 @@ export default function ContactPage() {
   return (
     <>
       <Seo
-        title={`Contact Us — ${brand.name} | ${brand.city}, ${brand.district}`}
-        description={`Visit ${brand.name} at ${brand.address}. Call ${brand.phone} or email ${brand.email}.`}
+        title={`Contact ${brand.name} | ${brand.city}, ${brand.district}`}
+        description={`Visit ${brand.name} at ${brand.address}. Call ${brand.phone}. Open ${brand.openingHours}, all days.`}
         path="/contact"
+        jsonLd={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact' },
+        ])}
       />
 
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 to-navy-800 pt-28 pb-12">
