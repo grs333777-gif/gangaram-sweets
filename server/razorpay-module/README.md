@@ -12,7 +12,7 @@ razorpay-module/
   helpers/price-order.js        server-side cart pricing in integer paise (closes "order for less / for nothing")
   helpers/idempotency.js        Idempotency-Key middleware for your "place order" endpoint (double-click safe)
   client/razorpay-checkout.js   browser helper (ES module): pay(), waitForPaid(), getStatus(), newIdempotencyKey()
-  test/                         npm-install-free tests (see section 9)
+  test/                         npm-install-free tests (see section 9 )
   .env.example
 ```
 
