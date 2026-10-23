@@ -28,7 +28,7 @@ const policies = {
   'refund-shipping': {
     title: 'Refund & Shipping Policy',
     sections: [
-      { heading: 'Shipping', content: `Home delivery from the shop on ${brand.streetAddress}, ${brand.city} is free. The minimum order is ₹${brand.minOrderAmount}. Store pickup is also available.` },
+      { heading: 'Shipping', content: `Home delivery is free within ${brand.deliveryRadiusKm} km of the shop on ${brand.streetAddress}, ${brand.city}. The minimum order is ₹${brand.minOrderAmount}. Store pickup is available if you are farther away.` },
       { heading: 'Order Cancellation', content: 'Orders can be cancelled within 15 minutes of placement if preparation has not begun. Once preparation starts, cancellation is not possible for perishable items.' },
       { heading: 'Refunds', content: 'If you receive damaged or incorrect items, please contact us within 24 hours with photos. We will arrange a replacement or full refund. Refunds are processed within 5-7 business days to the original payment method.' },
       { heading: 'Returns', content: 'Due to the perishable nature of our products, we do not accept returns. However, if you are unsatisfied with the quality, please reach out and we will make it right.' },

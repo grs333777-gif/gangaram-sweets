@@ -30,7 +30,7 @@ function readDeviceLocation() {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
       }),
-      () => reject(new Error('Allow location so we can fill the delivery address, or choose store pickup.')),
+      () => reject(new Error('Allow location so we can check the 3 km delivery area, or choose store pickup.')),
       { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 },
     );
   });
@@ -87,6 +87,9 @@ export default function CheckoutPage() {
           detected = '';
         }
       }
+      if (km > brand.deliveryRadiusKm) {
+        toast.error(`You are ${km.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
+      }
       return { ...point, distanceKm: km, address: form.address.trim() || detected };
     } catch (err) {
       setLocation(null);
@@ -125,6 +128,12 @@ export default function CheckoutPage() {
         if (!found) return;
         deliveryPoint = found;
         address = address || found.address || '';
+      }
+      if (deliveryPoint.distanceKm > brand.deliveryRadiusKm) {
+        if (location) {
+          toast.error(`You are ${deliveryPoint.distanceKm.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
+        }
+        return;
       }
       if (!address) {
         toast.error('Please enter the delivery address');
@@ -345,7 +354,7 @@ export default function CheckoutPage() {
                         </div>
                         <div className="sm:col-span-2 rounded-xl bg-cream-50 px-4 py-3">
                           <p className="text-sm text-navy-900">
-                            Be at the delivery place and share this phone’s location. If the address is empty, we fill it from that spot. You can still edit it.
+                            We deliver within {brand.deliveryRadiusKm} km of the shop. Be at the delivery place and share this phone’s location. If the address is empty, we fill it from that spot. You can still edit it.
                           </p>
                           <button
                             type="button"
@@ -356,8 +365,10 @@ export default function CheckoutPage() {
                             {locating ? 'Checking location…' : 'Check my location'}
                           </button>
                           {location && (
-                            <p className="mt-2 text-sm text-success">
-                              {`${location.distanceKm.toFixed(1)} km away. We can deliver here.`}
+                            <p className={`mt-2 text-sm ${location.distanceKm <= brand.deliveryRadiusKm ? 'text-success' : 'text-error'}`}>
+                              {location.distanceKm <= brand.deliveryRadiusKm
+                                ? `${location.distanceKm.toFixed(1)} km away. We can deliver here.`
+                                : `${location.distanceKm.toFixed(1)} km away. Please choose store pickup.`}
                             </p>
                           )}
                         </div>
