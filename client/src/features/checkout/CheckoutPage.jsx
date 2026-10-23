@@ -30,7 +30,7 @@ function readDeviceLocation() {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
       }),
-      () => reject(new Error('Allow location so we can check the 3 km delivery area, or choose store pickup.')),
+      () => reject(new Error('Allow location so we can fill the delivery address, or choose store pickup.')),
       { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 },
     );
   });
@@ -87,9 +87,6 @@ export default function CheckoutPage() {
           detected = '';
         }
       }
-      if (km > brand.deliveryRadiusKm) {
-        toast.error(`You are ${km.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
-      }
       return { ...point, distanceKm: km, address: form.address.trim() || detected };
     } catch (err) {
       setLocation(null);
@@ -129,19 +126,22 @@ export default function CheckoutPage() {
         deliveryPoint = found;
         address = address || found.address || '';
       }
-      if (deliveryPoint.distanceKm > brand.deliveryRadiusKm) {
-        if (location) {
-          toast.error(`You are ${deliveryPoint.distanceKm.toFixed(1)} km away. Delivery is only within ${brand.deliveryRadiusKm} km.`);
-        }
-        return;
-      }
       if (!address) {
         toast.error('Please enter the delivery address');
         return;
       }
     }
-    if (totalPrice < brand.minOrderAmount) {
-      toast.error(`Minimum order is ₹${brand.minOrderAmount}`);
+    const currentItems = useCartStore.getState().items;
+    const currentTotal = currentItems.reduce(
+      (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 0),
+      0,
+    );
+    if (currentItems.length === 0) {
+      toast.error('Your cart is empty');
+      return;
+    }
+    if (currentTotal < brand.minOrderAmount) {
+      toast.error(`Minimum order is ₹${brand.minOrderAmount}. Your cart is ₹${currentTotal}.`);
       return;
     }
 
@@ -149,7 +149,10 @@ export default function CheckoutPage() {
     try {
       const data = await api.checkout(
         {
-          items: items.map((item) => ({ productKey: item.productId, quantity: item.quantity })),
+          items: currentItems.map((item) => ({
+            productKey: item.productId,
+            quantity: Number(item.quantity) || 1,
+          })),
           paymentMethod: form.paymentMethod,
           deliveryType: form.deliveryType,
           timeSlot: form.timeSlot,
@@ -342,7 +345,7 @@ export default function CheckoutPage() {
                         </div>
                         <div className="sm:col-span-2 rounded-xl bg-cream-50 px-4 py-3">
                           <p className="text-sm text-navy-900">
-                            We deliver within {brand.deliveryRadiusKm} km of the shop. Be at the delivery place and share this phone’s location. If the address is empty, we fill it from that spot. You can still edit it.
+                            Be at the delivery place and share this phone’s location. If the address is empty, we fill it from that spot. You can still edit it.
                           </p>
                           <button
                             type="button"
@@ -353,10 +356,8 @@ export default function CheckoutPage() {
                             {locating ? 'Checking location…' : 'Check my location'}
                           </button>
                           {location && (
-                            <p className={`mt-2 text-sm ${location.distanceKm <= brand.deliveryRadiusKm ? 'text-success' : 'text-error'}`}>
-                              {location.distanceKm <= brand.deliveryRadiusKm
-                                ? `${location.distanceKm.toFixed(1)} km away. We can deliver here.`
-                                : `${location.distanceKm.toFixed(1)} km away. Please choose store pickup.`}
+                            <p className="mt-2 text-sm text-success">
+                              {`${location.distanceKm.toFixed(1)} km away. We can deliver here.`}
                             </p>
                           )}
                         </div>
@@ -418,6 +419,12 @@ export default function CheckoutPage() {
                     <span>Total</span>
                     <span>₹{(totalPrice + deliveryFee).toLocaleString('en-IN')}</span>
                   </div>
+
+                  {totalPrice < brand.minOrderAmount && (
+                    <p className="text-xs text-error mb-3">
+                      Minimum order is ₹{brand.minOrderAmount}. Your items total ₹{totalPrice.toLocaleString('en-IN')}.
+                    </p>
+                  )}
 
                   <div className="grid grid-cols-2 gap-2 mb-3">
                     <button

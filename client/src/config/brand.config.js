@@ -38,9 +38,9 @@ const brand = {
   },
   openingHours: '8:00 AM – 10:00 PM',
   openingHoursSchema: 'Mo-Su 08:00-22:00',
-  freeDeliveryAbove: 500, // ₹
-  minOrderAmount: 200,
-  deliveryFee: 40,
+  freeDeliveryAbove: 0, // ₹ — delivery is always free
+  minOrderAmount: 500,
+  deliveryFee: 0,
   deliveryRadiusKm: 3,
 
   // ─── Social ───
@@ -79,7 +79,7 @@ const brand = {
     'Pure Desi Ghee',
     'Fresh Daily',
     `Trusted for 60+ Years`,
-    'Free Delivery above ₹500',
+    'Free delivery',
   ],
 };
 

@@ -56,3 +56,37 @@ export async function seedCatalogIfEmpty() {
   logger.info({ count: docs.length }, 'Seeded product catalog from menu');
   return docs.length;
 }
+
+/**
+ * The website shows prices from the menu file. Checkout charges the database price.
+ * Keep those prices the same, including dishes that were edited after the first seed.
+ */
+export async function syncCatalogPrices() {
+  const menu = JSON.parse(readFileSync(menuPath, 'utf8'));
+  const ops = [];
+
+  for (const category of menu.categories) {
+    category.items.forEach((item, index) => {
+      const externalId = `${category.id}-${index + 1}`;
+      const hasPrice = Number.isInteger(item.price) && item.price > 0;
+      ops.push({
+        updateOne: {
+          filter: { externalId },
+          update: {
+            $set: {
+              isActive: hasPrice,
+              'variants.$[variant].pricePaise': hasPrice ? item.price * 100 : 0,
+              'variants.$[variant].isActive': hasPrice,
+            },
+          },
+          arrayFilters: [{ 'variant.variantId': 'default' }],
+        },
+      });
+    });
+  }
+
+  if (ops.length === 0) return 0;
+  const result = await Product.bulkWrite(ops, { ordered: false });
+  logger.info({ matched: result.matchedCount, modified: result.modifiedCount }, 'Synced menu prices');
+  return result.modifiedCount;
+}

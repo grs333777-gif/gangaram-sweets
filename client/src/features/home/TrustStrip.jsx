@@ -4,7 +4,7 @@ const trustItems = [
   'Pure desi ghee',
   'Made fresh daily',
   `${brand.yearsOfTrust}+ years`,
-  `Free delivery over ₹${brand.freeDeliveryAbove}`,
+  'Free delivery',
 ];
 
 export default function TrustStrip() {

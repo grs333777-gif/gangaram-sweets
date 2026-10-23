@@ -31,7 +31,7 @@ export const checkoutSchema = z.object({
     .array(
       z.object({
         productKey: z.string().trim().min(1).max(120),
-        quantity: z.number().int().min(1).max(20),
+        quantity: z.coerce.number().int().min(1).max(20),
       }),
     )
     .max(50)

@@ -38,9 +38,9 @@ const envSchema = z.object({
   CHECKOUT_RATE_LIMIT_MAX: z.coerce.number().int().positive().default(5),
 
   // Delivery
-  DELIVERY_FEE_PAISE: z.coerce.number().int().nonnegative().default(4000),
-  FREE_DELIVERY_ABOVE_PAISE: z.coerce.number().int().nonnegative().default(50000),
-  MIN_ORDER_AMOUNT_PAISE: z.coerce.number().int().nonnegative().default(20000),
+  DELIVERY_FEE_PAISE: z.coerce.number().int().nonnegative().default(0),
+  FREE_DELIVERY_ABOVE_PAISE: z.coerce.number().int().nonnegative().default(0),
+  MIN_ORDER_AMOUNT_PAISE: z.coerce.number().int().nonnegative().default(50000),
 
   // Tax
   GST_RATE_PERCENT: z.coerce.number().nonnegative().default(0),

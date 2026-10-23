@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MapPin } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import brand from '../../config/brand.config';
 import { api } from '../../lib/api';
@@ -114,6 +114,52 @@ const NEXT_STATUS = {
 
 function rupees(paise) {
   return Number.isFinite(paise) ? `₹${(paise / 100).toLocaleString('en-IN')}` : '—';
+}
+
+function OrderLocation({ order }) {
+  const location = orderLocation(order);
+  return (
+    <div className="mt-4 rounded-2xl bg-cream-50 px-4 py-3">
+      <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+        <MapPin size={13} />
+        {location.title}
+      </p>
+      {location.lines.map((line, index) => (
+        <p key={`${line}-${index}`} className="mt-1 text-sm text-navy-900">{line}</p>
+      ))}
+      {location.mapUrl && (
+        <a
+          href={location.mapUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-2 inline-flex text-sm font-semibold text-gold-700 underline underline-offset-2"
+        >
+          Open in Google Maps
+        </a>
+      )}
+    </div>
+  );
+}
+
+function orderLocation(order) {
+  const address = order.shippingAddress;
+  if (order.deliveryType === 'pickup' || !address) {
+    return { title: 'Store pickup', lines: ['Customer will collect from the shop.'], mapUrl: null };
+  }
+  const lines = [
+    address.addressLine1,
+    address.addressLine2,
+    address.landmark ? `Landmark: ${address.landmark}` : '',
+    [address.city, address.state, address.pincode].filter(Boolean).join(', '),
+  ].filter(Boolean);
+  const latitude = Number(address.latitude);
+  const longitude = Number(address.longitude);
+  const mapUrl = Number.isFinite(latitude) && Number.isFinite(longitude)
+    ? `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`
+    : lines.length
+      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lines.join(', '))}`
+      : null;
+  return { title: 'Delivery location', lines, mapUrl };
 }
 
 export default function AdminDeskPage() {
@@ -272,6 +318,7 @@ export default function AdminDeskPage() {
                           <p className="mt-1 text-xs text-muted">{order.paymentStatus} · {order.paymentMethod}</p>
                         </div>
                       </div>
+                      <OrderLocation order={order} />
                       {(order.items || []).length > 0 && (
                         <table className="mt-4 w-full max-w-md text-sm">
                           <thead>

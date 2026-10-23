@@ -5,7 +5,6 @@ import IdempotencyRecord from '../models/IdempotencyRecord.js';
 import Product from '../models/Product.js';
 import { clearCart } from './cart.service.js';
 import { emailService } from './email.service.js';
-import { DELIVERY_RADIUS_KM, serviceabilityService } from './serviceability.service.js';
 import * as productRepo from '../repositories/product.repository.js';
 import config from '../config/env.js';
 import logger from '../config/logger.js';
@@ -80,14 +79,6 @@ export async function checkout(userId, checkoutData, idempotencyKey) {
     if (!shippingAddress?.addressLine1) {
       throw new BadRequestError('Delivery address is required', ERROR_CODES.INVALID_INPUT);
     }
-    const km = serviceabilityService.distanceFromShopKm(shippingAddress.latitude, shippingAddress.longitude);
-    if (km == null || km > DELIVERY_RADIUS_KM) {
-      const away = km == null ? '' : ` You are ${km.toFixed(1)} km away.`;
-      throw new BadRequestError(
-        `Delivery is only within ${DELIVERY_RADIUS_KM} km of the shop.${away} Choose store pickup.`,
-        ERROR_CODES.ADDRESS_NOT_SERVICEABLE,
-      );
-    }
   }
   if (paymentMethod === PAYMENT_METHOD.ONLINE) {
     const { isPaymentsReady } = await import('../payments/razorpay.js');
@@ -152,7 +143,7 @@ export async function checkout(userId, checkoutData, idempotencyKey) {
       sourceItems.push({
         productId: product._id,
         variantId: variant.variantId,
-        quantity: item.quantity,
+        quantity: Number(item.quantity),
       });
     }
   } else {
@@ -248,8 +239,10 @@ export async function checkout(userId, checkoutData, idempotencyKey) {
       const totalPaise = subtotalPaise + deliveryChargePaise + taxPaise - discountPaise;
 
       if (totalPaise < config.MIN_ORDER_AMOUNT_PAISE) {
+        const minimumRupees = (config.MIN_ORDER_AMOUNT_PAISE / 100).toFixed(0);
+        const cartRupees = (totalPaise / 100).toFixed(0);
         throw new BadRequestError(
-          `Minimum order amount is ₹${(config.MIN_ORDER_AMOUNT_PAISE / 100).toFixed(0)}`,
+          `Minimum order amount is ₹${minimumRupees}. Your cart is ₹${cartRupees}.`,
           ERROR_CODES.INVALID_INPUT,
         );
       }
