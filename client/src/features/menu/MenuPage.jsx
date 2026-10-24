@@ -5,8 +5,9 @@ import Seo from '../../components/seo/Seo';
 import { breadcrumbJsonLd } from '../../config/seo.config';
 import { Search, SlidersHorizontal, X, Plus, Minus, Eye } from 'lucide-react';
 import brand from '../../config/brand.config';
-import products from '../../data/products';
+import fallbackProducts from '../../data/products';
 import categories from '../../data/categories';
+import { useLiveMenu } from '../../hooks/useLiveMenu';
 import useCartStore from '../../store/cartStore';
 import { useDebounce } from '../../hooks/useScrollAnimation';
 
@@ -26,6 +27,7 @@ export default function MenuPage() {
   const debouncedSearch = useDebounce(search, 300);
   const activeCategory = searchParams.get('category') || 'all';
   const addToCart = useCartStore((s) => s.addToCart);
+  const products = useLiveMenu(fallbackProducts);
 
   // Filtered & sorted products
   const filteredProducts = useMemo(() => {
@@ -64,7 +66,7 @@ export default function MenuPage() {
     if (sortBy === 'popularity') result.sort((a, b) => (b.isBestseller ? 1 : 0) - (a.isBestseller ? 1 : 0));
 
     return result;
-  }, [activeCategory, debouncedSearch, filters, sortBy]);
+  }, [products, activeCategory, debouncedSearch, filters, sortBy]);
 
   const setCategory = (slug) => {
     if (slug === 'all') {

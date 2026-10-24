@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Product from '../models/Product.js';
@@ -27,8 +27,9 @@ export async function seedCatalogIfEmpty() {
 
   for (const category of menu.categories) {
     category.items.forEach((item, index) => {
+      if (item.removed) return;
       const externalId = `${category.id}-${index + 1}`;
-      const hasPrice = Number.isInteger(item.price) && item.price > 0;
+      const hasPrice = Number(item.price) > 0 && !item.mrp;
       docs.push({
         name: item.name,
         slug: `${category.slug}-${slugify(item.name)}`,
@@ -43,7 +44,7 @@ export async function seedCatalogIfEmpty() {
           {
             variantId: 'default',
             name: 'Plate',
-            pricePaise: hasPrice ? item.price * 100 : 0,
+            pricePaise: hasPrice ? Math.round(Number(item.price) * 100) : 0,
             stock: hasPrice ? 500 : 0,
             isActive: hasPrice,
           },
@@ -58,8 +59,9 @@ export async function seedCatalogIfEmpty() {
 }
 
 /**
- * The website shows prices from the menu file. Checkout charges the database price.
- * Keep those prices the same, including dishes that were edited after the first seed.
+ * Kept for a manual one-off if the database is empty of prices.
+ * Do not call this on startup. The shop desk owns prices and removals,
+ * and a startup sync would put the menu file back over those edits.
  */
 export async function syncCatalogPrices() {
   const menu = JSON.parse(readFileSync(menuPath, 'utf8'));
@@ -67,8 +69,9 @@ export async function syncCatalogPrices() {
 
   for (const category of menu.categories) {
     category.items.forEach((item, index) => {
+      if (item.removed) return;
       const externalId = `${category.id}-${index + 1}`;
-      const hasPrice = Number.isInteger(item.price) && item.price > 0;
+      const hasPrice = Number(item.price) > 0 && !item.mrp;
       ops.push({
         updateOne: {
           filter: { externalId },
@@ -89,4 +92,56 @@ export async function syncCatalogPrices() {
   const result = await Product.bulkWrite(ops, { ordered: false });
   logger.info({ matched: result.matchedCount, modified: result.modifiedCount }, 'Synced menu prices');
   return result.modifiedCount;
+}
+
+export function publishedExternalIds() {
+  const menu = JSON.parse(readFileSync(menuPath, 'utf8'));
+  const ids = new Set();
+  for (const category of menu.categories) {
+    category.items.forEach((item, index) => {
+      if (!item.removed) ids.add(`${category.id}-${index + 1}`);
+    });
+  }
+  return ids;
+}
+
+function menuItem(menu, externalId) {
+  const match = String(externalId || '').match(/^(.*)-(\d+)$/);
+  if (!match) return null;
+  const category = menu.categories.find((item) => item.id === match[1]);
+  const index = Number(match[2]) - 1;
+  if (!category || !category.items[index]) return null;
+  return category.items[index];
+}
+
+let menuWrite = Promise.resolve();
+
+function changeMenuItem(externalId, change) {
+  menuWrite = menuWrite.then(() => {
+    const menu = JSON.parse(readFileSync(menuPath, 'utf8'));
+    const item = menuItem(menu, externalId);
+    if (!item) return false;
+    change(item);
+    writeFileSync(menuPath, `${JSON.stringify(menu, null, 2)}\n`);
+    return true;
+  }).catch((err) => {
+    logger.warn({ err, externalId }, 'Could not update the menu file');
+    return false;
+  });
+  return menuWrite;
+}
+
+export function writeMenuPrice(externalId, pricePaise) {
+  const rupees = pricePaise / 100;
+  return changeMenuItem(externalId, (item) => {
+    item.price = Number.isInteger(rupees) ? rupees : Math.round(rupees * 100) / 100;
+    delete item.mrp;
+    delete item.removed;
+  });
+}
+
+export function writeMenuRemoval(externalId) {
+  return changeMenuItem(externalId, (item) => {
+    item.removed = true;
+  });
 }

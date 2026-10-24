@@ -3,7 +3,7 @@ import config from './config/env.js';
 import logger from './config/logger.js';
 import app from './app.js';
 import { connectDatabase, disconnectDatabase } from './config/database.js';
-import { seedCatalogIfEmpty, syncCatalogPrices } from './services/catalog.service.js';
+import { seedCatalogIfEmpty } from './services/catalog.service.js';
 import { seedAdminIfMissing } from './services/admin.seed.js';
 import { startPaymentWorkers } from './payments/razorpay.js';
 
@@ -59,7 +59,6 @@ async function start() {
 
     await connectDatabase();
     await seedCatalogIfEmpty();
-    await syncCatalogPrices();
     await seedAdminIfMissing();
     await startPaymentWorkers();
 

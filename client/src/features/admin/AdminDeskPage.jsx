@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import brand from '../../config/brand.config';
 import { api } from '../../lib/api';
 import { useAuthStore } from '../../store/authStore';
+import ProductDesk from './ProductDesk';
 
 const STATUS_LABEL = {
   // PENDING_PAYMENT: 'Awaiting payment',
@@ -175,6 +176,7 @@ export default function AdminDeskPage() {
   const [notice, setNotice] = useState('');
   const [confirm, setConfirm] = useState(null);
   const [filter, setFilter] = useState('');
+  const [section, setSection] = useState('orders');
 
   const isAdmin = user?.role === 'admin';
 
@@ -233,7 +235,7 @@ export default function AdminDeskPage() {
         <title>Shop desk — {brand.name}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <div className="min-h-screen bg-cream-50 pt-28 pb-20">
+      <div className="min-h-screen bg-cream-50 pt-8 pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           {!ready ? (
             <p className="text-sm text-muted">Loading…</p>
@@ -269,12 +271,35 @@ export default function AdminDeskPage() {
           ) : (
             <>
               <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-600">Shop desk</p>
-                  <h1 className="font-heading text-3xl font-bold text-navy-900">Orders</h1>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/logo.jpeg"
+                    alt=""
+                    className="h-12 w-12 rounded-full border-2 border-gold-400 object-cover"
+                  />
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-600">Shop desk</p>
+                    <h1 className="font-heading text-3xl font-bold text-navy-900">{section === 'menu' ? 'Products' : 'Orders'}</h1>
+                  </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-3">
-                  <StatusFilter value={filter} onChange={setFilter} />
+                  <div className="flex rounded-full border border-cream-200 bg-white p-1">
+                    <button
+                      type="button"
+                      onClick={() => setSection('orders')}
+                      className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold ${section === 'orders' ? 'bg-navy-900 text-white' : 'text-navy-900'}`}
+                    >
+                      Orders
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSection('menu')}
+                      className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold ${section === 'menu' ? 'bg-navy-900 text-white' : 'text-navy-900'}`}
+                    >
+                      Products
+                    </button>
+                  </div>
+                  {section === 'orders' && <StatusFilter value={filter} onChange={setFilter} />}
                   <button
                     type="button"
                     onClick={() => logout()}
@@ -284,6 +309,8 @@ export default function AdminDeskPage() {
                   </button>
                 </div>
               </div>
+              {section === 'menu' ? <ProductDesk /> : (
+              <>
               {notice && <p className="mb-4 text-sm text-emerald-800">{notice}</p>}
               {loadError && <p className="mb-4 text-sm text-red-700">{loadError}</p>}
               <div className="space-y-4">
@@ -392,6 +419,8 @@ export default function AdminDeskPage() {
                   </p>
                 )}
               </div>
+              </>
+              )}
             </>
           )}
         </div>

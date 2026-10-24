@@ -9,26 +9,29 @@ function slugify(name) {
 }
 
 const products = menu.categories.flatMap((cat) =>
-  cat.items.map((item, index) => ({
-    _id: `${cat.id}-${index + 1}`,
-    name: item.name,
-    slug: slugify(item.name),
-    category: cat.id,
-    categoryName: cat.name,
-    description: item.description,
-    isVeg: true,
-    isBestseller: Boolean(item.bestseller),
-    inStock: true,
-    isMrp: Boolean(item.mrp),
-    variants: [
-      {
-        weight: 'Plate',
-        price: item.mrp ? null : item.price,
-      },
-    ],
-    images: [item.image || cat.image],
-    tags: item.bestseller ? ['bestseller'] : [],
-  }))
+  cat.items.flatMap((item, index) => {
+    if (item.removed) return [];
+    return [{
+      _id: `${cat.id}-${index + 1}`,
+      name: item.name,
+      slug: slugify(item.name),
+      category: cat.id,
+      categoryName: cat.name,
+      description: item.description,
+      isVeg: true,
+      isBestseller: Boolean(item.bestseller),
+      inStock: true,
+      isMrp: Boolean(item.mrp),
+      variants: [
+        {
+          weight: 'Plate',
+          price: item.mrp ? null : item.price,
+        },
+      ],
+      images: [item.image || cat.image],
+      tags: item.bestseller ? ['bestseller'] : [],
+    }];
+  })
 );
 
 export default products;

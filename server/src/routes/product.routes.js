@@ -17,13 +17,15 @@ const router = Router();
 
 // ─── Public ───
 router.get('/', validateQuery(productQuerySchema), productController.listProducts);
-router.get('/:slug', productController.getProduct);
+router.get('/catalog', productController.listCatalog);
 
 // ─── Admin ───
 const adminOnly = [authenticate, authorize(ROLES.ADMIN)];
 
 router.get('/admin/all', ...adminOnly, productController.adminListProducts);
 router.get('/admin/:id', ...adminOnly, productController.adminGetProduct);
+router.get('/:slug', productController.getProduct);
+router.delete('/:id', ...adminOnly, productController.adminDeleteProduct);
 router.post('/', ...adminOnly, validateBody(createProductSchema), productController.adminCreateProduct);
 router.patch('/:id', ...adminOnly, validateBody(updateProductSchema), productController.adminUpdateProduct);
 router.patch('/:id/deactivate', ...adminOnly, productController.adminDeactivateProduct);

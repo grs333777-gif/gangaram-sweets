@@ -1,9 +1,10 @@
 // Same-origin /api. The Vite dev server and the Vercel rewrite proxy these to the API.
 export const apiOrigin = '';
 
-async function request(path, { method = 'GET', body, headers } = {}) {
+async function request(path, { method = 'GET', body, headers, cache } = {}, allowRetry = true) {
   const response = await fetch(`${apiOrigin}${path}`, {
     method,
+    cache: cache ?? 'no-store',
     credentials: 'include',
     headers: {
       ...(body ? { 'Content-Type': 'application/json' } : {}),
@@ -11,6 +12,9 @@ async function request(path, { method = 'GET', body, headers } = {}) {
     },
     body: body ? JSON.stringify(body) : undefined,
   });
+  if (response.status === 304 && allowRetry) {
+    return request(path, { method, body, headers, cache: 'reload' }, false);
+  }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || data.success === false) {
@@ -55,4 +59,9 @@ export const api = {
   deskStatus: (orderId, status) => request(`/api/orders/desk/${orderId}/status`, { method: 'PATCH', body: { status } }),
   deskCancel: (orderId) => request(`/api/orders/desk/${orderId}/cancel`, { method: 'POST', body: { reason: 'Cancelled by shop' } }),
   deskRefund: (orderId) => request(`/api/orders/desk/${orderId}/refund`, { method: 'POST', body: {} }),
+  catalog: () => request('/api/products/catalog'),
+  deskProducts: () => request('/api/products/admin/all?limit=1000'),
+  deskUpdatePrice: (productId, variantId, pricePaise) =>
+    request(`/api/products/${productId}/variant-price`, { method: 'PATCH', body: { variantId, pricePaise } }),
+  deskRemoveProduct: (productId) => request(`/api/products/${productId}`, { method: 'DELETE' }),
 };

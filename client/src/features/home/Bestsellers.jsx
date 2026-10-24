@@ -1,17 +1,21 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
-import products from '../../data/products';
+import fallbackProducts from '../../data/products';
 import useCartStore from '../../store/cartStore';
 import OrnamentalDivider from '../../components/ui/OrnamentalDivider';
-
-const bestsellers = products.filter((p) => p.isBestseller);
+import { useLiveMenu } from '../../hooks/useLiveMenu';
 
 export default function Bestsellers() {
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const addToCart = useCartStore((s) => s.addToCart);
+  const menu = useLiveMenu(fallbackProducts);
+  const bestsellers = useMemo(
+    () => menu.filter((product) => product.isBestseller && product.variants[0]?.price != null),
+    [menu],
+  );
 
   const checkScroll = () => {
     const el = scrollRef.current;
@@ -25,11 +29,13 @@ export default function Bestsellers() {
     const el = scrollRef.current;
     el?.addEventListener('scroll', checkScroll, { passive: true });
     return () => el?.removeEventListener('scroll', checkScroll);
-  }, []);
+  }, [bestsellers]);
 
   const scroll = (dir) => {
     scrollRef.current?.scrollBy({ left: dir * 300, behavior: 'smooth' });
   };
+
+  if (bestsellers.length === 0) return null;
 
   return (
     <section className="py-16 sm:py-20 bg-white pattern-jaali">

@@ -61,17 +61,25 @@ export async function findProductBySlug(slug) {
   return Product.findOne({ slug, isActive: true }).lean();
 }
 
+export async function findCatalog() {
+  return Product.find({})
+    .select('name slug externalId description category images variants tags isVeg isBestseller isActive')
+    .sort({ category: 1, name: 1 })
+    .lean();
+}
+
 // ─── Admin Queries ───
 
 export async function findProductByIdForAdmin(id) {
   return Product.findById(id).lean();
 }
 
-export async function findAllProductsForAdmin({ page, limit, skip, category, search, isActive }) {
+export async function findAllProductsForAdmin({ page, limit, skip, category, search, isActive, externalIds }) {
   const filter = {};
   if (category) filter.category = category;
   if (search) filter.$text = { $search: search };
   if (isActive !== undefined) filter.isActive = isActive === 'true';
+  if (externalIds) filter.externalId = { $in: externalIds };
 
   const [items, total] = await Promise.all([
     Product.find(filter).sort({ createdAt: -1 }).skip(skip).limit(limit).lean(),
@@ -104,11 +112,22 @@ export async function updateProductStock(id, variantId, stock) {
 }
 
 export async function updateVariantPrice(id, variantId, pricePaise) {
-  return Product.findOneAndUpdate(
-    { _id: id, 'variants.variantId': variantId },
-    { $set: { 'variants.$.pricePaise': pricePaise } },
-    { new: true },
-  );
+  const product = await Product.findOne({ _id: id, 'variants.variantId': variantId });
+  if (!product) return null;
+  const variant = product.variants.find((item) => item.variantId === variantId);
+  const wasUnavailable = !product.isActive || !variant.isActive || variant.pricePaise <= 0;
+  variant.pricePaise = pricePaise;
+  if (pricePaise > 0) {
+    variant.isActive = true;
+    product.isActive = true;
+    if (wasUnavailable && variant.stock <= 0) variant.stock = 500;
+  }
+  await product.save();
+  return product;
+}
+
+export async function deleteProduct(id) {
+  return Product.findByIdAndDelete(id).lean();
 }
 
 export async function updateVariantStatus(id, variantId, isActive) {

@@ -8,6 +8,12 @@ export const listProducts = asyncHandler(async (req, res) => {
   return paginatedResponse(res, items, { page, limit, total });
 });
 
+export const listCatalog = asyncHandler(async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const items = await productService.listCatalog();
+  return successResponse(res, items);
+});
+
 export const getProduct = asyncHandler(async (req, res) => {
   const product = await productService.getPublicProduct(req.params.slug);
   return successResponse(res, product);
@@ -70,4 +76,9 @@ export const adminUpdateVariantStatus = asyncHandler(async (req, res) => {
 export const adminAddVariant = asyncHandler(async (req, res) => {
   const product = await productService.addVariant(req.params.id, req.body, req.user._id);
   return successResponse(res, product);
+});
+
+export const adminDeleteProduct = asyncHandler(async (req, res) => {
+  await productService.deleteProduct(req.params.id, req.user._id);
+  return successResponse(res, { deleted: true });
 });

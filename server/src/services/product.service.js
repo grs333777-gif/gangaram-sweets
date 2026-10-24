@@ -4,6 +4,31 @@ import { NotFoundError, BadRequestError } from '../utils/errors.js';
 import { ERROR_CODES } from '../constants/index.js';
 import logger from '../config/logger.js';
 import { parsePagination } from '../utils/helpers.js';
+import { publishedExternalIds, writeMenuPrice, writeMenuRemoval } from './catalog.service.js';
+
+export async function listCatalog() {
+  const allowed = publishedExternalIds();
+  const items = (await productRepo.findCatalog()).filter((product) => allowed.has(product.externalId));
+  return items.map((product) => ({
+    _id: product._id,
+    name: product.name,
+    slug: product.slug,
+    externalId: product.externalId,
+    description: product.description,
+    category: product.category,
+    images: product.images,
+    tags: product.tags,
+    isVeg: product.isVeg,
+    isBestseller: product.isBestseller,
+    isActive: product.isActive,
+    variants: (product.variants || []).map((variant) => ({
+      variantId: variant.variantId,
+      name: variant.name,
+      pricePaise: variant.pricePaise,
+      isActive: variant.isActive,
+    })),
+  }));
+}
 
 export async function listPublicProducts(query) {
   const { page, limit, skip } = parsePagination(query, 100);
@@ -25,12 +50,14 @@ export async function getPublicProduct(slug) {
 }
 
 export async function listAdminProducts(query) {
-  const { page, limit, skip } = parsePagination(query, 100);
+  const { page, limit, skip } = parsePagination(query, 1000);
+  const allowed = [...publishedExternalIds()];
   const { items, total } = await productRepo.findAllProductsForAdmin({
     page, limit, skip,
     category: query.category,
     search: query.search,
     isActive: query.isActive,
+    externalIds: allowed,
   });
   return { items, total, page, limit };
 }
@@ -80,6 +107,7 @@ export async function updateStock(id, variantId, stock, adminId) {
 export async function updateVariantPrice(id, variantId, pricePaise, adminId) {
   const product = await productRepo.updateVariantPrice(id, variantId, pricePaise);
   if (!product) throw new NotFoundError('Product or variant not found', ERROR_CODES.VARIANT_NOT_FOUND);
+  if (product.externalId) await writeMenuPrice(product.externalId, pricePaise);
   logger.info({ productId: id, variantId, pricePaise, adminId }, 'Variant price updated');
   return product;
 }
@@ -88,6 +116,14 @@ export async function updateVariantStatus(id, variantId, isActive, adminId) {
   const product = await productRepo.updateVariantStatus(id, variantId, isActive);
   if (!product) throw new NotFoundError('Product or variant not found', ERROR_CODES.VARIANT_NOT_FOUND);
   logger.info({ productId: id, variantId, isActive, adminId }, 'Variant status updated');
+  return product;
+}
+
+export async function deleteProduct(id, adminId) {
+  const product = await productRepo.deleteProduct(id);
+  if (!product) throw new NotFoundError('Product not found', ERROR_CODES.PRODUCT_NOT_FOUND);
+  if (product.externalId) await writeMenuRemoval(product.externalId);
+  logger.info({ productId: id, adminId }, 'Product removed');
   return product;
 }
 

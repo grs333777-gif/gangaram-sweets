@@ -19,17 +19,19 @@ export default function Layout() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  const adminSlug = String(import.meta.env.VITE_ADMIN_PANEL_SLUG || '').replace(/^\/+|\/+$/g, '');
+  const isShopDesk = Boolean(adminSlug) && (pathname === `/${adminSlug}` || pathname.startsWith(`/${adminSlug}/`));
+
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      {!isShopDesk && <Navbar />}
       <main className="flex-1">
         <Outlet />
       </main>
-      <Footer />
-      <MobileBar />
-      <CartDrawer />
-      {/* Spacer for mobile bottom bar */}
-      <div className="relative z-10 h-16 bg-cream-50 lg:hidden" />
+      {!isShopDesk && <Footer />}
+      {!isShopDesk && <MobileBar />}
+      {!isShopDesk && <CartDrawer />}
+      {!isShopDesk && <div className="relative z-10 h-16 bg-cream-50 lg:hidden" />}
     </div>
   );
 }
