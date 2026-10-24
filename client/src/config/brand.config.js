@@ -17,16 +17,15 @@ const brand = {
   email: 'gangaramdss12@gmail.com',
   streetAddress: 'Thana Road',
   address: 'Thana Road, Dalsinghsarai, Samastipur, Bihar 848114',
-  mapUrl:
-    'https://www.google.com/maps/place/Thana+Rd,+Bihar+848114/@25.6693575,85.8341322,17z/data=!3m1!4b1!4m6!3m5!1s0x39ed8968c9fce9b3:0x24edbe523a60f2ea!8m2!3d25.6693575!4d85.8367071!16s%2Fg%2F11b6bqgh51?entry=ttu',
+  mapUrl: 'https://www.google.com/maps?q=25.6668333,85.8395',
   city: 'Dalsinghsarai',
   district: 'Samastipur',
   state: 'Bihar',
   pincode: '848114',
   country: 'India',
   geo: {
-    latitude: 25.6693575,
-    longitude: 85.8367071,
+    latitude: 25.6668333,
+    longitude: 85.8395,
   },
 
   // ─── Business ───

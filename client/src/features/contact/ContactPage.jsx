@@ -107,7 +107,7 @@ export default function ContactPage() {
 
         <div className="mt-8 h-72 overflow-hidden rounded-2xl border border-cream-200 bg-cream-100">
           <iframe
-            src={`https://maps.google.com/maps?q=${encodeURIComponent(brand.address)}&z=15&output=embed`}
+            src={`https://maps.google.com/maps?q=${brand.geo.latitude},${brand.geo.longitude}&z=17&output=embed`}
             width="100%"
             height="100%"
             style={{ border: 0 }}

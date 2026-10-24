@@ -3,7 +3,7 @@ import logger from '../config/logger.js';
 import { BadRequestError } from '../utils/errors.js';
 import { ERROR_CODES } from '../constants/index.js';
 
-const SHOP = { latitude: 25.6693575, longitude: 85.8367071 };
+const SHOP = { latitude: 25.6668333, longitude: 85.8395 };
 export const DELIVERY_RADIUS_KM = 3;
 
 function toRad(degrees) {
