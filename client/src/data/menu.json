@@ -8,7 +8,7 @@
       "image": "/images/menu/beverages/beverages-category.jpg",
       "items": [
         {
-          "name": "Mineral Water",
+          "name": "Mineral Water (500 ml / 1000 ml)",
           "description": "Refreshing water",
           "mrp": true,
           "image": "/images/menu/beverages/mineral-water.jpg"
@@ -59,11 +59,11 @@
           "name": "Cold Coffee",
           "description": "Chilled creamy coffee",
           "price": 119,
-          "bestseller": true,
-          "image": "/images/menu/beverages/cold-coffee.jpg"
+          "image": "/images/menu/beverages/cold-coffee.jpg",
+          "bestseller": true
         },
         {
-          "name": "Cold Coffee with Ice Cream",
+          "name": "Cold Coffee With Ice Cream",
           "description": "Cold coffee topped with ice cream",
           "price": 159,
           "image": "/images/menu/beverages/cold-coffee-with-ice-cream.jpg"
@@ -105,7 +105,7 @@
           "image": "/images/menu/beverages/butterscotch-shake.jpg"
         },
         {
-          "name": "Kitkat Shake",
+          "name": "KitKat Shake",
           "description": "Creamy KitKat chocolate shake",
           "price": 159,
           "image": "/images/menu/beverages/kitkat-shake.jpg"
@@ -147,7 +147,7 @@
     },
     {
       "id": "smoothie",
-      "name": "Smoothie",
+      "name": "Smoothie & Sundae",
       "slug": "smoothie",
       "description": "Creamy fruit smoothies",
       "image": "/images/menu/smoothie/smoothie-category.jpg",
@@ -219,8 +219,8 @@
           "name": "Masala Dosa",
           "description": "Dosa filled with spiced potato masala",
           "price": 119,
-          "bestseller": true,
-          "image": "/images/menu/south-indian/masala-dosa.jpg"
+          "image": "/images/menu/south-indian/masala-dosa.jpg",
+          "bestseller": true
         },
         {
           "name": "Special Dosa",
@@ -325,7 +325,7 @@
           "image": "/images/menu/south-indian/paneer-uttapam.jpg"
         },
         {
-          "name": "Sambar Idli",
+          "name": "Idli Sambar",
           "description": "Soft idli served with hot sambar",
           "price": 69,
           "image": "/images/menu/south-indian/sambar-idli.jpg"
@@ -388,7 +388,7 @@
           "image": "/images/menu/chaat-snacks/aloo-tikki.jpg"
         },
         {
-          "name": "Dahi Puree",
+          "name": "Dahi Puri",
           "description": "Crispy puris topped with yogurt & chutneys",
           "price": 59,
           "image": "/images/menu/chaat-snacks/dahi-puree.jpg"
@@ -397,8 +397,8 @@
           "name": "Pav Bhaji",
           "description": "Spiced vegetable bhaji with buttered pav",
           "price": 99,
-          "bestseller": true,
-          "image": "/images/menu/chaat-snacks/pav-bhaji.jpg"
+          "image": "/images/menu/chaat-snacks/pav-bhaji.jpg",
+          "bestseller": true
         },
         {
           "name": "Aloo Chaat",
@@ -413,7 +413,7 @@
           "image": "/images/menu/chaat-snacks/raj-kachori.jpg"
         },
         {
-          "name": "Samosa Chat",
+          "name": "Samosa Chaat",
           "description": "Samosa topped with yogurt & chutneys",
           "price": 79,
           "image": "/images/menu/chaat-snacks/samosa-chat.jpg"
@@ -443,11 +443,11 @@
           "name": "Choley Bhature (Desi Ghee)",
           "description": "Spicy choley with fluffy bhature",
           "price": 109,
-          "bestseller": true,
-          "image": "/images/menu/morning-meal/choley-bhature-desi-ghee.jpg"
+          "image": "/images/menu/morning-meal/choley-bhature-desi-ghee.jpg",
+          "bestseller": true
         },
         {
-          "name": "Poori Sabzi with Jalebi",
+          "name": "Poori Sabzi With Jalebi",
           "description": "Crispy poori, spiced sabzi & sweet jalebi",
           "price": 69,
           "image": "/images/menu/morning-meal/poori-sabzi-with-jalebi.jpg"
@@ -456,7 +456,7 @@
     },
     {
       "id": "thaali",
-      "name": "Thaali",
+      "name": "Thali",
       "slug": "thaali",
       "description": "Complete Indian meals",
       "image": "/images/menu/thaali/thaali-category.jpg",
@@ -471,8 +471,8 @@
           "name": "Deluxe Thali",
           "description": "Royal Indian meal with assorted curries, breads, rice & dessert",
           "price": 319,
-          "bestseller": true,
-          "image": "/images/menu/thaali/deluxe-thali.jpg"
+          "image": "/images/menu/thaali/deluxe-thali.jpg",
+          "bestseller": true
         }
       ]
     },
@@ -523,16 +523,16 @@
           "image": "/images/menu/burgers/cheese-petties-burger.jpg"
         },
         {
-          "name": "Paneer Cheese Petties Burger",
-          "description": "Paneer cheese patty in a soft bun",
-          "price": 119,
-          "image": "/images/menu/burgers/paneer-cheese-petties-burger.jpg"
-        },
-        {
           "name": "Paneer Petties Burger",
           "description": "Crispy paneer patty in a soft bun",
           "price": 99,
           "image": "/images/menu/burgers/paneer-petties-burger.jpg"
+        },
+        {
+          "name": "Paneer Cheese Petties Burger",
+          "description": "Paneer cheese patty in a soft bun",
+          "price": 119,
+          "image": "/images/menu/burgers/paneer-cheese-petties-burger.jpg"
         }
       ]
     },
@@ -592,8 +592,8 @@
           "name": "Margherita Pizza",
           "description": "Classic cheese pizza with tomato sauce",
           "price": 179,
-          "bestseller": true,
-          "image": "/images/menu/pizza/margherita-pizza.jpg"
+          "image": "/images/menu/pizza/margherita-pizza.jpg",
+          "bestseller": true
         },
         {
           "name": "Mushroom Pizza",
@@ -608,7 +608,7 @@
           "image": "/images/menu/pizza/peri-peri-veg-pizza.jpg"
         },
         {
-          "name": "Peprica Pizza",
+          "name": "Paprika Pizza",
           "description": "Cheesy pizza with spicy paprika flavour",
           "price": 219,
           "image": "/images/menu/pizza/peprica-pizza.jpg"
@@ -629,7 +629,7 @@
           "image": "/images/menu/soup-shorba/tomato-soup.jpg"
         },
         {
-          "name": "Veg. Hot n Sour Soup",
+          "name": "Veg. Hot N Sour Soup",
           "description": "Spicy & tangy vegetable soup",
           "price": 99,
           "image": "/images/menu/soup-shorba/veg-hot-n-sour-soup.jpg"
@@ -671,8 +671,8 @@
           "name": "Veg. Momos Steamed",
           "description": "Steamed dumplings with vegetable filling",
           "price": 79,
-          "bestseller": true,
-          "image": "/images/menu/momos/veg-momos-steamed.jpg"
+          "image": "/images/menu/momos/veg-momos-steamed.jpg",
+          "bestseller": true
         },
         {
           "name": "Veg. Momos Fried",
@@ -726,7 +726,7 @@
           "image": "/images/menu/taste-of-china/schezwan-noodles.jpg"
         },
         {
-          "name": "Chili Garlic Noodles",
+          "name": "Chilli Garlic Noodles",
           "description": "Noodles with chilli & garlic",
           "price": 139,
           "image": "/images/menu/taste-of-china/chili-garlic-noodles.jpg"
@@ -762,7 +762,7 @@
           "image": "/images/menu/taste-of-china/paneer-fried-rice.jpg"
         },
         {
-          "name": "Veg. Manchurian Dry/Gry",
+          "name": "Veg. Manchurian Dry/Gravy",
           "description": "Vegetable dumplings in Manchurian sauce",
           "price": 179,
           "image": "/images/menu/taste-of-china/veg-manchurian-dry-gry.jpg"
@@ -870,8 +870,8 @@
           "name": "Paneer Tikka",
           "description": "Grilled paneer with aromatic spices",
           "price": 219,
-          "bestseller": true,
-          "image": "/images/menu/tandoori-starter/paneer-tikka.jpg"
+          "image": "/images/menu/tandoori-starter/paneer-tikka.jpg",
+          "bestseller": true
         },
         {
           "name": "Mushroom Tikka",
@@ -928,7 +928,7 @@
           "image": "/images/menu/tandoori-starter/hara-bhara-kebab.jpg"
         },
         {
-          "name": "Veg Sheek Kebab",
+          "name": "Veg Seekh Kebab",
           "description": "Grilled vegetable seekh kebab with spices",
           "price": 179,
           "image": "/images/menu/tandoori-starter/veg-sheek-kebab.jpg"
@@ -1036,7 +1036,7 @@
           "image": "/images/menu/rice-biryani/veg-pulao.jpg"
         },
         {
-          "name": "Muter Pulao",
+          "name": "Matar Pulao",
           "description": "Fragrant rice with green peas",
           "price": 199,
           "image": "/images/menu/rice-biryani/muter-pulao.jpg"
@@ -1087,7 +1087,7 @@
           "image": "/images/menu/indian-main-course/shahi-paneer.jpg"
         },
         {
-          "name": "Kadahi Paneer",
+          "name": "Kadhai Paneer",
           "description": "Paneer cooked with capsicum & spices",
           "price": 259,
           "image": "/images/menu/indian-main-course/kadahi-paneer.jpg"
@@ -1114,8 +1114,8 @@
           "name": "Paneer Butter Masala",
           "description": "Paneer in creamy buttery tomato gravy",
           "price": 269,
-          "bestseller": true,
-          "image": "/images/menu/indian-main-course/paneer-butter-masala.jpg"
+          "image": "/images/menu/indian-main-course/paneer-butter-masala.jpg",
+          "bestseller": true
         },
         {
           "name": "Matar Mushroom",
@@ -1124,7 +1124,7 @@
           "image": "/images/menu/indian-main-course/matar-mushroom.jpg"
         },
         {
-          "name": "Jeera Aloo",
+          "name": "Aloo Jeera",
           "description": "Potatoes tossed with cumin & spices",
           "price": 159,
           "image": "/images/menu/indian-main-course/jeera-aloo.jpg"
@@ -1220,7 +1220,7 @@
           "image": "/images/menu/indian-main-course/mutter-malai-methi.jpg"
         },
         {
-          "name": "Kadahi Mushroom",
+          "name": "Kadhai Mushroom",
           "description": "Mushrooms cooked with capsicum & spices",
           "price": 299,
           "image": "/images/menu/indian-main-course/kadahi-mushroom.jpg"
@@ -1310,8 +1310,8 @@
           "name": "Gulab Jamun",
           "description": "Soft dumplings in sweet syrup",
           "price": 39,
-          "bestseller": true,
-          "image": "/images/menu/sweets-dessert/gulab-jamun.jpg"
+          "image": "/images/menu/sweets-dessert/gulab-jamun.jpg",
+          "bestseller": true
         },
         {
           "name": "Rasgulla",
@@ -1326,7 +1326,7 @@
           "image": "/images/menu/sweets-dessert/rasmalai.jpg"
         },
         {
-          "name": "Rasmadhuri",
+          "name": "Ras Madhuri",
           "description": "Soft sweet dumplings in rich milk",
           "price": 65,
           "image": "/images/menu/sweets-dessert/rasmadhuri.jpg"
@@ -1356,7 +1356,7 @@
           "image": "/images/menu/sweets-dessert/strawberry-ice-cream.jpg"
         },
         {
-          "name": "Kessar Pista Ice Cream",
+          "name": "Kesar Pista Ice Cream",
           "description": "Creamy ice cream with kesar & pista",
           "price": 89,
           "image": "/images/menu/sweets-dessert/kessar-pista-ice-cream.jpg"
@@ -1380,7 +1380,7 @@
           "image": "/images/menu/sweets-dessert/chocolate-ice-cream.jpg"
         },
         {
-          "name": "Gulab Jamun with Rabdi",
+          "name": "Gulab Jamun With Rabdi",
           "description": "Warm gulab jamun served with rabdi",
           "price": 99,
           "image": "/images/menu/sweets-dessert/gulab-jamun-with-rabdi.jpg"
