@@ -41,6 +41,7 @@ const brand = {
   minOrderAmount: 500,
   deliveryFee: 0,
   deliveryRadiusKm: 3,
+  orderingOpen: false,
 
   // ─── Social ───
   social: {

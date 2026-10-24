@@ -73,7 +73,16 @@ function calculateTax(subtotalPaise) {
  *    e. Mark idempotency record as COMPLETED
  * 3. Roll back everything on any failure
  */
+const ONLINE_ORDERING_OPEN = false;
+
 export async function checkout(userId, checkoutData, idempotencyKey) {
+  if (!ONLINE_ORDERING_OPEN) {
+    throw new BadRequestError(
+      'Online ordering will open in a few days. We are not accepting orders or payments yet.',
+      ERROR_CODES.SERVICE_UNAVAILABLE,
+    );
+  }
+
   const { paymentMethod, deliveryType, shippingAddress, giftMessage, timeSlot, notes, items: requestedItems } = checkoutData;
 
   if (deliveryType !== DELIVERY_TYPE.PICKUP) {

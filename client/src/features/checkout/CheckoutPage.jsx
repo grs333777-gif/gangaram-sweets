@@ -54,6 +54,7 @@ export default function CheckoutPage() {
     paymentMethod: 'ONLINE',
   });
   const [loading, setLoading] = useState(false);
+  const [orderingPaused, setOrderingPaused] = useState(false);
   const [locating, setLocating] = useState(false);
   const [location, setLocation] = useState(null);
   const deliveryFee = form.deliveryType === 'pickup' || totalPrice >= brand.freeDeliveryAbove ? 0 : brand.deliveryFee;
@@ -102,6 +103,10 @@ export default function CheckoutPage() {
 
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
+    if (!brand.orderingOpen) {
+      setOrderingPaused(true);
+      return;
+    }
     if (!form.name || !form.phone) {
       toast.error('Please fill in required fields');
       return;
@@ -477,7 +482,7 @@ export default function CheckoutPage() {
                     )}
                   </button>
                   <p className="text-[11px] text-muted text-center mt-2">
-                    {form.paymentMethod === 'COD' ? 'Pay the shop when the order arrives.' : 'Card, UPI, or netbanking via Razorpay.'}
+                    Online ordering will open in a few days. Orders and payments are not available yet.
                   </p>
                 </div>
               </div>
@@ -485,6 +490,27 @@ export default function CheckoutPage() {
           </form>
         </div>
       </div>
+      {orderingPaused && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy-900/50 px-4" onClick={() => setOrderingPaused(false)}>
+          <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-card" onClick={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-labelledby="ordering-paused-title">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-600">Gangaram Sweets</p>
+            <h2 id="ordering-paused-title" className="mt-2 font-heading text-2xl font-bold text-navy-900">Online ordering opens soon</h2>
+            <p className="mt-3 text-sm leading-relaxed text-navy-800">
+              We will start this service in a few days. Orders and payments are not being accepted yet, so this checkout cannot be completed.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              You are welcome to visit us at {brand.streetAddress}, {brand.city}, or call {brand.phone}.
+            </p>
+            <button
+              type="button"
+              onClick={() => setOrderingPaused(false)}
+              className="mt-6 w-full cursor-pointer rounded-full bg-navy-900 py-2.5 text-sm font-semibold text-white"
+            >
+              Understood
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
